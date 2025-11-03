@@ -1,9 +1,7 @@
-// src/pages/Public/SignupPage.jsx
-
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import * as authApi from '../../api/auth'; // Usamos la API directamente para el registro
-import Layout from '../../components/layout/Layout';
+
+import '/login.css';
 
 const Register = () => {
     const [name, setName] = useState('');
