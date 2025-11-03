@@ -1,6 +1,3 @@
-// src/pages/Public/CartPage.jsx
-
-import React from 'react';
 import { useCart } from '../../hooks/useCart';
 import { useCheckout } from '../../hooks/useCheckout'; // Para iniciar el flujo de compra
 import Layout from '../../components/layout/Layout';
