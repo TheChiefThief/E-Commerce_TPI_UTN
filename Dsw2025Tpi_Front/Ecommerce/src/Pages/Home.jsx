@@ -1,6 +1,6 @@
 import {useState, useEffect } from 'react';
-import {useProduct} from '../../Hooks/useProduct';
-import {useCart } from '../../Hooks/useCart';
+import {useProduct} from '../Hooks/useProduct';
+import {useCart } from '../Hooks/useCart';
 
 const Home = () => {
     const [searchTerms, setSearchTerms] = useState(''); // Para los términos de búsqueda
