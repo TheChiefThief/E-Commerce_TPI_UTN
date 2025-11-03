@@ -1,5 +1,3 @@
-// src/hooks/useCart.js
-
 import { useState, useEffect, useCallback } from 'react';
 
 // Constante para la clave de localStorage
