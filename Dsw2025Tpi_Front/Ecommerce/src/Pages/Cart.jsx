@@ -1,7 +1,7 @@
-import { useCart } from '../../hooks/useCart';
-import { useCheckout } from '../../hooks/useCheckout'; // Para iniciar el flujo de compra
-import Layout from '../../components/layout/Layout';
-import LoginModal from '../../components/common/LoginModal'; // Necesario para el flujo de checkout
+import { useCart } from '../Hooks/useCart.js';
+//import { useCheckout } from '../hooks/useCheckout.js'; // Para iniciar el flujo de compra
+//import Layout from '../components/layout/Layout';
+//import LoginModal from '../components/common/LoginModal'; // Necesario para el flujo de checkout
 
 const SHIPPING_COST = 8.00; // Costo fijo de envío
 

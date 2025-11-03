@@ -1,6 +1,7 @@
 import {useState, useEffect } from 'react';
 import {useProduct} from '../Hooks/useProduct';
 import {useCart } from '../Hooks/useCart';
+import './Home.css';
 
 const Home = () => {
     const [searchTerms, setSearchTerms] = useState(''); // Para los términos de búsqueda

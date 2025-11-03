@@ -1,12 +1,12 @@
 import {useState} from 'react';
-import axios from 'axios';
+import * as productsApi from '../API/product.js';
 
 export const useProduct = () => {
     const [products, setProducts] = useState([]);
     const [totalPages, setTotalPages] = useState(1);
     const [isLoading, setIsLoading] = useState(false);
     const [error, setError] = useState(null);
-    const fetchProduct = async ({searchTerms = '', pageNumber = 1, pageSize = 10, status = 'Active'}) => {
+    const fetchProducts = async ({searchTerms = '', pageNumber = 1, pageSize = 10, status = 'Active'}) => {
         setIsLoading(true);
         setError(null);
         try{
