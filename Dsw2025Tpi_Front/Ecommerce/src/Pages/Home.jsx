@@ -3,6 +3,9 @@ import {useProduct} from '../Hooks/useProduct';
 import {useCart } from '../Hooks/useCart';
 import './Home.css';
 
+import Pagination from '../Components/Pagination';
+import ProductCard from '../Components/ProductCard';
+
 const Home = () => {
     const [searchTerms, setSearchTerms] = useState(''); // Para los términos de búsqueda
     const [pageNumber, setPageNumber] = useState(1); // Para la paginación
