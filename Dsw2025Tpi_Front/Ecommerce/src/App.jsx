@@ -3,6 +3,9 @@ import Home from './Pages/Home.jsx'
 import Login from './Pages/Login.jsx'
 import Register from './Pages/Register.jsx'
 import Cart from './Pages/Cart.jsx'
+import Header from './Components/Header.jsx';
+import { AuthProvider } from './Context/AuthContext.jsx';
+import { CartProvider } from './Context/CartContext.jsx';
 import './App.css'
 
 
@@ -10,12 +13,17 @@ import './App.css'
 function App() {
   return(
     <Router>
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/login' element={<Login />} />
-        <Route path='/register' element={<Register />} />
-        <Route path='/cart' element={<Cart />} />
-      </Routes>
+      <AuthProvider>
+        <CartProvider>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Home />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/register' element={<Register />} />
+            <Route path='/cart' element={<Cart />} />
+          </Routes>
+        </CartProvider>
+      </AuthProvider>
     </Router>
   )
 }

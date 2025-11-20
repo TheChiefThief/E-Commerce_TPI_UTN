@@ -51,3 +51,71 @@ button:disabled {
     cursor: not-allowed;
     opacity: 0.7;
 }
+
+.main-header {
+    background-color: var(--background-white);
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.app-logo {
+    font-size: 1.2em;
+    font-weight: 900;
+    color: var(--text-dark);
+    text-decoration: none;
+}
+
+.header-nav {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 0.95em;
+    padding: 5px 10px;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+.nav-button {
+    background-color: var(--text-dark);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.nav-cart {
+    font-weight: bold;
+    color: var(--primary-color);
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.nav-cart:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.app-main-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
