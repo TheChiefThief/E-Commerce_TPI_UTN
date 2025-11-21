@@ -1,7 +1,7 @@
 import { useCart } from '../Hooks/useCart.js';
-//import { useCheckout } from '../hooks/useCheckout.js'; // Para iniciar el flujo de compra
-//import Layout from '../components/layout/Layout';
-//import LoginModal from '../components/common/LoginModal'; // Necesario para el flujo de checkout
+import { useCheckout } from '../Hooks/useCheckout.js'; // Para iniciar el flujo de compra
+import Layout from '../Components/Layout';
+import Login from '../Pages/Login'; // Necesario para el flujo de checkout
 
 const SHIPPING_COST = 8.00; // Costo fijo de envío
 
@@ -86,7 +86,7 @@ const CartPage = () => {
             </div>
             
             {/* Modal de Login condicional */}
-            <LoginModal 
+            <Login 
                 isOpen={isLoginModalOpen}
                 onClose={() => isProcessing ? null : startCheckoutFlow()} // Evitar cerrar si está procesando
                 onLoginSuccess={handleLoginSuccess}

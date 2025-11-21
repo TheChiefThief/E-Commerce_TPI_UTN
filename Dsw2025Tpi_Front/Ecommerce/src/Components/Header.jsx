@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useAuth } from '../../hooks/useAuth';
 import { useCart } from '../../hooks/useCart';
-import SearchBar from '../common/SearchBar'; // Asumimos un componente de búsqueda simple
+//import SearchBar from '../common/SearchBar'; // Asumimos un componente de búsqueda simple
 
 const Header = () => {
     const { isAuthenticated, userRole, logout } = useAuth();

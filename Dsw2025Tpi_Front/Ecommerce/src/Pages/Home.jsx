@@ -2,7 +2,7 @@ import {useState, useEffect } from 'react';
 import {useProduct} from '../Hooks/useProduct';
 import {useCart } from '../Hooks/useCart';
 import './Home.css';
-
+import Layout from '../Components/Layout';
 import Pagination from '../Components/Pagination';
 import ProductCard from '../Components/ProductCard';
 
@@ -26,6 +26,7 @@ const Home = () => {
     }
 
     return (
+        <Layout>
         <div className="home-container">
             <header>
                 <input type="text" placeholder="Search products..." value={searchTerms} onChange={(e) => setSearchTerms(e.target.value)} />
@@ -40,6 +41,7 @@ const Home = () => {
             <Pagination currentPage={pageNumber} totalPages={totalPages} onPageChange={setPageNumber} />
 
         </div>
+        </Layout>
     )    
 
 }

@@ -1,73 +1,81 @@
-import {createContext, useContext, useState, useEffect} from "react";
-import * as authApi from "../Api/authApi";
-import {jwtDecode} from "jwt-decode";
+// src/context/AuthContext.jsx
+
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import * as authApi from '../api/auth'; // Las funciones de llamada a la API
+import { jwtDecode } from 'jwt-decode'; // Utilidad para decodificar el token
 
 const AuthContext = createContext();
 
-const TOKENKEY = "auth_token";
+const TOKEN_KEY = 'authToken';
 
-export const AuthProvider = ({children}) => {
-    const [user, setUser] = useState(null);
+export const AuthProvider = ({ children }) => {
     const [token, setToken] = useState(null);
-    const[isAuthenticated, setIsAuthenticated] = useState(false);
-    const[useRole, setUserRole] = useState(null);
-}
+    const [user, setUser] = useState(null);
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+    const [userRole, setUserRole] = useState(null);
 
-useEffect(() => {
-    const storedToken = localStorage.getItem(TOKENKEY);
-    if(storedToken){
-        const decodedToken = jwtDecode(storedToken);
-    }
-}, []);
-    const decodedToken = (t) => {
+    // 1. Cargar el token desde localStorage al iniciar la app
+    useEffect(() => {
+        const storedToken = localStorage.getItem(TOKEN_KEY);
+        if (storedToken) {
+            decodeToken(storedToken);
+        }
+    }, []);
+
+    // Función auxiliar para decodificar y establecer el estado del usuario
+    const decodeToken = (t) => {
         try {
             const decoded = jwtDecode(t);
-            setUser({id: decoded.id, name: decoded.name});
-            setUserRole(decoded.role);
+            // Asume que el token contiene 'id', 'name' y 'role'
+            setUser({ id: decoded.id, name: decoded.name }); 
+            setUserRole(decoded.role); // Rol: 'Administrador' o 'Cliente'
             setToken(t);
             setIsAuthenticated(true);
-            localStorage.setItem(TOKENKEY, t);
+            localStorage.setItem(TOKEN_KEY, t);
         } catch (error) {
-            console.error("Error decoding token:", error);
+            console.error("Token inválido o expirado:", error);
+            // Si el token es inválido, borra los datos
             logout();
         }
-        };
+    };
 
+    // 2. Lógica de Login: Llama a la API y almacena el token
     const login = async (credentials) => {
         try {
-            const response = await authApi.login(credentials);
-            const newToken = response.token;
-            decodedToken(newToken);
+            // Llama a la API: POST /api/auth/login [cite: 345]
+            const response = await authApi.login(credentials); 
+            const newToken = response.token; // Asume que la respuesta tiene un campo 'token'
+            decodeToken(newToken);
             return true;
         } catch (error) {
-            console.error("Login error:", error);
+            console.error("Fallo de autenticación:", error);
             throw error;
         }
-    }
+    };
 
+    // 3. Lógica de Logout
     const logout = () => {
+        setToken(null);
         setUser(null);
         setUserRole(null);
-        setToken(null);
         setIsAuthenticated(false);
-        localStorage.removeItem(TOKENKEY);
-    }
+        localStorage.removeItem(TOKEN_KEY);
+        // Opcional: Podrías borrar el carrito si el logout debe implicarlo
+    };
 
     const value = {
-        user,
         token,
+        user,
         isAuthenticated,
-        useRole,
+        userRole,
         login,
-        logout
-    }
-
-    return (
-        <AuthContext.Provider value={value}>
-            {children}
-        </AuthContext.Provider>
-    );
-
-    export const useAuth = () => {
-        return useContext(AuthContext);
+        logout,
     };
+
+    return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+};
+
+// Custom Hook para consumir el contexto fácilmente
+export const useAuth = () => {
+    return useContext(AuthContext);
+};

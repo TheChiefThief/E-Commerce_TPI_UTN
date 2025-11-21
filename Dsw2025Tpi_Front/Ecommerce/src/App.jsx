@@ -5,7 +5,7 @@ import Register from './Pages/Register.jsx'
 import Cart from './Pages/Cart.jsx'
 import Header from './Components/Header.jsx';
 import { AuthProvider } from './Context/AuthContext.jsx';
-import { CartProvider } from './Context/CartContext.jsx';
+import { CartProvider } from './Context/NewCartContext.jsx';
 import './App.css'
 
 
