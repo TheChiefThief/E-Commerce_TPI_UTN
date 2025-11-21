@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
-import { useCart } from '../../hooks/useCart';
+import { useAuth } from '../hooks/useAuth';
+import { useCart } from '../hooks/useCart';
 //import SearchBar from '../common/SearchBar'; // Asumimos un componente de búsqueda simple
 
 const Header = () => {
@@ -29,7 +29,7 @@ const Header = () => {
                 <nav className="header-nav">
                     [cite_start]{/* Botón de Carrito (Visible para todos los visitantes) [cite: 154-156] */}
                     <Link to="/cart" className="nav-cart">
-                        🛒 Carrito ({cartItemCount})
+                        ({cartItemCount})
                     </Link>
 
                     {isAuthenticated ? (
@@ -50,7 +50,7 @@ const Header = () => {
                             <Link to="/login" className="nav-link">
                                 Iniciar Sesión
                             </Link>
-                            <Link to="/signup" className="nav-button primary">
+                            <Link to="/register" className="nav-button primary">
                                 Registrarse
                             </Link>
                         </>

@@ -1,12 +1,10 @@
-import {createNewContext} from 'react';
-import {useCart} from '../Hooks/useCart';
+import React, { createContext, useContext } from 'react';
+import { useCart } from '../hooks/useCart';
+
 // 1. Creación del Contexto
 const CartContext = createContext();
 
-
-
 export const CartProvider = ({ children }) => {
-
     // Ejecuta el hook de lógica de negocio para obtener el estado y las funciones
     const cart = useCart();
 
@@ -18,11 +16,7 @@ export const CartProvider = ({ children }) => {
     );
 };
 
-// 2. Custom Hook para consumir el contexto (opcional, pero buena práctica)
-// Nota: En este caso, el hook useCart que ya existe puede actuar como el consumidor, 
-// o podemos crear uno simple para obtener el contexto directamente.
-
-const { cartItems, addItemToCart } = useCartContext();
+// 2. Custom Hook para consumir el contexto
 export const useCartContext = () => {
     const context = useContext(CartContext);
     if (!context) {

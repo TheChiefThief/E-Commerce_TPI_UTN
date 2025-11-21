@@ -1,8 +1,6 @@
 import Header from "../Components/Header.jsx";
 
 
-
-
 const Layout = ({ children }) => {
 return (
     <div>

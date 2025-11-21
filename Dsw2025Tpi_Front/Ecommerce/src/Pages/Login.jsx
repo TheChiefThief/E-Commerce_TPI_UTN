@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
+import { useAuth } from '../Hooks/useAuth';
+import Layout from '../Components/Layout.jsx';
+
 
 import './Login.css';
 
@@ -25,7 +28,9 @@ const LoginPage = () => {
 
         try {
             // Llama a la lógica centralizada de useAuth, que llama a la API.
-            await login({ email, password });
+            // El backend espera un campo 'Username' en el DTO, por eso enviamos
+            // 'username' (usualmente usamos el email como username en la app)
+            await login({ username: email, password });
 
             // Si el login es exitoso, navega al Home (o al Dashboard si es Admin, 
             // aunque el useAuth podría manejar la redirección basada en el rol).
@@ -51,7 +56,7 @@ const LoginPage = () => {
                     <div className="form-group">
                         <label htmlFor="email">Email</label>
                         <input
-                            type="email"
+                            type="username"
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
@@ -76,7 +81,7 @@ const LoginPage = () => {
                 </form>
                 
                 <p>
-                    ¿No tienes cuenta? <Link to="/signup">Regístrate aquí</Link>
+                    ¿No tienes cuenta? <Link to="/register">Regístrate aquí</Link>
                 </p>
             </div>
         </Layout>

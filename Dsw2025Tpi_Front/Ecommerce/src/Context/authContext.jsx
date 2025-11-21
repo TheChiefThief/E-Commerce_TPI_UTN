@@ -1,10 +1,8 @@
-// src/context/AuthContext.jsx
-
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import * as authApi from '../api/auth'; // Las funciones de llamada a la API
+import React, { createContext, useState, useEffect } from 'react';
+import * as authApi from '../API/auth'; // Las funciones de llamada a la API
 import { jwtDecode } from 'jwt-decode'; // Utilidad para decodificar el token
 
-const AuthContext = createContext();
+export const AuthContext = createContext();
 
 const TOKEN_KEY = 'authToken';
 
@@ -73,9 +71,4 @@ export const AuthProvider = ({ children }) => {
     };
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
-};
-
-// Custom Hook para consumir el contexto fácilmente
-export const useAuth = () => {
-    return useContext(AuthContext);
 };

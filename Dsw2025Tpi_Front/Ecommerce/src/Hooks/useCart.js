@@ -3,10 +3,6 @@ import { useState, useEffect, useCallback } from 'react';
 // Constante para la clave de localStorage
 const CART_STORAGE_KEY = 'cart'; 
 
-/**
- * Hook para manejar el estado y la lógica del carrito de compras.
- * Persiste los datos en localStorage bajo la clave 'cart'. 
- */
 export const useCart = () => {
     // Estado del carrito: array de OrderItem simplificados.
     const [cartItems, setCartItems] = useState([]);
