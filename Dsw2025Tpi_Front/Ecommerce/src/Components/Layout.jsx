@@ -1,16 +1,12 @@
-import Header from "../Components/Header.jsx";
-
-
 const Layout = ({ children }) => {
-return (
-    <div>
-        <Header />
-        <main className="app-main-content">{children}</main>
-        <footer> 
-        <p>© 2025 My E-commerce Site. All rights reserved.</p>
-        </footer>
-    </div>
-);
+    return (
+        <div>
+            <main className="app-main-content">{children}</main>
+            <footer>
+                <p>© 2025 My E-commerce Site. All rights reserved.</p>
+            </footer>
+        </div>
+    );
 };
 
 export default Layout;

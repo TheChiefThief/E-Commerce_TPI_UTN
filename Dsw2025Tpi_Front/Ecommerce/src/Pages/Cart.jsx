@@ -1,12 +1,13 @@
-import { useCart } from '../Hooks/useCart.js';
+import { useCartContext } from '../Context/NewCartContext.jsx';
 import { useCheckout } from '../Hooks/useCheckout.js'; // Para iniciar el flujo de compra
 import Layout from '../Components/Layout';
 import Login from '../Pages/Login'; // Necesario para el flujo de checkout
+import './Cart.css';
 
 const SHIPPING_COST = 8.00; // Costo fijo de envío
 
 const CartPage = () => {
-    const { cartItems, updateItemQuantity, removeItemFromCart, calculateSubtotal } = useCart();
+    const { cartItems, updateItemQuantity, removeItemFromCart, calculateSubtotal } = useCartContext();
     const { 
         isLoginModalOpen, 
         checkoutError, 
@@ -85,13 +86,7 @@ const CartPage = () => {
                 </button>
             </div>
             
-            {/* Modal de Login condicional */}
-            <Login 
-                isOpen={isLoginModalOpen}
-                onClose={() => isProcessing ? null : startCheckoutFlow()} // Evitar cerrar si está procesando
-                onLoginSuccess={handleLoginSuccess}
-                loginFunction={login} 
-            />
+           
         </Layout>
     );
 };

@@ -1,63 +1,64 @@
-import {useState, useCallback} from 'react';
+import { useState, useCallback } from 'react';
 import { useAuth } from './useAuth';
-import { useCart } from './useCart';
-import * as OrdertApi from '../Api/orders.js';
+import { useCartContext } from '../Context/NewCartContext.jsx';
+import * as orderApi from '../API/orders.js';
 import { useNavigate } from 'react-router-dom';
 
+const SHIPPING_COST = 8.0;
 
-const SHIPPING_COST = 8.00;
 export const useCheckout = () => {
-    //globales
-    const {isAuthenticated, user} = useAuth();
-    const {cartItems, clearCart} = useCart();
+    const { isAuthenticated, user, login } = useAuth();
+    const { cartItems, clearCart } = useCartContext();
     const navigate = useNavigate();
 
-    //locales
     const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
-    const [checkouError, setCheckoutError] = useState(null);
+    const [checkoutError, setCheckoutError] = useState(null);
     const [isProcessing, setIsProcessing] = useState(false);
-    const startCheckoutFlow = useCallback(( ) => {
-        if(cartItems.length === 0){
-            setCheckoutError("El carrito está vacío.");
+
+    const startCheckoutFlow = useCallback(() => {
+        if (!cartItems || cartItems.length === 0) {
+            setCheckoutError('El carrito está vacío.');
             return;
         }
-        if(!isAuthenticated){
-            setIsLoginModalOpen(true);
+        if (!isAuthenticated) {
+            // Redirigir a la página de login si el usuario no está autenticado.
+            // Evita depender de un modal que no está implementado.
+            navigate('/login');
             return;
         }
-        else{
-            handleFinalizeOrder();
-        }
+        handleFinalizeOrder();
     }, [isAuthenticated, cartItems]);
 
     const handleLoginSuccess = useCallback(() => {
         setIsLoginModalOpen(false);
         handleFinalizeOrder();
-    }, []);
+    }, [/* no deps */]);
 
     const handleFinalizeOrder = async (
-        shippingAdress = "Casa de dini 1090",
-        billingAdress = "Casa de billy 1090",
-        notes = "Por favor entregar en la puerta"
+        shippingAddress = 'Casa de dini 1090',
+        billingAddress = 'Casa de billy 1090',
+        notes = 'Por favor entregar en la puerta'
     ) => {
-        if (cartItems.length === 0) {
-            setCheckoutError("El carrito está vacío.");
+        if (!cartItems || cartItems.length === 0) {
+            setCheckoutError('El carrito está vacío.');
             return;
         }
         const customerId = user?.id;
         if (!customerId) {
-            setCheckoutError("Usuario no válido.");
+            setCheckoutError('Usuario no válido.');
             return;
         }
-        const orderItemRequests = cartItems.map(item => ({
+
+        const orderItemRequests = cartItems.map((item) => ({
             productId: item.productId,
             quantity: item.quantity,
             unitPrice: item.unitPrice,
         }));
+
         const orderData = {
             customerId,
-            shippingAdress,
-            billingAdress,
+            shippingAddress,
+            billingAddress,
             notes,
             orderItems: orderItemRequests,
         };
@@ -65,13 +66,15 @@ export const useCheckout = () => {
         setIsProcessing(true);
         setCheckoutError(null);
         try {
-            const response = await OrdertApi.createOrderApi(orderData);
+            const response = await orderApi.createOrder(orderData);
             clearCart();
-            alert(`Orden #${response.orderId} creada exitosamente!, Total: $${(response.totalAmount+SHIPPING_COST).toFixed(2)}`);
+            alert(
+                `Orden creada exitosamente! Total (sin envío): $${response.totalAmount?.toFixed(2) || '0.00'}`
+            );
             navigate('/orders/success');
-        } catch (error) {
-            const apiMessage = error.response?.data?.message || "Error al procesar la orden.";
-            if(error.response?.status === 400){
+        } catch (err) {
+            const apiMessage = err.response?.data?.message || 'Error al procesar la orden.';
+            if (err.response?.status === 400) {
                 setCheckoutError(`Error al crear la orden: ${apiMessage}`);
             } else {
                 setCheckoutError(`Error del servidor: ${apiMessage}`);
@@ -79,6 +82,8 @@ export const useCheckout = () => {
         } finally {
             setIsProcessing(false);
         }
+    };
+
     return {
         isLoginModalOpen,
         checkoutError,
@@ -86,7 +91,6 @@ export const useCheckout = () => {
         startCheckoutFlow,
         handleLoginSuccess,
         handleFinalizeOrder,
-        login: useAuth().login, // Expone la función de login para el modal
+        login,
     };
-}      
 };

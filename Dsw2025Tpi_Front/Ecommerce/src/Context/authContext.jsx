@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import * as authApi from '../API/auth'; // Las funciones de llamada a la API
-import { jwtDecode } from 'jwt-decode'; // Utilidad para decodificar el token
+import jwtDecode from 'jwt-decode'; // Utilidad para decodificar el token (import por defecto)
 
 export const AuthContext = createContext();
 
@@ -30,6 +30,7 @@ export const AuthProvider = ({ children }) => {
             setToken(t);
             setIsAuthenticated(true);
             localStorage.setItem(TOKEN_KEY, t);
+            console.debug('AuthContext: token decodificado y guardado', { decoded });
         } catch (error) {
             console.error("Token inválido o expirado:", error);
             // Si el token es inválido, borra los datos
@@ -40,9 +41,14 @@ export const AuthProvider = ({ children }) => {
     // 2. Lógica de Login: Llama a la API y almacena el token
     const login = async (credentials) => {
         try {
-            // Llama a la API: POST /api/auth/login [cite: 345]
+            // Llama a la API: POST /api/auth/login
             const response = await authApi.login(credentials); 
-            const newToken = response.token; // Asume que la respuesta tiene un campo 'token'
+            console.debug('AuthContext.login: respuesta del servidor', response);
+            // Manejar distintos nombres de campo posibles que el backend devuelva
+            const newToken = response?.token || response?.accessToken || response?.access_token || response?.data?.token || response;
+            if (!newToken) {
+                throw new Error('No se recibió token en la respuesta de autenticación');
+            }
             decodeToken(newToken);
             return true;
         } catch (error) {

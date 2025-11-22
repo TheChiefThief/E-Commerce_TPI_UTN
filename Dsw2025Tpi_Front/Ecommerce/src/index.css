@@ -24,10 +24,13 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  /* Evitar centrar todo el contenido globalmente; el layout y los contenedores
+     individuales controlan el centrado y los anchos. */
+  display: block;
+  background-color: transparent;
+  color: inherit;
 }
 
 h1 {

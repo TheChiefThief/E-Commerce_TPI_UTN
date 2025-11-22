@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom';
-import { useAuth } from '../hooks/useAuth';
-import { useCart } from '../hooks/useCart';
+import { useAuth } from '../Hooks/useAuth';
+import { useCartContext } from '../Context/NewCartContext.jsx';
 //import SearchBar from '../common/SearchBar'; // Asumimos un componente de búsqueda simple
 
 const Header = () => {
     const { isAuthenticated, userRole, logout } = useAuth();
-    const { cartItems } = useCart();
+    const { cartItems } = useCartContext();
     
     const cartItemCount = cartItems.reduce((total, item) => total + item.quantity, 0);
 

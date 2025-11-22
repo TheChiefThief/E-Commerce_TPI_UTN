@@ -1,6 +1,6 @@
 import {useState, useEffect } from 'react';
 import {useProduct} from '../Hooks/useProduct';
-import {useCart } from '../Hooks/useCart';
+import { useCartContext } from '../Context/NewCartContext.jsx';
 import './Home.css';
 import Layout from '../Components/Layout';
 import Pagination from '../Components/Pagination';
@@ -11,14 +11,14 @@ const Home = () => {
     const [pageNumber, setPageNumber] = useState(1); // Para la paginación
     const pageSize = 10;
     const { products, totalPages, isLoading, fetchProducts } = useProduct(); // hook personalizado para manejar productos
-    const { addToCart } = useCart(); // hook personalizado para manejar el carrito de compras
+    const { addItemToCart } = useCartContext(); // usa el contexto compartido del carrito
 
     useEffect(() => {
         fetchProducts(searchTerms, pageNumber, pageSize);
     }, [searchTerms, pageNumber, pageSize]);
 
     const handleAddToCart = (product, quantity) => {
-        addToCart(product, quantity);
+        addItemToCart(product, quantity);
         alert(`${quantity} of ${product.name} added to cart!`);
     };
     if (isLoading) { // Para manejar el estado de carga

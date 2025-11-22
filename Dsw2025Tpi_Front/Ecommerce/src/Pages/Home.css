@@ -45,6 +45,14 @@
     border-radius: 4px;
 }
 
+/* Mejoras visuales para imágenes reales */
+.product-image img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
 .product-name {
     font-size: 1.1em;
     font-weight: bold;
@@ -82,4 +90,21 @@
     width: 30px;
     text-align: center;
     font-weight: bold;
+}
+
+/* Paginación centrada y separada */
+.pagination-controls {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+/* Ajuste responsive: espacio interior y box-sizing */
+.product-card,
+.product-grid,
+.home-container,
+.app-main-content {
+    box-sizing: border-box;
 }
