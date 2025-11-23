@@ -1,6 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import * as authApi from '../API/auth'; // Las funciones de llamada a la API
-import jwtDecode from 'jwt-decode'; // Utilidad para decodificar el token (import por defecto)
+import { jwtDecode } from 'jwt-decode'; // Utilidad para decodificar el token (import por defecto)
 
 export const AuthContext = createContext();
 
@@ -25,7 +25,7 @@ export const AuthProvider = ({ children }) => {
         try {
             const decoded = jwtDecode(t);
             // Asume que el token contiene 'id', 'name' y 'role'
-            setUser({ id: decoded.id, name: decoded.name }); 
+            setUser({ id: decoded.id, name: decoded.name });
             setUserRole(decoded.role); // Rol: 'Administrador' o 'Cliente'
             setToken(t);
             setIsAuthenticated(true);
@@ -42,7 +42,7 @@ export const AuthProvider = ({ children }) => {
     const login = async (credentials) => {
         try {
             // Llama a la API: POST /api/auth/login
-            const response = await authApi.login(credentials); 
+            const response = await authApi.login(credentials);
             console.debug('AuthContext.login: respuesta del servidor', response);
             // Manejar distintos nombres de campo posibles que el backend devuelva
             const newToken = response?.token || response?.accessToken || response?.access_token || response?.data?.token || response;

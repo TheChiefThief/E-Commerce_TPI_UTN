@@ -6,6 +6,13 @@ import Cart from './Pages/Cart.jsx'
 import Header from './Components/Header.jsx';
 import { AuthProvider } from './Context/AuthContext.jsx';
 import { CartProvider } from './Context/NewCartContext.jsx';
+import { ProtectedRoute } from './Components/ProtectedRoute.jsx';
+import NotFound from './Pages/NotFound.jsx';
+import Layout from './Components/Layout.jsx';
+import AdminDashboard from './Pages/Admin/AdminDashboard.jsx';
+import ProductListAdmin from './Pages/Admin/ProductListAdmin.jsx';
+import ProductCreate from './Pages/Admin/ProductCreate.jsx';
+import OrderListAdmin from './Pages/Admin/OrderListAdmin.jsx';
 import './App.css'
 
 
@@ -21,6 +28,21 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/cart' element={<Cart />} />
+              <Route element={<ProtectedRoute allowedRoles={['Usuario', 'Administrador']} />}>
+                <Route path ='/admin' element={<Layout>
+                  <AdminDashboard />
+                </Layout>}/>
+                <Route path ='/admin/products' element={<Layout>
+                  <ProductListAdmin />
+                </Layout>}/>
+                <Route path ='/admin/products/create' element={<Layout>
+                  <ProductCreate/>
+                </Layout>}/>
+                <Route path ='/admin/orders' element={<Layout>
+                  <OrderListAdmin/>
+                </Layout>}/>
+              </Route>
+              <Route path = '*' element={<Layout><NotFound/></Layout>}/>
           </Routes>
         </CartProvider>
       </AuthProvider>
