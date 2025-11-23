@@ -6,7 +6,7 @@ import Cart from './Pages/Cart.jsx'
 import Header from './Components/Header.jsx';
 import { AuthProvider } from './Context/AuthContext.jsx';
 import { CartProvider } from './Context/NewCartContext.jsx';
-import { ProtectedRoute } from './Components/ProtectedRoute.jsx';
+import ProtectedRoute from './Components/Common/ProtectedRoute.jsx';
 import NotFound from './Pages/NotFound.jsx';
 import Layout from './Components/Layout.jsx';
 import AdminDashboard from './Pages/Admin/AdminDashboard.jsx';

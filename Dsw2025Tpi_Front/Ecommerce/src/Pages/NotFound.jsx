@@ -69,7 +69,7 @@ const Card = () => {
   );
 }
 
-const StyledWrapper = styled.div;
+const StyledWrapper = styled.div``;
 
 
 export default Card;
