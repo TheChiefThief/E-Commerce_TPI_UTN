@@ -55,29 +55,47 @@ export const useCheckout = () => {
             unitPrice: item.unitPrice,
         }));
 
-        const orderData = {
-            customerId,
-            shippingAddress,
-            billingAddress,
-            notes,
-            orderItems: orderItemRequests,
-        };
-
         setIsProcessing(true);
         setCheckoutError(null);
         try {
-            const response = await orderApi.createOrder(orderData);
+            // Backend C# espera PascalCase y un GUID para CustomerId.
+            // Construimos el objeto exactamente con los nombres que el backend define.
+            const customerGuid = String(customerId);
+
+            const orderItemsPayload = cartItems.map((item) => ({
+                ProductId: item.productId || item.productId,
+                Quantity: item.quantity,
+                UnitPrice: item.unitPrice,
+            }));
+
+            const preparedOrderData = {
+                ShippingAddress: shippingAddress,
+                BillingAddress: billingAddress,
+                CustomerId: customerGuid,
+                Notes: notes,
+                OrderItems: orderItemsPayload,
+               
+            };
+
+            console.debug('useCheckout: cartItems before send', cartItems);
+
+            // Algunos controladores esperan el DTO directamente en el body.
+            // Enviar directamente el RequestOrderModel en la raíz.
+            console.debug('useCheckout: creando orden (body)', preparedOrderData);
+            const response = await orderApi.createOrder(preparedOrderData);
+            console.debug('useCheckout: respuesta createOrder', response);
             clearCart();
             alert(
                 `Orden creada exitosamente! Total (sin envío): $${response.totalAmount?.toFixed(2) || '0.00'}`
             );
             navigate('/orders/success');
         } catch (err) {
-            const apiMessage = err.response?.data?.message || 'Error al procesar la orden.';
+            console.error('useCheckout: createOrder error response', err.response || err);
+            const apiMessage = err.response?.data?.message || err.response?.data || 'Error al procesar la orden.';
             if (err.response?.status === 400) {
-                setCheckoutError(`Error al crear la orden: ${apiMessage}`);
+                setCheckoutError(`Error al crear la orden: ${JSON.stringify(apiMessage)}`);
             } else {
-                setCheckoutError(`Error del servidor: ${apiMessage}`);
+                setCheckoutError(`Error del servidor: ${JSON.stringify(apiMessage)}`);
             }
         } finally {
             setIsProcessing(false);

@@ -12,7 +12,7 @@ const LoginPage = () => {
     const [error, setError] = useState(null);
     const [isLoading, setIsLoading] = useState(false);
     
-    const { login } = useAuth(); // Función de login del contexto
+    const { login, userRole } = useAuth(); // Función de login del contexto + rol
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -34,9 +34,13 @@ const LoginPage = () => {
             const result = await login({ username: email, password });
             console.debug('LoginPage: login result', result);
 
-            // Si el login es exitoso, navega al Home (o al Dashboard si es Admin, 
-            // aunque el useAuth podría manejar la redirección basada en el rol).
-            navigate('/'); 
+            // Redirigir según rol
+            const normalizedRole = String(userRole || '').toLowerCase();
+            if (normalizedRole.includes('admin') || normalizedRole.includes('administrador')) {
+                navigate('/admin');
+            } else {
+                navigate('/');
+            }
 
         } catch (err) {
             // Manejo de errores de autenticación (ej. credenciales inválidas)

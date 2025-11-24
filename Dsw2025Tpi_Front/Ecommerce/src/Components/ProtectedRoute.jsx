@@ -12,6 +12,9 @@ const ProtectedRoute = ({ allowedRoles }) => {
         return <Navigate to="/unauthorized" replace />;
     }
 
+    if (!allowedRoles.includes(admin)) {
+        return <Navigate to="/adminDashboard" replace />;
+    }
     return <Outlet />;
 };
 

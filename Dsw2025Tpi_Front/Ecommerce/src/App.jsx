@@ -28,7 +28,8 @@ function App() {
             <Route path='/login' element={<Login />} />
             <Route path='/register' element={<Register />} />
             <Route path='/cart' element={<Cart />} />
-              <Route element={<ProtectedRoute allowedRoles={['Administrador']} />}>
+            <Route path='/orders/success' element={<Layout><h1>Orden Exitosa</h1></Layout>} />
+              <Route element={<ProtectedRoute allowedRoles={['Admin']} />}>
                 <Route path ='/admin' element={<Layout>
                   <AdminDashboard />
                 </Layout>}/>

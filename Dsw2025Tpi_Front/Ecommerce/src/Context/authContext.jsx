@@ -24,9 +24,13 @@ export const AuthProvider = ({ children }) => {
     const decodeToken = (t) => {
         try {
             const decoded = jwtDecode(t);
-            // Asume que el token contiene 'id', 'name' y 'role'
-            setUser({ id: decoded.id, name: decoded.name });
-            setUserRole(decoded.role); // Rol: 'Administrador' o 'Cliente'
+            // Extraer campos comunes del token (varía según backend)
+            const id = decoded.id || decoded.sub || decoded.userId || decoded.uid || decoded?.user?.id;
+            const name = decoded.name || decoded.username || decoded.email || decoded?.user?.name;
+            const role = decoded.role || decoded.roles || decoded['role'] || decoded?.user?.role;
+
+            setUser({ id, name });
+            setUserRole(role);
             setToken(t);
             setIsAuthenticated(true);
             localStorage.setItem(TOKEN_KEY, t);

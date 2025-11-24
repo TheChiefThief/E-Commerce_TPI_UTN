@@ -1,8 +1,8 @@
 import apiClient from "./apiClient";
 
 
-export const createOrder = async (orderData) => {
-    const response = await apiClient.post('/orders', orderData);
+export const createOrder = async (preparedorderData) => {
+    const response = await apiClient.post('/orders', preparedorderData);
     return response.data;
 }
 

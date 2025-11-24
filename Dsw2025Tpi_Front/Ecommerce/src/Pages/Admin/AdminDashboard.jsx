@@ -1,9 +1,9 @@
 
-import React, { useEffect, useState } from 'react';
+import  { useEffect, useState } from 'react';
 // Asume que tienes APIs para obtener conteos:
 // import * as adminApi from '../../api/admin'; 
 
-const DashboardPage = () => {
+const AdminDashboard = () => {
     const [productCount, setProductCount] = useState('#');
     const [orderCount, setOrderCount] = useState('#');
 
