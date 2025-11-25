@@ -1,0 +1,20 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Backend (.NET Core)",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            "program": "${workspaceFolder}/Dsw2025Tpi_Back/Dsw2025Tpi.Api/bin/Debug/net8.0/Dsw2025Tpi.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dsw2025Tpi_Back/Dsw2025Tpi.Api",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "pattern": "Now listening on",
+                "uriFormat": "http://localhost:5142/swagger",
+                "action": "openExternally"
+            }
+        }
+    ]
+}

@@ -12,4 +12,5 @@ public record ProductModel
 
     public record ResponseProductModel(Guid Id, string Sku, string InternalCode, string Name, string Description, decimal CurrentUnitPrice, int StockQuantity, bool IsActive);
 
+    public record SearchProduct(string? Search = null, int PageNumber = 1, int PageSize = 10);
 }

@@ -37,5 +37,22 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
-  }
+  },
+  "configurations": [
+        {
+            "name": "Backend + Swagger",
+            "type": "coreclr",
+            "request": "launch",
+            "preLaunchTask": "dotnet: build",
+            "program": "${workspaceFolder}/Dsw2025Tpi_Back/Dsw2025Tpi.Api/bin/Debug/net8.0/Dsw2025Tpi.Api.dll",
+            "args": [],
+            "cwd": "${workspaceFolder}/Dsw2025Tpi_Back/Dsw2025Tpi.Api",
+            "stopAtEntry": false,
+            "serverReadyAction": {
+                "pattern": "listening on .*(http[s]?://[^:]+:\\d+)",
+                "uriFormat": "http://localhost:5142/swagger",
+                "action": "openExternally"
+            }
+        }
+    ]
 }

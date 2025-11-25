@@ -43,6 +43,28 @@ namespace Dsw2025Tpi.Application.Services
             
         }
 
+        public async Task<IEnumerable<ProductModel.ResponseProductModel>?> GetAllProducts(ProductModel.SearchProduct request)
+        {
+            if (request.PageNumber <= 0) throw new ArgumentException("Page number must be greater than zero.");
+
+            if (request.PageSize <= 0) throw new ArgumentException("Page size must be greater than zero.");
+
+            var products = await _repository
+                .GetFiltered<Product>(p => p.IsActive && 
+                    (string.IsNullOrWhiteSpace(request.Search) || 
+                     p.Name.Contains(request.Search) || 
+                     p.Description.Contains(request.Search) ||
+                     p.Sku.Contains(request.Search)));
+
+            var paginatedProducts = products
+                .Select(p => new ProductModel.ResponseProductModel(p.Id, p.Sku, p.InternalCode, p.Name, p.Description,
+                p.CurrentUnitPrice, p.StockQuantity, p.IsActive))
+                .Skip((request.PageNumber - 1) * request.PageSize)
+                .Take(request.PageSize);
+
+            return paginatedProducts;
+        }
+
         public async Task<ProductModel.ResponseProductModel> AddProduct(ProductModel.RequestProductModel request)
         {
             ProductValidator.Validate(request);

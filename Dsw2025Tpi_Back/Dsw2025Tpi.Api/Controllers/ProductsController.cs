@@ -23,9 +23,17 @@ public class ProductsController : ControllerBase
 
     [HttpGet()]
     [AllowAnonymous]
-    public async Task<IActionResult> GetAllProducts()
+    public async Task<IActionResult> GetAllProducts([FromQuery] ProductModel.SearchProduct? request = null)
     {
-        var products = await _service.GetAllProducts();
+        IEnumerable<ProductModel.ResponseProductModel>? products;
+        if (request != null && (request.PageNumber > 0 || request.PageSize > 0 || !string.IsNullOrWhiteSpace(request.Search)))
+        {
+            products = await _service.GetAllProducts(request);
+        }
+        else
+        {
+            products = await _service.GetAllProducts();
+        }
         if (products == null || !products.Any()) throw new NoContentException("Empty List");
         return Ok(products);
     }

@@ -1,0 +1,49 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "build",
+            "command": "dotnet",
+            "type": "shell",
+            "args": ["build"],
+            "options": {
+                "cwd": "${workspaceFolder}/Dsw2025Tpi_Back/Dsw2025Tpi.Api"
+            },
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build"
+            }
+        },
+        {
+            "label": "Backend: run (sin Swagger)",
+            "command": "dotnet",
+            "type": "shell",
+            "args": ["run", "--no-build"],
+            "options": {
+                "cwd": "${workspaceFolder}/Dsw2025Tpi_Back/Dsw2025Tpi.Api"
+            },
+            "problemMatcher": "$msCompile",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        },
+        {
+            "label": "Frontend: run",
+            "command": "npm",
+            "type": "shell",
+            "args": ["run", "dev"],
+            "options": {
+                "cwd": "${workspaceFolder}/Dsw2025Tpi_Front/Ecommerce"
+            },
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            }
+        }
+    ]
+}
