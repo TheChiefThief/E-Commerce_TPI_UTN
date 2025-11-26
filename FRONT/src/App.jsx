@@ -9,6 +9,7 @@ import ListProductsPage from './modules/products/pages/ListProductsPage';
 import CreateProductPage from './modules/products/pages/CreateProductPage';
 import RegisterPage from './modules/auth/pages/RegisterPage';
 import ClientHome from './modules/home/pages/ClientHome';
+import CartPage from './modules/home/pages/CartPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -22,7 +23,7 @@ function App() {
         },
         {
           path: '/cart',
-          element: <>Carrito de compras</>,
+          element: <CartPage/>,
         },
       ],
     },
