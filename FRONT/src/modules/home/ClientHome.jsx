@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import ClientHeader from '../../../shared/components/ClientHeader';
-import ProductCard from '../../products/components/ProductCard';
-// NOTA: Asegúrate de que este servicio exista o ajústalo a la ruta correcta.
-import { getProducts } from '../../orders/services/listServices'; 
+import ClientHeader from '../../../modules/shared/components/Header';
+import Card from '../../shared/components/Card';
+// Usar el servicio correcto para productos
+import { getProducts } from '../../products/services/list';
 
 // Datos simulados para demostrar el layout si la API falla
 const mockProducts = [
@@ -73,15 +73,16 @@ function ClientHome() {
           /* 2. Grilla de Productos (Listado de Productos) */
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {products.map(product => (
-              <ProductCard 
-                key={product.id} 
-                product={{ 
-                  id: product.id, 
-                  name: product.name, 
-                  price: product.currentUnitPrice, 
-                  stock: product.stockQuantity 
-                }}
-              />
+              <Card key={product.id} className="flex flex-col justify-between">
+                <div>
+                  <h3 className="font-semibold text-lg">{product.name}</h3>
+                  <p className="text-sm text-gray-600">SKU: {product.sku ?? product.id}</p>
+                </div>
+                <div className="mt-4 flex items-center justify-between">
+                  <span className="font-bold text-purple-700">${(product.currentUnitPrice ?? product.price ?? 0).toFixed(2)}</span>
+                  <span className="text-sm text-gray-500">Stock: {product.stockQuantity ?? product.stock ?? 0}</span>
+                </div>
+              </Card>
             ))}
           </div>
         )}

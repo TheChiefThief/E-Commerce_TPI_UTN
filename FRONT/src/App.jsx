@@ -18,12 +18,12 @@ function App() {
       element: <><Outlet /></>,
       children: [
         {
-          path: '/',
-          element: <ClientHome/>,
+          index: true,
+          element: <ClientHome />,
         },
         {
-          path: '/cart',
-          element: <CartPage/>,
+          path: 'cart',
+          element: <CartPage />,
         },
       ],
     },
@@ -44,19 +44,19 @@ function App() {
       ),
       children: [
         {
-          path: '/admin/home',
+          index: true,
           element: <Home />,
         },
         {
-          path: '/admin/products',
+          path: 'products',
           element: <ListProductsPage />,
         },
         {
-          path: '/admin/products/create',
+          path: 'products/create',
           element: <CreateProductPage />,
         },
         {
-          path: '/admin/orders',
+          path: 'orders',
           element: <ListOrdersPage />,
         },
       ],

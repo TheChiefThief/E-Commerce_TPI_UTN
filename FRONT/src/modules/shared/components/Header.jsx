@@ -1,6 +1,3 @@
-// src/shared/components/ClientHeader.jsx
-
-
 import { Link, useNavigate } from 'react-router-dom';
 import Button from './Button'; // Utiliza tu componente Button
 
