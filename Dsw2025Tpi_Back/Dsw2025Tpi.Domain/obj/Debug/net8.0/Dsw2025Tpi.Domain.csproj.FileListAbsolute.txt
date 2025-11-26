@@ -46,3 +46,25 @@ C:\Users\lucia\Desktop\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Domain\obj\Debug\net
 C:\Users\lucia\Desktop\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Domain\obj\Debug\net8.0\refint\Dsw2025Tpi.Domain.dll
 C:\Users\lucia\Desktop\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.pdb
 C:\Users\lucia\Desktop\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Domain\obj\Debug\net8.0\ref\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.deps.json
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfoInputs.cache
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfo.cs
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\refint\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\lucia\Desktop\TPI prueba 2\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\ref\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.deps.json
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfoInputs.cache
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.AssemblyInfo.cs
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.csproj.CoreCompileInputs.cache
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\refint\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Domain\obj\Debug\net8.0\ref\Dsw2025Tpi.Domain.dll

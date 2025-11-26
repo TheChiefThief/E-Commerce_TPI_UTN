@@ -26,9 +26,9 @@ namespace Dsw2025Tpi.Application.Services
         {
             var product = await _repository.GetById<Product>(id);
             if (product == null)
-                throw new EntityNotFoundException("Product not found");
+                throw new EntityNotFoundException("Producto no encontrado");
             if (!product.IsActive)
-                throw new ApplicationException("The product is not active");
+                throw new ApplicationException("El producto no está activo");
             return product != null ?
                 new ProductModel.ResponseProductModel(product.Id, product.Sku, product.InternalCode, product.Name, product.Description, product.CurrentUnitPrice, product.StockQuantity, product.IsActive) :
                 null;
@@ -40,19 +40,19 @@ namespace Dsw2025Tpi.Application.Services
                 .GetFiltered<Product>(p => p.IsActive))?
                 .Select(p => new ProductModel.ResponseProductModel(p.Id, p.Sku, p.InternalCode, p.Name, p.Description,
                 p.CurrentUnitPrice, p.StockQuantity, p.IsActive));
-            
+
         }
 
         public async Task<IEnumerable<ProductModel.ResponseProductModel>?> GetAllProducts(ProductModel.SearchProduct request)
         {
-            if (request.PageNumber <= 0) throw new ArgumentException("Page number must be greater than zero.");
+            if (request.PageNumber <= 0) throw new ArgumentException("El número de página debe ser mayor que cero.");
 
-            if (request.PageSize <= 0) throw new ArgumentException("Page size must be greater than zero.");
+            if (request.PageSize <= 0) throw new ArgumentException("El tamaño de la página debe ser mayor que cero.");
 
             var products = await _repository
-                .GetFiltered<Product>(p => p.IsActive && 
-                    (string.IsNullOrWhiteSpace(request.Search) || 
-                     p.Name.Contains(request.Search) || 
+                .GetFiltered<Product>(p => p.IsActive &&
+                    (string.IsNullOrWhiteSpace(request.Search) ||
+                     p.Name.Contains(request.Search) ||
                      p.Description.Contains(request.Search) ||
                      p.Sku.Contains(request.Search)));
 
@@ -69,7 +69,7 @@ namespace Dsw2025Tpi.Application.Services
         {
             ProductValidator.Validate(request);
             var exist = await _repository.First<Product>(p => p.Sku == request.Sku);
-            if (exist != null) throw new DuplicatedEntityException($"A product with Sku {request.Sku} already exists");
+            if (exist != null) throw new DuplicatedEntityException($"Ya existe un producto con Sku {request.Sku}");
             var product = new Product(request.Sku, request.InternalCode, request.Name, request.Description, request.CurrentUnitPrice, request.StockQuantity);
             await _repository.Add(product);
             return new ProductModel.ResponseProductModel(product.Id, product.Sku, product.InternalCode, product.Name, product.Description,
@@ -79,12 +79,12 @@ namespace Dsw2025Tpi.Application.Services
         {
             var exist = await _repository.GetById<Product>(id);
             if (exist == null)
-                throw new EntityNotFoundException("Product not found");
+                throw new EntityNotFoundException("Producto no encontrado");
 
             ProductValidator.Validate(request);
 
             var sku = await _repository.First<Product>(p => p.Sku == request.Sku && p.IsActive);
-            if (sku != null ) throw new DuplicatedEntityException($"A product with Sku {request.Sku} already exists");
+            if (sku != null) throw new DuplicatedEntityException($"Ya existe un producto con Sku {request.Sku}");
 
             exist.Sku = request.Sku;
             exist.InternalCode = request.InternalCode;
@@ -112,12 +112,12 @@ namespace Dsw2025Tpi.Application.Services
         {
             var exist = await _repository.GetById<Product>(id);
             if (exist == null)
-                throw new EntityNotFoundException("Product not found");
+                throw new EntityNotFoundException("Producto no encontrado");
             if (exist.IsActive == false)
-                throw new ApplicationException("The product was already disabled");
-            exist.IsActive = false; 
+                throw new ApplicationException("El producto ya estaba deshabilitado");
+            exist.IsActive = false;
             await _repository.Update(exist);
         }
-     }
+    }
 }
 

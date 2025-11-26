@@ -1,42 +1,41 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\",
+  "WorkspaceRootPath": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.api\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\basecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\dsw2025tpi.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\tpi con front de chibi\\back\\dsw2025tpi.api\\dsw2025tpi.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\dsw2025tpi.api.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\BaseController.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -52,9 +51,9 @@
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "ProductsController.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
               "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\ProductsController.cs",
               "ViewState": "AgIAACEAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -64,9 +63,9 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "OrdersController.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
               "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\OrdersController.cs",
               "ViewState": "AgIAABsAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -74,12 +73,12 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "BaseController.cs",
               "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\BaseController.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\BaseController.cs",
+              "RelativeDocumentMoniker": "..\\..\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\BaseController.cs",
               "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\BaseController.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\BaseController.cs",
+              "RelativeToolTip": "..\\..\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\BaseController.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-11T13:25:54.012Z"
@@ -88,22 +87,21 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "AuthenticateController.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
               "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
               "ViewState": "AgIAACcAAAAAAAAAAAAYwDgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-11T13:25:49.541Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-11-11T13:25:49.541Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "OrdersManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
               "RelativeToolTip": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGMAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -111,11 +109,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 5,
               "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\appsettings.json",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\appsettings.json",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\appsettings.json",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\appsettings.json",
               "RelativeToolTip": "Dsw2025Tpi.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
@@ -123,11 +121,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 7,
               "Title": "Dsw2025Tpi.Api",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj",
               "RelativeToolTip": "Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
               "WhenOpened": "2025-10-09T14:46:38.92Z"
@@ -136,22 +134,22 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Program.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Program.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Program.cs",
               "RelativeToolTip": "Dsw2025Tpi.Api\\Program.cs",
-              "ViewState": "AgIAAGAAAAAAAAAAAAD4v2sAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAGkAAAAAAAAAAAD4v2gAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-22T03:03:46.591Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 6,
               "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Properties\\launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Api\\Properties\\launchSettings.json",
               "RelativeToolTip": "Dsw2025Tpi.Api\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAACkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",

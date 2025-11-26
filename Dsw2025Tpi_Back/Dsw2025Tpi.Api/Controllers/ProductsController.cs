@@ -50,8 +50,8 @@ public class ProductsController : ControllerBase
     [Authorize(Roles = "Admin")]
     public async Task<IActionResult> AddProduct([FromBody]ProductModel.RequestProductModel request)
     {
-         var product = await _service.AddProduct(request);
-         return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product); 
+        var product = await _service.AddProduct(request);
+        return CreatedAtAction(nameof(GetProductById), new { id = product.Id }, product); 
     }
 
     [HttpPut("{id}")]

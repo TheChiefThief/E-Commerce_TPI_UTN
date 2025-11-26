@@ -104,7 +104,8 @@ public class Program
             {
                 policy.WithOrigins("http://localhost:5173")
                     .AllowAnyHeader()
-                    .AllowAnyMethod();
+                    .AllowAnyMethod()
+                    .AllowCredentials();
             });
         });
 
@@ -153,7 +154,6 @@ public class Program
                     await userManager.AddToRoleAsync(newUser, adminSection["Role"]);
                 }
             }
-
         }
 
         if (app.Environment.IsDevelopment())
