@@ -122,3 +122,24 @@ C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Application\obj\De
 C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Application\obj\Debug\net8.0\refint\Dsw2025Tpi.Application.dll
 C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.pdb
 C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Application\obj\Debug\net8.0\ref\Dsw2025Tpi.Application.dll
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Sources\products.json
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Sources\customers.json
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Sources\orders.json
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.deps.json
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.dll
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.pdb
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.AssemblyReference.cache
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfoInputs.cache
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfo.cs
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.CoreCompileInputs.cache
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.sourcelink.json
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025T.52074EDD.Up2Date
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\refint\Dsw2025Tpi.Application.dll
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\ref\Dsw2025Tpi.Application.dll

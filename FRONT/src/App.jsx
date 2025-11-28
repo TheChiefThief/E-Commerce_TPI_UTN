@@ -9,6 +9,7 @@ import ListProductsPage from './modules/products/pages/ListProductsPage';
 import CreateProductPage from './modules/products/pages/CreateProductPage';
 import RegisterPage from './modules/auth/pages/RegisterPage';
 import ClientHome from './modules/home/pages/ClientHome';
+import CartPage from './modules/home/pages/CartPage';
 
 function App() {
   const router = createBrowserRouter([
@@ -17,12 +18,12 @@ function App() {
       element: <><Outlet /></>,
       children: [
         {
-          path: '/',
-          element: <ClientHome/>,
+          index: true,
+          element: <ClientHome />,
         },
         {
-          path: '/cart',
-          element: <>Carrito de compras</>,
+          path: 'cart',
+          element: <CartPage />,
         },
       ],
     },
@@ -43,19 +44,19 @@ function App() {
       ),
       children: [
         {
-          path: '/admin/home',
+          index: true,
           element: <Home />,
         },
         {
-          path: '/admin/products',
+          path: 'products',
           element: <ListProductsPage />,
         },
         {
-          path: '/admin/products/create',
+          path: 'products/create',
           element: <CreateProductPage />,
         },
         {
-          path: '/admin/orders',
+          path: 'orders',
           element: <ListOrdersPage />,
         },
       ],

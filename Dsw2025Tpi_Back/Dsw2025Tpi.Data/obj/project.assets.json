@@ -4911,23 +4911,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\lucia\\.nuget\\packages\\": {},
+    "C:\\Users\\julia\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj",
+      "projectUniqueName": "C:\\Users\\julia\\OneDrive\\Escritorio\\TPI ScremArq version\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj",
       "projectName": "Dsw2025Tpi.Data",
-      "projectPath": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj",
-      "packagesPath": "C:\\Users\\lucia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Data\\obj\\",
+      "projectPath": "C:\\Users\\julia\\OneDrive\\Escritorio\\TPI ScremArq version\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj",
+      "packagesPath": "C:\\Users\\julia\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\julia\\OneDrive\\Escritorio\\TPI ScremArq version\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Data\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\lucia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\julia\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -4942,8 +4942,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj": {
-              "projectPath": "C:\\Users\\lucia\\Desktop\\TPI Con FRONT de Chibi\\BACK\\Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj"
+            "C:\\Users\\julia\\OneDrive\\Escritorio\\TPI ScremArq version\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj": {
+              "projectPath": "C:\\Users\\julia\\OneDrive\\Escritorio\\TPI ScremArq version\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Domain\\Dsw2025Tpi.Domain.csproj"
             }
           }
         }
@@ -4958,7 +4958,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
       "net8.0": {
@@ -4995,7 +4995,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

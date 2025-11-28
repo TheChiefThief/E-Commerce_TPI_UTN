@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dsw2025Tpi.Data")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+17ea0493297735a334da0fedf5c267d11adb9fe0")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dsw2025Tpi.Data")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dsw2025Tpi.Data")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
