@@ -1,4 +1,5 @@
 ﻿using Dsw2025Tpi.Application.Exceptions;
+using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Text.Json;
 using ApplicationException = Dsw2025Tpi.Application.Exceptions.ApplicationException;
@@ -7,6 +8,13 @@ namespace Dsw2025Tpi.Api;
 
 public class CustomExceptionHandlingMiddleware : IMiddleware
 {
+    private readonly ILogger<CustomExceptionHandlingMiddleware> _logger;
+
+    public CustomExceptionHandlingMiddleware(ILogger<CustomExceptionHandlingMiddleware> logger)
+    {
+        _logger = logger;
+    }
+
     public async Task InvokeAsync(HttpContext context, RequestDelegate next)
     {
         try
@@ -15,6 +23,8 @@ public class CustomExceptionHandlingMiddleware : IMiddleware
         }
         catch (Exception e)
         {
+            _logger.LogError(e, "Ocurrió una excepción no controlada: {ErrorMessage}", e.Message);
+
             context.Response.ContentType = "application/json";
 
             var statusCode = e switch
