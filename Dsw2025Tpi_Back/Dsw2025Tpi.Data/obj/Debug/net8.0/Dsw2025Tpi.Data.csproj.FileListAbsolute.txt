@@ -122,24 +122,24 @@ C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Data\obj\Debug\net
 C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.pdb
 C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.genruntimeconfig.cache
 C:\Users\lucia\Desktop\TPI Con FRONT de Chibi\BACK\Dsw2025Tpi.Data\obj\Debug\net8.0\ref\Dsw2025Tpi.Data.dll
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Sources\products.json
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Sources\customers.json
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Sources\orders.json
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.deps.json
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.runtimeconfig.json
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.dll
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.pdb
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.csproj.AssemblyReference.cache
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.AssemblyInfoInputs.cache
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.AssemblyInfo.cs
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.csproj.CoreCompileInputs.cache
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.sourcelink.json
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025T.C87D4DE9.Up2Date
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.dll
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\refint\Dsw2025Tpi.Data.dll
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.pdb
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.genruntimeconfig.cache
-C:\Users\julia\OneDrive\Escritorio\TPI ScremArq version\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\ref\Dsw2025Tpi.Data.dll
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Sources\products.json
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Sources\customers.json
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Sources\orders.json
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.deps.json
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.runtimeconfig.json
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.dll
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Data.pdb
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.csproj.AssemblyReference.cache
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.AssemblyInfoInputs.cache
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.AssemblyInfo.cs
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.csproj.CoreCompileInputs.cache
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.sourcelink.json
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025T.C87D4DE9.Up2Date
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.dll
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\refint\Dsw2025Tpi.Data.dll
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.pdb
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\Dsw2025Tpi.Data.genruntimeconfig.cache
+C:\Users\lucia\Desktop\Chibi\vers\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Data\obj\Debug\net8.0\ref\Dsw2025Tpi.Data.dll

@@ -6,6 +6,7 @@ using Dsw2025Tpi.Application.Validation;
 using Dsw2025Tpi.Data.Repositories;
 using Dsw2025Tpi.Domain.Entities;
 using Dsw2025Tpi.Domain.Interfaces;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.IdentityModel.Tokens;
 using System;
 using System.Collections.Generic;
@@ -19,15 +20,18 @@ namespace Dsw2025Tpi.Application.Services
     public class OrdersManagementService : IOrdersManagementService
     {
         private readonly IRepository _repository;
+        private readonly UserManager<IdentityUser> _userManager;
 
 
-        public OrdersManagementService(IRepository repository)
+        public OrdersManagementService(IRepository repository, UserManager<IdentityUser> userManager)
         {
             _repository = repository;
+            _userManager = userManager;
         }
         public async Task<OrderModel.ResponseOrderModel?> GetOrderById(Guid id)
         {
-            var order = await _repository.GetById<Order>(id, nameof(Order.OrderItems), "OrderItems.Product");
+            var order = await _repository.GetById<Order>(id, nameof(Order.OrderItems), "OrderItems.Product", nameof(Order.Customer));
+
             if (order == null) throw new EntityNotFoundException($"Orden no encontrada");
 
             var responseItems = order.OrderItems.Select(i => new OrderItemModel.ResponseOrderItemModel(
@@ -39,13 +43,22 @@ namespace Dsw2025Tpi.Application.Services
                     i.Subtotal
                 )).ToList();
 
-            return order != null ?
-                new OrderModel.ResponseOrderModel(order.Id, order.Date, order.ShippingAddress, order.BillingAddress, order.Notes, order.CustomerId, order.Status, order.TotalAmount, responseItems) :
-                null;
+            return new OrderModel.ResponseOrderModel(
+                Id: order.Id,
+                Date: order.Date,
+                ShippingAddress: order.ShippingAddress,
+                BillingAddress: order.BillingAddress,
+                Notes: order.Notes,
+                CustomerId: order.CustomerId,
+                Status: order.Status,
+                order.TotalAmount,
+                responseItems,
+                CustomerName: order.Customer?.Name ?? "Cliente no encontrado");
         }
 
         public async Task<IEnumerable<OrderModel.ResponseOrderModel>?> GetAllOrders(OrderModel.SearchOrder request)
         {
+
             OrderStatus? status = null;
             if (!string.IsNullOrWhiteSpace(request.Status))
             {
@@ -66,18 +79,22 @@ namespace Dsw2025Tpi.Application.Services
             }
 
             var orders = await _repository.GetFiltered<Order>(
-                o =>
-                    o.Status != OrderStatus.CANCELLED &&
-                    (!request.CustomerId.HasValue || o.CustomerId == request.CustomerId.Value) &&
-                    (!status.HasValue || o.Status == status.Value),
-                include: new[] { "OrderItems.Product" }
+                o => o.Status != OrderStatus.CANCELLED &&
+                     (!request.CustomerId.HasValue || o.CustomerId == request.CustomerId.Value) &&
+                     (!status.HasValue || o.Status == status.Value),
+                include: new[] { "OrderItems.Product", "Customer" }
             );
+
+            if (orders == null || !orders.Any())
+                return Enumerable.Empty<OrderModel.ResponseOrderModel>();
+
+            var sortedOrders = orders.OrderByDescending(o => o.Date);
 
             if (request.PageNumber <= 0) throw new ArgumentException("El número de página debe ser mayor que cero.");
 
             if (request.PageSize <= 0) throw new ArgumentException("El tamaño de la página debe ser mayor que cero.");
 
-            var paginatedOrders = orders.Select(
+            var paginatedOrders = sortedOrders.Select(
                 order => new OrderModel.ResponseOrderModel(
                 order.Id,
                 order.Date,
@@ -94,7 +111,8 @@ namespace Dsw2025Tpi.Application.Services
                     i.OrderId,
                     i.ProductId,
                     i.Subtotal
-                )).ToList()
+                )).ToList(),
+                CustomerName: order.Customer?.Name ?? "Cliente no encontrado"
             ))
                 .Skip((request.PageNumber - 1) * request.PageSize)
                 .Take(request.PageSize);
@@ -122,17 +140,33 @@ namespace Dsw2025Tpi.Application.Services
 
             var orderItems = new List<OrderItem>();
 
+
+            // OPTIMIZACIÓN: Obtener todos los productos en una sola consulta
+            var productIds = request.OrderItems.Select(i => i.ProductId).Distinct().ToList();
+            var products = await _repository.GetFiltered<Product>(p => productIds.Contains(p.Id));
+
+            // Validar que se encontraron todos los productos
+            if (products == null || products.Count() != productIds.Count)
+                throw new EntityNotFoundException("Uno o más productos no fueron encontrados.");
+
+            var productsDict = products.ToDictionary(p => p.Id);
+
             foreach (var item in request.OrderItems)
             {
-                var product = await _repository.GetById<Product>(item.ProductId)
-                    ?? throw new EntityNotFoundException($"Producto no encontrado: {item.ProductId}");
+                if (!productsDict.TryGetValue(item.ProductId, out var product))
+                    throw new EntityNotFoundException($"Producto no encontrado: {item.ProductId}");
+
                 if (!product.IsActive)
-                    throw new ApplicationException("El producto está deshabilitado");
+                    throw new ApplicationException($"El producto '{product.Name}' está deshabilitado");
 
                 if (product.StockQuantity < item.Quantity)
-                    throw new InvalidOperationException($"Stock insuficiente de producto: {product.Name}");
+                    throw new InvalidOperationException($"Stock insuficiente para el producto: {product.Name}");
 
+                // Actualizar stock en memoria (se guardará al final)
                 product.StockQuantity -= item.Quantity;
+
+                // Nota: Dependiendo de la implementación del repositorio, podría ser necesario llamar a Update aquí o al final.
+                // Asumiendo que Update marca la entidad como modificada en el contexto:
                 await _repository.Update(product);
 
                 var orderItem = new OrderItem(
@@ -165,13 +199,14 @@ namespace Dsw2025Tpi.Application.Services
                 order.CustomerId,
                 order.Status,
                 order.TotalAmount,
-                responseItems
+                responseItems,
+                CustomerName: customer.Name ?? "Cliente sin nombre"
             );
         }
 
         public async Task<OrderModel.ResponseOrderModel> UpdateOrderStatus(Guid id, string newStatus)
         {
-            var order = await _repository.GetById<Order>(id, nameof(Order.OrderItems), "OrderItems.Product");
+            var order = await _repository.GetById<Order>(id, nameof(Order.OrderItems), "OrderItems.Product", nameof(Order.Customer));
 
             if (order == null)
                 throw new EntityNotFoundException($"Orden con ID: {id} no encontrada");
@@ -215,7 +250,8 @@ namespace Dsw2025Tpi.Application.Services
                 order.CustomerId,
                 order.Status,
                 order.TotalAmount,
-                responseItems
+                responseItems,
+                CustomerName: order.Customer?.Name ?? "Cliente no encontrado"
             );
         }
     }
