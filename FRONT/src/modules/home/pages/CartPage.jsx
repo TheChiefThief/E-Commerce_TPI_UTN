@@ -1,8 +1,18 @@
+<<<<<<< HEAD
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
 import ClientHeader from '../../shared/components/Header'; 
+=======
+
+
+import { useState, useEffect, useMemo } from 'react';
+import { useNavigate, Link } from 'react-router-dom';
+import Card from '../../../shared/components/Card';
+import Button from '../../../shared/components/Button';
+import ClientHeader from '../../../shared/components/Header'; 
+>>>>>>> 1942ede189df877d2efa8160f32f7ab6f0089857
 // NOTA: Asegúrate de crear este servicio o apuntar a la ruta correcta si ya existe.
 // import { postOrder } from '../../orders/services/listServices'; 
 
