@@ -1,21 +1,59 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Card from '../../shared/components/Card';
-import { getCustomerProducts } from '../../products/services/list'
+import Header from '../../shared/components/Header';
+import { getProductsClient } from '../../products/services/listClient';
 
 const ClientHome = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
+  const [searchInput, setSearchInput] = useState('');
   const [searchTerms, setSearchTerms] = useState('');
+  const [page, setPage] = useState(1);
+  const [pageSize] = useState(8);
+  const [totalPages, setTotalPages] = useState(1);
+  const [quantities, setQuantities] = useState({});
+  const debounceRef = useRef(null);
 
+  // Debounce search input -> searchTerms
+  useEffect(() => {
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      setPage(1);
+      setSearchTerms(searchInput.trim());
+    }, 450);
+
+    return () => clearTimeout(debounceRef.current);
+  }, [searchInput]);
+
+  // Load products when searchTerms or page changes
   useEffect(() => {
     let mounted = true;
 
     const load = async () => {
       setIsLoading(true);
       try {
-        const { data } = await getCustomerProducts(searchTerms || null);
+        const { data } = await getProductsClient(searchTerms || null, null, page, pageSize);
+
+        // API may return { items: [], totalPages } or an array directly
         if (!mounted) return;
-        setProducts(data || []);
+        if (data) {
+          if (Array.isArray(data)) {
+            setProducts(data);
+            setTotalPages(1);
+          } else if (data.items) {
+            setProducts(data.items);
+            setTotalPages(data.totalPages || 1);
+          } else if (data.data && Array.isArray(data.data)) {
+            setProducts(data.data);
+            setTotalPages(data.totalPages || 1);
+          } else {
+            setProducts([]);
+            setTotalPages(1);
+          }
+        } else {
+          setProducts([]);
+          setTotalPages(1);
+        }
       } catch (err) {
         console.error('Error cargando productos:', err);
         if (mounted) setProducts([]);
@@ -29,10 +67,29 @@ const ClientHome = () => {
     return () => {
       mounted = false;
     };
-  }, [searchTerms]);
+  }, [searchTerms, page, pageSize]);
+
+  const changeQty = (id, delta) => {
+    setQuantities((prev) => {
+      const current = prev[id] || 1;
+      const next = Math.max(0, current + delta);
+      return { ...prev, [id]: next };
+    });
+  };
 
   const handleAddToCart = (product) => {
-    console.log('Agregar al carrito:', product);
+    const qty = quantities[product.id] || 1;
+    const minQty = Math.max(1, qty);
+
+    const stored = JSON.parse(localStorage.getItem('cart') || '[]');
+    const exists = stored.find((it) => it.id === product.id);
+    if (exists) {
+      exists.quantity = Math.max(1, (exists.quantity || 0) + minQty);
+    } else {
+      stored.push({ id: product.id, product, quantity: minQty });
+    }
+
+    localStorage.setItem('cart', JSON.stringify(stored));
   };
 
   if (isLoading) {
@@ -43,35 +100,70 @@ const ClientHome = () => {
     );
   }
 
+  const handleHeaderSearch = (q) => {
+    setPage(1);
+    setSearchInput(q || '');
+  };
+
   return (
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-      <div className="flex flex-col sm:flex-row items-center justify-between gap-4 mb-6">
-        <h1 className="text-2xl font-semibold text-gray-800">Productos</h1>
-        <div className="w-full sm:w-80">
-          <label htmlFor="search" className="sr-only">Buscar productos</label>
-          <input
-            id="search"
-            type="text"
-            placeholder="Buscar productos..."
-            value={searchTerms}
-            onChange={(e) => setSearchTerms(e.target.value)}
-            className="w-full rounded-md border border-gray-200 bg-white px-3 py-2 text-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-500"
-          />
-        </div>
-      </div>
+    <>
+      <Header onSearch={handleHeaderSearch} />
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-        {products.length === 0 ? (
-          <div className="col-span-full text-center text-gray-500 py-12">No se encontraron productos</div>
-        ) : (
-          products.map((product) => (
-            <Card key={product.id} product={product} onAddToCart={handleAddToCart} />
-          ))
-        )}
+          {products.length === 0 ? (
+            <div className="col-span-full text-center text-gray-500 py-12">No se encontraron productos</div>
+          ) : (
+            products.map((product) => (
+              <Card key={product.id} className="flex flex-col">
+                <div className="h-56 sm:h-44 bg-gray-50 flex items-center justify-center overflow-hidden">
+                  {product.image ? (
+                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                  ) : (
+                    <div className="text-gray-300">Imagen</div>
+                  )}
+                </div>
+
+                <div className="p-4 flex-1 flex flex-col">
+                  <div className="flex items-start justify-between gap-4">
+                    <div className="flex-1">
+                      <h3 className="text-sm font-medium text-gray-900">{product.name || product.title}</h3>
+                      <p className="text-xs text-gray-500 mt-1">{product.description?.slice(0, 60)}</p>
+                    </div>
+                  </div>
+
+                  <div className="mt-auto border-t border-gray-100 pt-3 flex items-center justify-between">
+                    <div className="text-lg font-semibold text-gray-800">${product.price ?? 0}</div>
+
+                    <div className="flex items-center gap-3">
+                      <div className="flex items-center border border-gray-200 rounded-full px-2 py-1">
+                        <button type="button" onClick={() => changeQty(product.id, -1)} className="text-gray-600 px-2">-</button>
+                        <div className="w-6 text-center text-sm">{quantities[product.id] || 1}</div>
+                        <button type="button" onClick={() => changeQty(product.id, 1)} className="text-gray-600 px-2">+</button>
+                      </div>
+
+                      <button
+                        type="button"
+                        onClick={() => handleAddToCart(product)}
+                        className="px-3 py-1 rounded-md shadow-sm bg-purple-500 text-white sm:bg-purple-100 sm:text-purple-800 sm:border sm:border-purple-200"
+                      >
+                        Agregar
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+            ))
+          )}
       </div>
 
-      <div className="mt-8"></div>
+      <div className="mt-8 flex items-center justify-center gap-4">
+        <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-1 bg-gray-200 rounded" >Anterior</button>
+        <div>Pagina {page} / {totalPages}</div>
+        <button disabled={page >= totalPages} onClick={() => setPage((p) => p + 1)} className="px-3 py-1 bg-gray-200 rounded">Siguiente</button>
+      </div>
     </div>
+    </>
   );
 };
 
