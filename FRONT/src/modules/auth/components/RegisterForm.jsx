@@ -54,7 +54,7 @@ function RegisterForm() {
 
     return (
     <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-        <Card>
+        
             <Input 
                 label="Usuario" 
                 {...register(
@@ -111,7 +111,7 @@ function RegisterForm() {
                     {loading ? 'Creando...' : 'Crear usuario'}
             </Button>
             {serverError && <p className="text-red-500">{serverError}</p>}
-        </Card>
+        
     </form>
     );
 }

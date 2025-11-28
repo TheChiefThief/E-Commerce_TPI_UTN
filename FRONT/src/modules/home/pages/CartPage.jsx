@@ -5,7 +5,6 @@ import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
 import Header from '../../shared/components/Header'; 
-// NOTA: Asegúrate de crear este servicio o apuntar a la ruta correcta si ya existe.
 // import { postOrder } from '../../orders/services/listServices'; 
 
 // --- Componente Modal de Login (Para usuarios no logueados) ---

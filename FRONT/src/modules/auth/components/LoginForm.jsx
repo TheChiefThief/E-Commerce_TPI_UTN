@@ -42,13 +42,8 @@ function LoginForm() {
     <form className='
         flex
         flex-col
-        gap-20
-        bg-white
-        p-8
-        sm:w-md
-        sm:gap-4
-        sm:rounded-lg
-        sm:shadow-lg
+        gap-4
+        
       '
     onSubmit={handleSubmit(onValid)}
     >
