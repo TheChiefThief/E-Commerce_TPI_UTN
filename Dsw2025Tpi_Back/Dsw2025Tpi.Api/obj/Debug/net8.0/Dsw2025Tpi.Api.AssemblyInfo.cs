@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Dsw2025Tpi.Api")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcbcbc0f544f233f51aab10ae4f6ee7b88d466a6")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+fb6473767a392e670c21cd7ca549d8c4b84f1967")]
 [assembly: System.Reflection.AssemblyProductAttribute("Dsw2025Tpi.Api")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Dsw2025Tpi.Api")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
