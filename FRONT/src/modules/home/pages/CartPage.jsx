@@ -1,18 +1,10 @@
-<<<<<<< HEAD
+
+
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
-import ClientHeader from '../../shared/components/Header'; 
-=======
-
-
-import { useState, useEffect, useMemo } from 'react';
-import { useNavigate, Link } from 'react-router-dom';
-import Card from '../../../shared/components/Card';
-import Button from '../../../shared/components/Button';
-import ClientHeader from '../../../shared/components/Header'; 
->>>>>>> 1942ede189df877d2efa8160f32f7ab6f0089857
+import Header from '../../shared/components/Header'; 
 // NOTA: Asegúrate de crear este servicio o apuntar a la ruta correcta si ya existe.
 // import { postOrder } from '../../orders/services/listServices'; 
 
@@ -263,8 +255,8 @@ function CartPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Usamos ClientHeader para la barra superior (Productos, Carrito, Login, Search) */}
-      <ClientHeader /> 
+      {/* Usamos Header para la barra superior (Productos, Carrito, Login, Search) */}
+      <Header /> 
       <main className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
         
         {/* Columna Izquierda: Listado de Ítems del Carrito */}
