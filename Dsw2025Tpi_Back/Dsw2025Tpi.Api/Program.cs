@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
+using Serilog;
 using System.Security.Claims;
 using System.Text;
 using System.Text.Json.Serialization;
@@ -20,6 +21,11 @@ public class Program
     public static async Task Main(string[] args)
     {
         var builder = WebApplication.CreateBuilder(args);
+
+        builder.Host.UseSerilog((context, configuration) =>
+            configuration.ReadFrom.Configuration(context.Configuration)
+                .WriteTo.Console()
+                .WriteTo.File("Logs/log-.txt", rollingInterval: RollingInterval.Day));
 
         builder.Services.AddControllers()
             .AddJsonOptions(options =>
@@ -113,67 +119,82 @@ public class Program
 
         var app = builder.Build();
 
-        var rolesToCreate = builder.Configuration.GetSection("Roles").Get<List<string>>();
+        Log.Information("Starting up");
 
-        using (var scope = app.Services.CreateScope())
+        try
         {
-            var dbContext = scope.ServiceProvider.GetRequiredService<Dsw2025TpiContext>();
-            dbContext.Database.Migrate();
-            var authContext = scope.ServiceProvider.GetRequiredService<AuthenticateContext>();
-            authContext.Database.Migrate();
-            dbContext.Seedwork<Product>("Sources/products.json");
-            dbContext.Seedwork<Customer>("Sources/customers.json");
-            dbContext.Seedwork<Order>("Sources/orders.json");
+            var rolesToCreate = builder.Configuration.GetSection("Roles").Get<List<string>>();
 
-            var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
-
-            foreach (var roleName in rolesToCreate!)
+            using (var scope = app.Services.CreateScope())
             {
-                if (!await roleManager.RoleExistsAsync(roleName))
+                var dbContext = scope.ServiceProvider.GetRequiredService<Dsw2025TpiContext>();
+                dbContext.Database.Migrate();
+                var authContext = scope.ServiceProvider.GetRequiredService<AuthenticateContext>();
+                authContext.Database.Migrate();
+                dbContext.Seedwork<Product>("Sources/products.json");
+                dbContext.Seedwork<Customer>("Sources/customers.json");
+                dbContext.Seedwork<Order>("Sources/orders.json");
+
+                var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+
+                foreach (var roleName in rolesToCreate!)
                 {
-                    await roleManager.CreateAsync(new IdentityRole(roleName));
+                    if (!await roleManager.RoleExistsAsync(roleName))
+                    {
+                        await roleManager.CreateAsync(new IdentityRole(roleName));
+                    }
+                }
+
+                var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
+                var adminSection = builder.Configuration.GetSection("DefaultAdminUser");
+
+                var adminUser = await userManager.FindByNameAsync(adminSection["UserName"]);
+                if (adminUser == null)
+                {
+                    var newUser = new IdentityUser
+                    {
+                        UserName = adminSection["UserName"],
+                        Email = adminSection["Email"],
+                        EmailConfirmed = true
+                    };
+
+                    var result = await userManager.CreateAsync(newUser, adminSection["Password"]);
+                    if (result.Succeeded)
+                    {
+                        await userManager.AddToRoleAsync(newUser, adminSection["Role"]);
+                    }
                 }
             }
 
-            var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            var adminSection = builder.Configuration.GetSection("DefaultAdminUser");
-
-            var adminUser = await userManager.FindByNameAsync(adminSection["UserName"]);
-            if (adminUser == null)
+            if (app.Environment.IsDevelopment())
             {
-                var newUser = new IdentityUser
-                {
-                    UserName = adminSection["UserName"],
-                    Email = adminSection["Email"],
-                    EmailConfirmed = true
-                };
-
-                var result = await userManager.CreateAsync(newUser, adminSection["Password"]);
-                if (result.Succeeded)
-                {
-                    await userManager.AddToRoleAsync(newUser, adminSection["Role"]);
-                }
+                app.UseSwagger();
+                app.UseSwaggerUI();
             }
-        }
 
-        if (app.Environment.IsDevelopment())
+            app.UseHttpsRedirection();
+
+            app.UseCors("PermitirFrontend");
+            
+            app.UseSerilogRequestLogging();
+
+            app.UseAuthentication();
+            app.UseAuthorization();
+
+            app.UseMiddleware<CustomExceptionHandlingMiddleware>();
+
+            app.MapControllers();
+            app.MapHealthChecks("/healthcheck");
+
+            app.Run();
+        }
+        catch (Exception ex)
         {
-            app.UseSwagger();
-            app.UseSwaggerUI();
+            Log.Fatal(ex, "Application start-up failed");
         }
-
-        app.UseHttpsRedirection();
-
-        app.UseCors("PermitirFrontend");
-
-        app.UseAuthentication();
-        app.UseAuthorization();
-
-        app.UseMiddleware<CustomExceptionHandlingMiddleware>();
-
-        app.MapControllers();
-        app.MapHealthChecks("/healthcheck");
-
-        app.Run();
+        finally
+        {
+            Log.CloseAndFlush();
+        }
     }
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "2Y6bliJ/Ar0=",
+  "dgSpecHash": "/5D5+aXfxI0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj",
+  "projectFilePath": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\lucia\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\lucia\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
