@@ -190,7 +190,7 @@ public class Program
         }
         catch (Exception ex)
         {
-            Log.Fatal(ex, "Application start-up failed");
+            Log.Fatal(ex, "Ejecución fallida de la aplicación");
         }
         finally
         {

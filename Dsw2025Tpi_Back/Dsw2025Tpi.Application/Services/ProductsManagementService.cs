@@ -87,7 +87,6 @@ namespace Dsw2025Tpi.Application.Services;
             return paginatedProducts;
 
             //FALTA Devolver lista paginada con el numero de paginas, pagina actual y total de paginas
-
         }
 
         public async Task<ProductModel.ResponseProductModel> AddProduct(ProductModel.RequestProductModel request)

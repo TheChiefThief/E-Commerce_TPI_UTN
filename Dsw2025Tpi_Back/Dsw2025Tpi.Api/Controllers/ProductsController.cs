@@ -43,7 +43,7 @@ public class ProductsController : ControllerBase
         if (products == null || !products.Any())
         {
             _logger.LogWarning("No se encontraron productos para los filtros proporcionados.");
-            throw new NoContentException("Empty List");
+            return Ok(new List<ProductModel.ResponseProductModel>());
         }
 
         _logger.LogInformation("Se encontraron {Count} productos.", products.Count());

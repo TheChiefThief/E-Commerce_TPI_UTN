@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\Dsw2025Tpi.Api",
-    "\\Dsw2025Tpi.Api\\Controllers"
+    "\\Dsw2025Tpi.Api\\Controllers",
+    "\\Dsw2025Tpi.Application",
+    "\\Dsw2025Tpi.Application\\Services"
   ],
-  "SelectedNode": "\\Dsw2025Tpi.Api\\Program.cs",
+  "SelectedNode": "\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
   "PreviewInSolutionExplorer": false
 }

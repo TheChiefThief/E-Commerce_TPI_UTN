@@ -1,37 +1,43 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\",
+  "WorkspaceRootPath": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\services\\ordersmanagementservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\customexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\customexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\customexceptionhandlermiddleware.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\exceptions\\applicationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\exceptions\\applicationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.api\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}|Dsw2025Tpi.Api\\Dsw2025Tpi.Api.csproj|solutionrelative:dsw2025tpi.api\\controllers\\authenticatecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\dtos\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\dtos\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Dsw2025Tpi/True/SqlTable/dbo.Customers.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\dtos\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Dsw2025Tpi/True/SqlTable/dbo.Usuarios.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\dtos\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\dtos\\ordermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\services\\jwttokenservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\exceptions\\applicationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\exceptions\\applicationexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\exceptions\\unauthorizedexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\dtos\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\dtos\\productmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.application\\exceptions\\unauthorizedexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}|Dsw2025Tpi.Application\\Dsw2025Tpi.Application.csproj|solutionrelative:dsw2025tpi.application\\exceptions\\unauthorizedexception.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E34B93C6-D34C-409A-AAF4-908795FFEB4E}|Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj|c:\\users\\lucia\\desktop\\chibi\\vers\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.data\\authenticatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E34B93C6-D34C-409A-AAF4-908795FFEB4E}|Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj|c:\\users\\lucia\\desktop\\yu\\tpi-front\\dsw2025tpi_back\\dsw2025tpi.data\\authenticatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E34B93C6-D34C-409A-AAF4-908795FFEB4E}|Dsw2025Tpi.Data\\Dsw2025Tpi.Data.csproj|solutionrelative:dsw2025tpi.data\\authenticatecontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -42,52 +48,113 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ProductModel.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T16:07:26.415Z"
+              "DocumentIndex": 4,
+              "Title": "dbo.Usuarios [Datos]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Dsw2025Tpi/True/SqlTable/dbo.Usuarios.sql",
+              "ToolTip": "dbo.Usuarios [Datos]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-29T19:11:50.481Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "UnauthorizedException.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "dbo.Customers [Datos]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/Dsw2025Tpi/True/SqlTable/dbo.Customers.sql",
+              "ToolTip": "dbo.Customers [Datos]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2025-11-29T19:11:48.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthenticateController.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Api\\Controllers\\AuthenticateController.cs",
+              "ViewState": "AgIAAFQAAAAAAAAAAAAYwGgAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T16:06:34.847Z"
+              "WhenOpened": "2025-11-29T19:11:16.572Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AuthenticateContext.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Data\\AuthenticateContext.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T16:04:43.521Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "OrdersManagementService.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
+              "ViewState": "AgIAALUAAAAAAAAAAAAkwNMAAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-07T17:41:11.877Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "CustomExceptionHandlerMiddleware.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\CustomExceptionHandlerMiddleware.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\CustomExceptionHandlerMiddleware.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Api\\CustomExceptionHandlerMiddleware.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\CustomExceptionHandlerMiddleware.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Api\\CustomExceptionHandlerMiddleware.cs",
               "RelativeToolTip": "Dsw2025Tpi.Api\\CustomExceptionHandlerMiddleware.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAwwBgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-26T16:06:11.627Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
+              "Title": "UnauthorizedException.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Exceptions\\UnauthorizedException.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T16:06:34.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OrderModel.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-26T15:50:52.392Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "ApplicationException.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\ApplicationException.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\ApplicationException.cs",
               "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Exceptions\\ApplicationException.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\ApplicationException.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Exceptions\\ApplicationException.cs",
               "RelativeToolTip": "Dsw2025Tpi.Application\\Exceptions\\ApplicationException.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -96,51 +163,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "JwtTokenService.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Services\\JwtTokenService.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAAwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T16:05:09.914Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 7,
-              "Title": "AuthenticateContext.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Data\\AuthenticateContext.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Data\\AuthenticateContext.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Data\\AuthenticateContext.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Data\\AuthenticateContext.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Title": "ProductModel.cs",
+              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
+              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
+              "ToolTip": "C:\\Users\\lucia\\Desktop\\yu\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
+              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\ProductModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T16:04:43.521Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OrderModel.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Dtos\\OrderModel.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAABFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-26T15:50:52.392Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OrdersManagementService.cs",
-              "DocumentMoniker": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
-              "RelativeDocumentMoniker": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
-              "ToolTip": "C:\\Users\\lucia\\Desktop\\Chibi\\vers\\TPI-Front\\Dsw2025Tpi_Back\\Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
-              "RelativeToolTip": "Dsw2025Tpi.Application\\Services\\OrdersManagementService.cs",
-              "ViewState": "AgIAAI4AAAAAAAAAAAAkwKcAAAANAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-07T17:41:11.877Z",
+              "WhenOpened": "2025-11-26T16:07:26.415Z",
               "EditorCaption": ""
             }
           ]

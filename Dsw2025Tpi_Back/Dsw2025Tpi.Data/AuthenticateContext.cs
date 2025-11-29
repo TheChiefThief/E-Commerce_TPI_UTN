@@ -20,7 +20,10 @@ public class AuthenticateContext: IdentityDbContext
     {
         base.OnModelCreating(builder);
 
-        builder.Entity<IdentityUser>(b => { b.ToTable("Usuarios"); });
+        builder.Entity<IdentityUser>(b => 
+        { 
+            b.ToTable("Usuarios");
+        });
         builder.Entity<IdentityRole>(b => { b.ToTable("Roles"); });
         builder.Entity<IdentityUserRole<string>>(b => { b.ToTable("UsuariosRoles"); });
         builder.Entity<IdentityUserClaim<string>>(b => { b.ToTable("UsuariosClaims"); });
