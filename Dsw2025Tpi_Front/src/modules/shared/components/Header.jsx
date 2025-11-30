@@ -1,16 +1,16 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState } from 'react';
-import Button from './Button'; 
+import { useState, useEffect } from 'react';
+import Button from './Button';
 // ⚠️ Asegúrate de que las rutas sean correctas para tu proyecto
 import LoginForm from '../../auth/components/LoginForm';
-import RegisterForm from '../../auth/components/RegisterForm'; 
+import RegisterForm from '../../auth/components/RegisterForm';
 
 const Header = ({ onSearch }) => {
     const navigate = useNavigate();
     const [menuOpen, setMenuOpen] = useState(false);
-    
+
     // ESTADO: Controla qué formulario se muestra ('login', 'signup', o null/cerrado)
-    const [authFormType, setAuthFormType] = useState(null); 
+    const [authFormType, setAuthFormType] = useState(null);
 
     const handleSearch = (e) => {
         e.preventDefault();
@@ -20,8 +20,24 @@ const Header = ({ onSearch }) => {
         }
     };
 
-    // Simulación de logueo
-    const isAuthenticated = !!localStorage.getItem('userToken');
+    const [isAuthenticated, setIsAuthenticated] = useState(false);
+
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.localStorage) {
+            const checkAuth = () => {
+                const token = localStorage.getItem('userToken');
+                setIsAuthenticated(!!token);
+            };
+
+            checkAuth();
+
+            window.addEventListener('storage', checkAuth);
+
+            return () => {
+                window.removeEventListener('storage', checkAuth);
+            };
+        }
+    }, []);
 
     const handleLogout = () => {
         localStorage.removeItem('userToken');
@@ -34,22 +50,22 @@ const Header = ({ onSearch }) => {
     const closeModal = () => {
         setAuthFormType(null);
     }
-    
+
     // FUNCIÓN PARA ABRIR EL MODAL (y cerrar el menú móvil)
     const openModal = (type) => {
         setAuthFormType(type);
-        setMenuOpen(false); 
+        setMenuOpen(false);
     }
 
     // COMPONENTE ENVOLTORIO DEL MODAL (similar a la apariencia de tus imágenes)
     const ModalWrapper = ({ children, title }) => (
         // Fondo oscuro que ocupa toda la pantalla
-        <div 
+        <div
             className="fixed inset-0 bg-transparent backdrop-blur-md flex items-center justify-center z-[999]"
             onClick={closeModal}
         >
             {/* Contenedor principal del Modal */}
-            <div 
+            <div
                 // Estilos basados en tus imágenes: un contenedor blanco centrado
                 className="bg-white rounded-xl shadow-2xl p-6 w-11/12 max-w-md max-h-[90vh] overflow-y-auto"
                 onClick={e => e.stopPropagation()} // Evita que se cierre al hacer click dentro
@@ -57,8 +73,8 @@ const Header = ({ onSearch }) => {
                 {/* Título y botón de cerrar */}
                 <div className="flex justify-between items-start mb-4">
                     <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
-                    <button 
-                        onClick={closeModal} 
+                    <button
+                        onClick={closeModal}
                         className="text-gray-400 hover:text-gray-600 p-1 rounded-full"
                         aria-label="Cerrar"
                     >
@@ -74,7 +90,7 @@ const Header = ({ onSearch }) => {
     return (
         <header className="bg-white shadow-md border-b border-gray-100 sticky top-0 z-50">
             <div className="px-4 py-3">
-                
+
                 {/* Mobile Header - Código Original Mantenido */}
                 <div className="flex items-center justify-between md:hidden">
                     {/* Logo */}
@@ -133,7 +149,8 @@ const Header = ({ onSearch }) => {
                         <Link to="/" onClick={() => setMenuOpen(false)} className="block text-gray-800 hover:text-purple-600 font-medium py-2">
                             Productos
                         </Link>
-                        <Link to="/cart" onClick={() => setMenuOpen(false)} className="block text-gray-800 hover:text-purple-600 font-medium py-2">
+                        <Link to="/cart" onClick={() => setMenuOpen(false)} className="flex items-center text-gray-800 hover:text-purple-600 font-medium py-2">
+                            <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5 mr-2" />
                             Carrito de compras
                         </Link>
 
@@ -169,7 +186,7 @@ const Header = ({ onSearch }) => {
 
                 {/* Desktop Header - Código Original Mantenido */}
                 <div className="hidden md:flex items-center justify-between">
-                    
+
                     {/* Logo y Links de Navegación */}
                     <div className="flex items-center space-x-6">
                         <Link to="/" className="text-2xl font-extrabold text-gray-800 flex items-center">
@@ -184,7 +201,8 @@ const Header = ({ onSearch }) => {
                         <Link to="/" className="text-gray-800 hover:text-purple-600 font-medium">
                             Productos
                         </Link>
-                        <Link to="/cart" className="text-gray-800 hover:text-purple-600 font-medium">
+                        <Link to="/cart" className="flex items-center text-gray-800 hover:text-purple-600 font-medium">
+                            <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5 mr-2" />
                             Carrito de compras
                         </Link>
                     </div>
@@ -240,13 +258,13 @@ const Header = ({ onSearch }) => {
                     </div>
                 </div>
             </div>
-            
+
             {/* RENDERIZADO CONDICIONAL DEL MODAL */}
             {authFormType === 'login' && (
                 <ModalWrapper title="Iniciar Sesión">
                     {/* Pasamos 'onClose' para que el formulario lo use al iniciar sesión */}
-                    <LoginForm 
-                        onClose={closeModal} 
+                    <LoginForm
+                        onClose={closeModal}
                         openSignup={() => openModal('signup')} // Permite cambiar a Registro
                     />
                 </ModalWrapper>
@@ -255,13 +273,13 @@ const Header = ({ onSearch }) => {
             {authFormType === 'signup' && (
                 <ModalWrapper title="Registrar Usuario">
                     {/* Pasamos 'onClose' para que el formulario lo use al registrarse */}
-                    <RegisterForm 
-                        onClose={closeModal} 
+                    <RegisterForm
+                        onClose={closeModal}
                         openLogin={() => openModal('login')} // Permite cambiar a Login
                     />
                 </ModalWrapper>
             )}
-            
+
         </header>
     );
 };

@@ -11,7 +11,7 @@ const useAuth = () => {
   return {
     isAuthenticated: context.isAuthenticated,
     singin: context.singin,
-    signout: context.signout,
+    singout: context.singout
   };
 
 };

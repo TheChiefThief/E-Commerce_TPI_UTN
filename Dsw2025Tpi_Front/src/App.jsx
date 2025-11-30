@@ -44,7 +44,7 @@ function App() {
       ),
       children: [
         {
-          index: true,
+          path: '/admin/home',
           element: <Home />,
         },
         {

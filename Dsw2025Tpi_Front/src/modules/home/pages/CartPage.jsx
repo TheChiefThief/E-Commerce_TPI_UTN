@@ -1,5 +1,3 @@
-
-
 import { useState, useEffect, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';

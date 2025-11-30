@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Card from '../../shared/components/Card';
 import Header from '../../shared/components/Header';
 import { getProductsClient } from '../../products/services/listClient';
+import AddToCartButton from '../../shared/components/AddToCartButton';
 
 const ClientHome = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -142,13 +143,10 @@ const ClientHome = () => {
                         <button type="button" onClick={() => changeQty(product.id, 1)} className="text-gray-600 px-2">+</button>
                       </div>
 
-                      <button
-                        type="button"
+                      <AddToCartButton
+                        price={product.price ?? 0}
                         onClick={() => handleAddToCart(product)}
-                        className="px-3 py-1 rounded-md shadow-sm bg-purple-500 text-white sm:bg-purple-100 sm:text-purple-800 sm:border sm:border-purple-200"
-                      >
-                        Agregar
-                      </button>
+                      />
                     </div>
                   </div>
                 </div>

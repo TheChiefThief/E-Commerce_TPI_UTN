@@ -1,14 +1,17 @@
-import { createContext, useState } from 'react';
+import { createContext, useState, useEffect } from 'react';
 import { login } from '../services/login';
 
 const AuthContext = createContext();
 
 function AuthProvider({ children }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(() => {
-    const token = localStorage.getItem('token');
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
-    return Boolean(token);
-  });
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setIsAuthenticated(true);
+    }
+  }, []);
 
   const singout = () => {
     localStorage.clear();
