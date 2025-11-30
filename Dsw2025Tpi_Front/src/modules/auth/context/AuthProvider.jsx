@@ -4,17 +4,23 @@ import { login } from '../services/login';
 const AuthContext = createContext();
 
 function AuthProvider({ children }) {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-  useEffect(() => {
-    const token = localStorage.getItem('token');
-    if (token) {
-      setIsAuthenticated(true);
+  const [isAuthenticated, setIsAuthenticated] = useState(() => {
+    try {
+      const t = typeof window !== 'undefined' ? (window.localStorage.getItem('token') || window.localStorage.getItem('userToken')) : null;
+      return Boolean(t);
+    } catch (e) {
+      return false;
     }
-  }, []);
+  });
 
   const singout = () => {
-    localStorage.clear();
+    try {
+      localStorage.removeItem('token');
+      localStorage.removeItem('userToken');
+      localStorage.removeItem('customerId');
+    } catch (e) {
+      // ignore
+    }
     setIsAuthenticated(false);
   };
 
@@ -25,7 +31,13 @@ function AuthProvider({ children }) {
       return { error };
     }
 
-    localStorage.setItem('token', data);
+    try {
+      localStorage.setItem('token', data);
+      // keep compatibility with other parts of the app that use 'userToken'
+      localStorage.setItem('userToken', data);
+    } catch (e) {
+      // ignore
+    }
     setIsAuthenticated(true);
 
     return { error: null };

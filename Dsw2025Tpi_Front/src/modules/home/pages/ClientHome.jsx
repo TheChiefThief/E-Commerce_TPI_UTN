@@ -78,28 +78,27 @@ const ClientHome = () => {
     });
   };
 
-  const handleAddToCart = (product) => {
-    const qty = quantities[product.id] || 1;
-    const minQty = Math.max(1, qty);
+const handleAddToCart = (product) => {
+  const qty = quantities[product.id] || 1;
 
-    const stored = JSON.parse(localStorage.getItem('cart') || '[]');
-    const exists = stored.find((it) => it.id === product.id);
-    if (exists) {
-      exists.quantity = Math.max(1, (exists.quantity || 0) + minQty);
-    } else {
-      stored.push({ id: product.id, product, quantity: minQty });
-    }
+  const stored = JSON.parse(localStorage.getItem('cart') || '[]');
 
-    localStorage.setItem('cart', JSON.stringify(stored));
-  };
+  const exists = stored.find((it) => it.productId === product.id);
 
-  if (isLoading) {
-    return (
-      <div className="min-h-[60vh] flex items-center justify-center">
-        <p className="text-gray-500">Cargando...</p>
-      </div>
-    );
+  if (exists) {
+    exists.quantity += qty;
+  } else {
+    stored.push({
+      productId: product.id,
+      name: product.name,
+      price: Number(product.price) || 0,
+      quantity: qty
+    });
   }
+
+  localStorage.setItem('cart', JSON.stringify(stored));
+};
+
 
   const handleHeaderSearch = (q) => {
     setPage(1);
@@ -142,7 +141,7 @@ const ClientHome = () => {
                         <div className="w-6 text-center text-sm">{quantities[product.id] || 1}</div>
                         <button type="button" onClick={() => changeQty(product.id, 1)} className="text-gray-600 px-2">+</button>
                       </div>
-
+                          
                       <AddToCartButton
                         price={product.price ?? 0}
                         onClick={() => handleAddToCart(product)}

@@ -12,6 +12,7 @@ const productStatus = {
 
 function ListProductsPage() {
   const navigate = useNavigate();
+  const [expanded, setExpanded] = useState({});
 
   const [ searchTerm, setSearchTerm ] = useState('');
   const [ status, setStatus ] = useState(productStatus.ALL);
@@ -30,8 +31,19 @@ function ListProductsPage() {
 
       if (error) throw error;
 
-    setTotal(data.total ?? data.totalCount ?? 0);
-    setProducts(data.productItems ?? data.products ?? []);
+      // API may return several shapes:
+      // - an array of products
+      // - an object with { productItems | products, total | totalCount }
+      // Normalize both cases so admin list shows correctly.
+      if (Array.isArray(data)) {
+        setProducts(data);
+        setTotal(data.length || 0);
+      } else {
+        const items = data.productItems ?? data.products ?? [];
+        const tot = data.total ?? data.totalCount ?? items.length ?? 0;
+        setProducts(items);
+        setTotal(tot);
+      }
     } catch (error) {
       console.error(error);
     } finally {
@@ -91,12 +103,53 @@ function ListProductsPage() {
         {
           loading
             ? <span>Buscando datos...</span>
-            : products.map(product => (
-              <Card key={product.sku}>
-                <h1>{product.sku} - {product.name}</h1>
-                <p className='text-base'>Stock: {product.stockQuantity} - ${product.currentUnitPrice} - {product.isActive ? 'Activado' : 'Desactivado'}</p>
-              </Card>
-            ))
+            : products.map(product => {
+              const key = product.id ?? product.sku;
+              const isOpen = Boolean(expanded[key]);
+
+              return (
+                <Card key={product.sku}>
+                  <div className="p-4">
+                    <div className='flex items-start justify-between gap-4'>
+                      <div className='flex-1'>
+                        <div className='text-lg font-semibold'>
+                          {product.sku ? String(product.sku).replace(/^SKU-/, '') : product.sku} - {product.name}
+                        </div>
+                        <div className='text-sm text-gray-600 mt-1'>
+                          Stock: {product.stockQuantity} - {product.isActive ? 'Activado' : 'Desactivado'}
+                        </div>
+                      </div>
+
+                      <div className='flex-shrink-0 ml-4'>
+                        <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar' : 'Ver'}</Button>
+                      </div>
+                    </div>
+
+                    {isOpen && (
+                      <div className='mt-3 border-t pt-3 text-sm text-gray-700'>
+                        <div className='flex gap-4'>
+                          <div className='flex-shrink-0'>
+                            {product.image ? (
+                              <img src={product.image} alt={product.name} className='w-40 h-28 object-cover rounded-md border' />
+                            ) : (
+                              <div className='w-40 h-28 bg-gray-100 rounded-md border flex items-center justify-center text-gray-400'>No imagen</div>
+                            )}
+                          </div>
+
+                          <div className='flex-1'>
+                            <div className='mb-1'><strong>SKU completo:</strong> {product.sku ?? '-'}</div>
+                            <div className='mb-1'><strong>Precio:</strong> ${Number(product.currentUnitPrice ?? product.price ?? 0).toLocaleString()}</div>
+                            <div className='mb-1'><strong>Descripción:</strong> {product.description ?? '-'}</div>
+                            <div className='mb-1'><strong>Stock:</strong> {product.stockQuantity ?? '-'}</div>
+                            <div className='mb-1'><strong>Estado:</strong> {product.isActive ? 'Activado' : 'Desactivado'}</div>
+                          </div>
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                </Card>
+              );
+            })
         }
       </div>
 

@@ -1,5 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
+import useAuth from '../../auth/hook/useAuth';
 import Button from './Button';
 // ⚠️ Asegúrate de que las rutas sean correctas para tu proyecto
 import LoginForm from '../../auth/components/LoginForm';
@@ -20,28 +21,15 @@ const Header = ({ onSearch }) => {
         }
     };
 
-    const [isAuthenticated, setIsAuthenticated] = useState(false);
-
-    useEffect(() => {
-        if (typeof window !== 'undefined' && window.localStorage) {
-            const checkAuth = () => {
-                const token = localStorage.getItem('userToken');
-                setIsAuthenticated(!!token);
-            };
-
-            checkAuth();
-
-            window.addEventListener('storage', checkAuth);
-
-            return () => {
-                window.removeEventListener('storage', checkAuth);
-            };
-        }
-    }, []);
+    const { isAuthenticated, signout, singout } = useAuth();
 
     const handleLogout = () => {
-        localStorage.removeItem('userToken');
-        localStorage.removeItem('customerId');
+        // call provider signout (supports both names)
+        if (typeof signout === 'function') signout();
+        if (typeof singout === 'function') singout();
+        // also clear any legacy keys
+        try { localStorage.removeItem('userToken'); } catch(e) {}
+        try { localStorage.removeItem('customerId'); } catch(e) {}
         setMenuOpen(false);
         navigate('/');
     };

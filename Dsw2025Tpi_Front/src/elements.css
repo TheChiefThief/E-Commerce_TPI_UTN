@@ -1,17 +1,17 @@
 @import "tailwindcss";
 
 @layer base {
-  button {
+button {
     @apply p-1 cursor-pointer rounded-md shadow overflow-hidden;
-  }
+}
 
-  input {
+input {
     @apply border border-gray-200 rounded-md p-1.5 hover:shadow;
-  }
+}
 
-  select {
+select {
     @apply border border-gray-200 rounded-md p-1.5 hover:shadow;
-  }
+}
 }
 
 /* Add to Cart Button Styles */

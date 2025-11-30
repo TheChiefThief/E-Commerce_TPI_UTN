@@ -84,45 +84,49 @@ const LoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
 
 // --- Componente de Fila de Producto en el Carrito ---
 const CartItem = ({ item, updateQuantity, removeItem }) => {
-  const subTotal = item.quantity * item.price; 
-  // Usa "Sub Total" con el formato del TPI
-  const subTotalDisplay = subTotal.toFixed(2); 
+  const quantity = Number(item.quantity) || 0;
+  const price = Number(item.price) || 0;
+  const subTotal = quantity * price;
+  const subTotalDisplay = subTotal.toFixed(2);
 
   return (
     <Card className="flex flex-col sm:flex-row justify-between items-center p-4">
-      
-      {/* Columna Izquierda: Nombre, Cantidad de productos, Sub Total */}
+
       <div className="flex-grow mb-3 sm:mb-0">
-        <h3 className="text-xl font-bold text-gray-800">{item.name || "Nombre de producto"}</h3>
+        <h3 className="text-xl font-bold text-gray-800">
+          {item.name || "Nombre de producto"}
+        </h3>
+
         <p className="text-sm text-gray-600">
-            Cantidad de productos: #
-            <span className='ml-4'>Sub Total: ${subTotalDisplay}</span> 
+          Cantidad de productos: {quantity}
+          <span className="ml-4">Sub Total: ${subTotalDisplay}</span>
         </p>
       </div>
 
-      {/* Columna Derecha: Controles y Botón Borrar */}
       <div className="flex items-center space-x-3">
-        {/* Botón Restar */}
+        {/* Restar */}
         <button
-          onClick={() => updateQuantity(item.productId, item.quantity - 1)}
+          onClick={() => updateQuantity(item.productId, quantity - 1)}
           className="text-gray-500 hover:text-gray-700 font-bold px-2 py-1 border rounded-md"
-          disabled={item.quantity <= 0} // Permitir 0, pero el + solo activa si es > 0
+          disabled={quantity <= 0}
         >
           −
         </button>
-        {/* Cantidad actual (simulando el 0 de la imagen) */}
-        <span className="w-6 text-center text-lg">{item.quantity}</span>
-        {/* Botón Sumar */}
+
+        <span className="w-6 text-center text-lg">{quantity}</span>
+
+        {/* Sumar */}
         <button
-          onClick={() => updateQuantity(item.productId, item.quantity + 1)}
+          onClick={() => updateQuantity(item.productId, quantity + 1)}
           className="text-gray-500 hover:text-gray-700 font-bold px-2 py-1 border rounded-md"
         >
           +
         </button>
-        {/* Botón Borrar */}
+
+        {/* Borrar */}
         <Button
           onClick={() => removeItem(item.productId)}
-          variant="default" // bg-purple-200
+          variant="default"
           className="py-1 px-3 text-purple-700 font-medium"
         >
           Borrar
@@ -136,184 +140,160 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
 // --- Componente Principal CartPage ---
 function CartPage() {
   const navigate = useNavigate();
-  // Los datos se cargan desde localStorage, key 'cart' [cite: 604]
   const [cartItems, setCartItems] = useState([]);
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // Cargar el carrito desde localStorage al montar
   useEffect(() => {
-    const savedCart = localStorage.getItem('cart');
-    if (savedCart) {
-      setCartItems(JSON.parse(savedCart));
+    const saved = localStorage.getItem("cart");
+    if (saved) {
+      const parsed = JSON.parse(saved).map(item => ({
+        ...item,
+        quantity: Number(item.quantity) || 0,
+        price: Number(item.price) || 0
+      }));
+      setCartItems(parsed);
     }
   }, []);
 
-  // Calcular totales
   const { totalItems, totalAmount } = useMemo(() => {
-    const calculatedItems = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-    const calculatedAmount = cartItems.reduce((sum, item) => sum + (item.quantity * item.price), 0);
-    return {
-      totalItems: calculatedItems,
-      totalAmount: calculatedAmount,
-    };
+    const items = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+    const amount = cartItems.reduce((sum, item) => sum + item.quantity * item.price, 0);
+    return { totalItems: items, totalAmount: amount };
   }, [cartItems]);
 
-  // Persistir cambios
   const saveCart = (newCart) => {
     setCartItems(newCart);
-    localStorage.setItem('cart', JSON.stringify(newCart));
+    localStorage.setItem("cart", JSON.stringify(newCart));
   };
-  
-  // Lógica para actualizar la cantidad
+
   const updateQuantity = (productId, newQuantity) => {
-    // Si la nueva cantidad es 0, no la eliminamos, simplemente la seteamos en 0
-    const newCart = cartItems.map(item => 
-      item.productId === productId ? { ...item, quantity: Math.max(0, newQuantity) } : item
+    const updated = cartItems.map(item =>
+      item.productId === productId
+        ? { ...item, quantity: Math.max(0, Number(newQuantity) || 0) }
+        : item
     );
-    saveCart(newCart);
+    saveCart(updated);
   };
 
-  // Lógica para eliminar un producto (elimina la fila completamente)
   const removeItem = (productId) => {
-    const newCart = cartItems.filter(item => item.productId !== productId);
-    saveCart(newCart);
+    const filtered = cartItems.filter(item => item.productId !== productId);
+    saveCart(filtered);
   };
 
-  // Función para enviar la orden a la API
   const processOrder = async () => {
-    const customerId = localStorage.getItem('customerId');
-    
-    // NOTA: Si falta el customerId después del login, el flujo falla.
+    const customerId = localStorage.getItem("customerId");
     if (!customerId) {
-        alert("Error de autenticación. Por favor, vuelve a iniciar sesión.");
-        localStorage.removeItem('userToken');
-        setIsLoginModalOpen(true);
-        return;
+      alert("Error de autenticación. Por favor inicia sesión nuevamente.");
+      setIsLoginModalOpen(true);
+      return;
     }
 
     const orderData = {
-      customerId: customerId, 
-      shippingAddress: 'Dirección por defecto: C/ Ejemplo, 123',
-      billingAddress: 'Dirección por defecto: C/ Ejemplo, 123',
-      orderItems: cartItems.filter(item => item.quantity > 0).map(item => ({
-        productId: item.productId,
-        quantity: item.quantity,
-      })),
+      customerId,
+      shippingAddress: "Dirección por defecto",
+      billingAddress: "Dirección por defecto",
+      orderItems: cartItems
+        .filter(i => i.quantity > 0)
+        .map(i => ({
+          productId: i.productId,
+          quantity: i.quantity
+        }))
     };
 
     try {
       setIsProcessing(true);
-      // *** Aquí iría la llamada REAL a la API POST /api/orders *** [cite: 606]
-      console.log('Enviando orden:', orderData);
-      
-      // Simulación de respuesta exitosa
-      await new Promise(resolve => setTimeout(resolve, 1000)); 
-      
-      alert('¡Orden creada exitosamente! Redirigiendo a Productos.');
-      
-      // Limpiar localStorage, resetear clave 'cart', y redirigir [cite: 607]
-      localStorage.removeItem('cart'); 
-      setCartItems([]); 
-      navigate('/'); 
+      await new Promise(res => setTimeout(res, 1000));
 
-    } catch (error) {
-      console.error(error);
-      alert(`Error al procesar la orden: ${error.message || "Fallo de conexión o stock insuficiente."}`);
+      alert("Orden creada exitosamente");
+
+      localStorage.removeItem("cart");
+      setCartItems([]);
+      navigate("/");
+    } catch (err) {
+      alert("Error procesando la orden");
     } finally {
       setIsProcessing(false);
     }
   };
-  
-  // Lógica de Checkout (Finalizar Compra)
+
   const handleCheckout = () => {
-    const userIsLoggedIn = !!localStorage.getItem('userToken'); 
-    
     if (cartItems.length === 0 || totalItems === 0) {
-        alert("El carrito está vacío. Agrega productos para continuar.");
-        return;
+      alert("Tu carrito está vacío.");
+      return;
     }
 
-    if (userIsLoggedIn) {
-      // Flujo: Usuario ya logeado: se envia la informacion a '/api/orders' [cite: 606]
-      processOrder(); 
-    } else {
-      // Flujo: Usuario no logeado: debe abril una modal [cite: 607]
-      setIsLoginModalOpen(true); 
-    }
+    const isLogged = !!localStorage.getItem("userToken");
+
+    if (isLogged) processOrder();
+    else setIsLoginModalOpen(true);
   };
 
-  // Se ejecuta después de que el usuario se loguea en el modal
   const handleLoginSuccess = () => {
-    setIsLoginModalOpen(false); 
-    // Al cerrarse la modal debe enviar los datos a '/api/orders' automáticamente [cite: 607]
-    processOrder(); 
+    setIsLoginModalOpen(false);
+    processOrder();
   };
 
   return (
     <div className="min-h-screen bg-gray-50">
-      {/* Usamos Header para la barra superior (Productos, Carrito, Login, Search) */}
-      <Header /> 
-      <main className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
-        
-        {/* Columna Izquierda: Listado de Ítems del Carrito */}
-        <div className="lg:col-span-2 space-y-4">
-          <h2 className="sr-only">Listado de Productos en Carrito</h2>
+      <Header />
 
+      <main className="container mx-auto px-4 py-8 grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div className="lg:col-span-2 space-y-4">
           {cartItems.length > 0 ? (
             cartItems.map(item => (
-              <CartItem 
+              <CartItem
                 key={item.productId}
-                item={item} 
-                updateQuantity={updateQuantity} 
-                removeItem={removeItem} 
+                item={item}
+                updateQuantity={updateQuantity}
+                removeItem={removeItem}
               />
             ))
           ) : (
             <Card className="text-center p-10">
               <p className="text-xl text-gray-600">Tu carrito está vacío.</p>
-              <Button onClick={() => navigate('/')} className="mt-4">
-                Volver a Productos
-              </Button>
+              <Button onClick={() => navigate("/")}>Volver a Productos</Button>
             </Card>
           )}
         </div>
 
-        {/* Columna Derecha: Detalle del Pedido */}
         <div className="lg:col-span-1">
           <Card className="p-6 bg-white">
-            <h2 className="text-xl font-bold mb-4 text-gray-800">Detalle de pedido</h2>
-            
+            <h2 className="text-xl font-bold mb-4">Detalle de pedido</h2>
+
             <div className="space-y-2">
               <p className="flex justify-between text-base">
-                <span>Cantidad de en total: #</span> {/* Valor fijo como en la imagen */}
+                <span>Cantidad total:</span>
+                <span>{totalItems}</span>
               </p>
+
               <p className="flex justify-between text-lg font-bold">
                 <span>Total a pagar:</span>
                 <span>${totalAmount.toFixed(2)}</span>
               </p>
             </div>
-            
+
             <Button
               onClick={handleCheckout}
               variant="default"
               className="w-full mt-6 py-3 font-bold text-purple-700"
-              disabled={cartItems.length === 0 || totalItems === 0 || isProcessing}
+              disabled={totalItems === 0 || isProcessing}
             >
-              {isProcessing ? 'Procesando...' : 'Finalizar Compra'}
+              {isProcessing ? "Procesando..." : "Finalizar Compra"}
             </Button>
           </Card>
         </div>
       </main>
-      
-      {/* Modal de Login (Aparece si el usuario no está logueado y presiona Finalizar Compra) */}
-      <LoginModal 
-        isOpen={isLoginModalOpen} 
-        onClose={() => setIsLoginModalOpen(false)} 
+
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
         onLoginSuccess={handleLoginSuccess}
       />
     </div>
   );
 }
+
 
 export default CartPage;
