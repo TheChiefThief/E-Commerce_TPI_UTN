@@ -3,6 +3,7 @@ import Card from '../../shared/components/Card';
 import Header from '../../shared/components/Header';
 import { getProductsClient } from '../../products/services/listClient';
 import AddToCartButton from '../../shared/components/AddToCartButton';
+import { useCart } from '../../shared/context/CartProvider';
 
 const ClientHome = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -78,19 +79,11 @@ const ClientHome = () => {
     });
   };
 
+  const { addToCart } = useCart();
   const handleAddToCart = (product) => {
     const qty = quantities[product.id] || 1;
     const minQty = Math.max(1, qty);
-
-    const stored = JSON.parse(localStorage.getItem('cart') || '[]');
-    const exists = stored.find((it) => it.id === product.id);
-    if (exists) {
-      exists.quantity = Math.max(1, (exists.quantity || 0) + minQty);
-    } else {
-      stored.push({ id: product.id, product, quantity: minQty });
-    }
-
-    localStorage.setItem('cart', JSON.stringify(stored));
+    addToCart(product, minQty);
   };
 
   if (isLoading) {

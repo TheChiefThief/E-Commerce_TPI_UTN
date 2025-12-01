@@ -1,4 +1,5 @@
 import { useState, useEffect, useMemo } from 'react';
+import { useCart } from '../../shared/context/CartProvider';
 import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
@@ -141,47 +142,15 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
 // --- Componente Principal CartPage ---
 function CartPage() {
   const navigate = useNavigate();
-  const [cartItems, setCartItems] = useState([]);
+  const { cartItems, totalItems, totalAmount, updateQuantity, removeItem, clearCart } = useCart();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  useEffect(() => {
-    const saved = localStorage.getItem("cart");
-    if (saved) {
-      const parsed = JSON.parse(saved).map(item => ({
-        ...item,
-        quantity: Number(item.quantity) || 0,
-        price: Number(item.product?.currentUnitPrice) || Number(item.price) || 0,
-        productId: item.productId || item.id
-      }));
-      setCartItems(parsed);
-    }
-  }, []);
+  // Cart items now come from useCart and are persisted there
 
-  const { totalItems, totalAmount } = useMemo(() => {
-    const items = cartItems.reduce((sum, item) => sum + item.quantity, 0);
-    const amount = cartItems.reduce((sum, item) => sum + item.quantity * item.price, 0);
-    return { totalItems: items, totalAmount: amount };
-  }, [cartItems]);
+  // totalItems and totalAmount now come from the cart context
 
-  const saveCart = (newCart) => {
-    setCartItems(newCart);
-    localStorage.setItem("cart", JSON.stringify(newCart));
-  };
-
-  const updateQuantity = (productId, newQuantity) => {
-    const updated = cartItems.map(item =>
-      (item.productId === productId || item.id === productId)
-        ? { ...item, quantity: Math.max(0, Number(newQuantity) || 0) }
-        : item
-    );
-    saveCart(updated);
-  };
-
-  const removeItem = (productId) => {
-    const filtered = cartItems.filter(item => item.productId !== productId && item.id !== productId);
-    saveCart(filtered);
-  };
+  // updateQuantity/removeItem are provided by context
 
   const processOrder = async () => {
     const customerId = localStorage.getItem("customerId");
@@ -209,8 +178,7 @@ function CartPage() {
 
       alert("Orden creada exitosamente");
 
-      localStorage.removeItem("cart");
-      setCartItems([]);
+      clearCart();
       navigate("/");
     } catch (err) {
       alert("Error procesando la orden");

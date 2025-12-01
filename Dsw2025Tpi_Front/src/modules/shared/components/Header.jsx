@@ -5,6 +5,7 @@ import Button from './Button';
 // ⚠️ Asegúrate de que las rutas sean correctas para tu proyecto
 import LoginForm from '../../auth/components/LoginForm';
 import RegisterForm from '../../auth/components/RegisterForm';
+import { useCart } from '../context/CartProvider';
 
 const Header = ({ onSearch }) => {
     const navigate = useNavigate();
@@ -22,16 +23,21 @@ const Header = ({ onSearch }) => {
     };
 
     const { isAuthenticated, signout, singout } = useAuth();
+    const { totalItems } = useCart();
 
     const handleLogout = () => {
-        // call provider signout (supports both names)
-        if (typeof signout === 'function') signout();
-        if (typeof singout === 'function') singout();
+            // Navigate to the public home page first, then clear auth tokens
+                // Use replace to avoid going back to a protected page in history
+                navigate('/', { replace: true });
+                // call provider signout (supports both names); delay slightly to avoid protected route redirect
+                setTimeout(() => {
+                    if (typeof signout === 'function') signout();
+                    if (typeof singout === 'function') singout();
+                }, 150);
         // also clear any legacy keys
         try { localStorage.removeItem('userToken'); } catch(e) {}
         try { localStorage.removeItem('customerId'); } catch(e) {}
         setMenuOpen(false);
-        navigate('/');
     };
 
     // FUNCIÓN PARA CERRAR EL MODAL
@@ -138,7 +144,12 @@ const Header = ({ onSearch }) => {
                             Productos
                         </Link>
                         <Link to="/cart" onClick={() => setMenuOpen(false)} className="flex items-center text-gray-800 hover:text-purple-600 font-medium py-2">
-                            <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5 mr-2" />
+                            <div className="relative inline-block mr-2">
+                                <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5" />
+                                {totalItems > 0 && (
+                                    <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full px-1.5">{totalItems}</span>
+                                )}
+                            </div>
                             Carrito de compras
                         </Link>
 
@@ -190,7 +201,12 @@ const Header = ({ onSearch }) => {
                             Productos
                         </Link>
                         <Link to="/cart" className="flex items-center text-gray-800 hover:text-purple-600 font-medium">
-                            <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5 mr-2" />
+                            <div className="relative inline-block mr-2">
+                                <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5" />
+                                {totalItems > 0 && (
+                                    <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full px-1.5">{totalItems}</span>
+                                )}
+                            </div>
                             Carrito de compras
                         </Link>
                     </div>

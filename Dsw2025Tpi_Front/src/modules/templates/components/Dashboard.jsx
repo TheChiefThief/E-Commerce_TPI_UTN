@@ -11,8 +11,11 @@ function Dashboard() {
   const { singout } = useAuth();
 
   const logout = () => {
-    singout();
-    navigate('/login');
+    // Navigate first so we leave the protected admin route before clearing auth
+    // Use replace to avoid going back to admin with browser back button
+    navigate('/', { replace: true });
+    // Give navigation time to complete before clearing auth (avoid ProtectedRoute redirecting to /login)
+    setTimeout(() => singout(), 150);
   };
 
   const getLinkStyles = ({ isActive }) => (
