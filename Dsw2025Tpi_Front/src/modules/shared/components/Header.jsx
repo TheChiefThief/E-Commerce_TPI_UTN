@@ -66,7 +66,7 @@ const Header = ({ onSearch }) => {
             >
                 {/* Título y botón de cerrar */}
                 <div className="flex justify-between items-start mb-4">
-                    <h2 className="text-xl font-semibold text-gray-800">{title}</h2>
+                    <h2 className="text-lg sm:text-xl font-semibold text-gray-800">{title}</h2>
                     <button
                         onClick={closeModal}
                         className="text-gray-400 hover:text-gray-600 p-1 rounded-full"
@@ -135,10 +135,10 @@ const Header = ({ onSearch }) => {
                 {menuOpen && (
                     <div className="md:hidden mt-4 space-y-3 border-t border-gray-200 pt-4">
                         {/* Links de navegación */}
-                        <Link to="/" onClick={() => setMenuOpen(false)} className="block text-gray-800 hover:text-orange-600 font-medium py-2">
+                        <Link to="/" onClick={() => setMenuOpen(false)} className="block text-base text-gray-800 hover:text-orange-600 font-medium py-2">
                             Productos
                         </Link>
-                        <Link to="/cart" onClick={() => setMenuOpen(false)} className="flex items-center text-gray-800 hover:text-orange-600 font-medium py-2">
+                        <Link to="/cart" onClick={() => setMenuOpen(false)} className="flex items-center text-base text-gray-800 hover:text-orange-600 font-medium py-2">
                             <div className="relative inline-block mr-2">
                                 <img src="/cart-outline.svg" alt="Carrito" className="w-5 h-5" />
                                 {totalItems > 0 && (
@@ -153,7 +153,7 @@ const Header = ({ onSearch }) => {
                                 <Button
                                     onClick={handleLogout}
                                     variant="secondary"
-                                    className="w-full py-2 px-4 rounded-md font-medium"
+                                    className="w-full py-2 px-4 rounded-md font-medium text-sm"
                                 >
                                     Cerrar Sesión
                                 </Button>
@@ -161,14 +161,14 @@ const Header = ({ onSearch }) => {
                                 <>
                                     <Button
                                         onClick={() => openModal('login')} // Abrir Modal
-                                        className="w-full py-2 px-4 rounded-md font-medium"
+                                        className="w-full py-2 px-4 rounded-md font-medium text-sm"
                                     >
                                         Iniciar Sesión
                                     </Button>
                                     <Button
                                         onClick={() => openModal('signup')} // Abrir Modal
                                         variant="secondary"
-                                        className="w-full py-2 px-4 rounded-md font-medium"
+                                        className="w-full py-2 px-4 rounded-md font-medium text-sm"
                                     >
                                         Registrarse
                                     </Button>
@@ -187,7 +187,7 @@ const Header = ({ onSearch }) => {
                             <img src="/LogoNombre.png" alt="Logo" className="h-20 w-auto mr-2" />
                             <span className="sr-only">E-commerce Logo</span>
                         </Link>
-                        <Link to="/" className="text-gray-800 hover:text-orange-600 font-medium">
+                        <Link to="/" className="text-base text-gray-800 hover:text-orange-600 font-medium">
                             Productos
                         </Link>
                     </div>
@@ -215,7 +215,7 @@ const Header = ({ onSearch }) => {
 
                     {/* Botones de Autenticación - Lógica de Modal Aplicada */}
                     <div className="flex items-center space-x-6">
-                        <Link to="/cart" className="flex items-center text-gray-800 hover:text-orange-600 font-medium">
+                        <Link to="/cart" className="flex items-center text-base text-gray-800 hover:text-orange-600 font-medium">
                             <div className="relative inline-block mr-2">
                                 <img src="/cart-outline.svg" alt="Carrito" className="w-8 h-8" />
                                 {totalItems > 0 && (
@@ -230,7 +230,7 @@ const Header = ({ onSearch }) => {
                                 <Button
                                     onClick={handleLogout}
                                     variant="secondary"
-                                    className="py-2 px-4 rounded-md font-medium"
+                                    className="py-2 px-4 rounded-md font-medium text-sm"
                                 >
                                     Cerrar Sesión
                                 </Button>
@@ -238,14 +238,14 @@ const Header = ({ onSearch }) => {
                                 <>
                                     <Button
                                         onClick={() => openModal('login')} // Abrir Modal
-                                        className="py-2 px-4 rounded-md font-medium"
+                                        className="py-2 px-4 rounded-md font-medium text-sm"
                                     >
                                         Iniciar Sesión
                                     </Button>
                                     <Button
                                         onClick={() => openModal('signup')} // Abrir Modal
                                         variant="secondary"
-                                        className="py-2 px-4 rounded-md font-medium"
+                                        className="py-2 px-4 rounded-md font-medium text-sm"
                                     >
                                         Registrarse
                                     </Button>

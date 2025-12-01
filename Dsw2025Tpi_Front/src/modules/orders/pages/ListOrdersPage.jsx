@@ -128,7 +128,7 @@ function ListOrdersPage() {
       <Card>
         <div className='p-4'>
           <div className='flex justify-between items-center mb-3'>
-            <h1 className='text-3xl'>Ordenes</h1>
+            <h1 className='text-2xl sm:text-3xl font-bold'>Ordenes</h1>
             <div className='flex items-center gap-3'>
               {/* Optional action buttons could go here */}
             </div>
@@ -140,13 +140,13 @@ function ListOrdersPage() {
                 placeholder='Buscar'
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className='text-[1.3rem] w-full sm:w-64'
+                className='p-2 border border-gray-300 rounded-lg text-base w-full sm:w-64'
               />
               <Button className='h-11 w-11 p-0 flex items-center justify-center' onClick={handleSearch}>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
               </Button>
             </div>
-            <select value={status} onChange={handleStatusChange} className='text-[1.3rem]'>
+            <select value={status} onChange={handleStatusChange} className='p-2 border border-gray-300 rounded-lg text-base'>
               <option value='all'>Estado de Orden</option>
               <option value='PENDING'>PENDING</option>
               <option value='PROCESSING'>PROCESSING</option>
@@ -186,7 +186,7 @@ function ListOrdersPage() {
               <div className="p-4">
                 <div className='flex items-start justify-between gap-4'>
                   <div className='flex-1'>
-                    <div className='text-lg font-semibold'>#{id ? String(id).slice(0, 8) : '#'} - {customerName}</div>
+                    <div className='text-base sm:text-lg font-semibold'>#{id ? String(id).slice(0, 8) : '#'} - {customerName}</div>
                     <div className='text-sm text-gray-600 mt-1'>{statusVal}</div>
                   </div>
 
@@ -214,12 +214,12 @@ function ListOrdersPage() {
                           const price = Number(it?.product?.currentUnitPrice ?? it?.price ?? it?.unitPrice ?? 0);
                           const sub = (qty * price).toFixed(2);
                           return (
-                            <div key={idx} className='flex items-center justify-between border rounded p-2'>
+                            <div key={idx} className='flex flex-col sm:flex-row items-start sm:items-center justify-between border rounded p-2 gap-2'>
                               <div className='flex-1'>
                                 <div className='font-semibold'>{itemName}</div>
                                 <div className='text-sm text-gray-600'>SKU: {sku}</div>
                               </div>
-                              <div className='flex flex-col items-end'>
+                              <div className='flex flex-col items-start sm:items-end w-full sm:w-auto'>
                                 <div className='text-sm'>Cantidad: {qty}</div>
                                 <div className='text-sm'>Precio: ${price.toFixed(2)}</div>
                                 <div className='text-sm font-semibold'>Subtotal: ${sub}</div>
@@ -252,7 +252,7 @@ function ListOrdersPage() {
         <button
           disabled={page === 1}
           onClick={() => setPage(page - 1)}
-          className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
+          className='bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1 rounded'
         >Anterior</button>
 
         {Array.from({ length: totalPages }, (_, i) => i + 1).map(pg => (
@@ -266,7 +266,7 @@ function ListOrdersPage() {
         <button
           disabled={!canNext}
           onClick={() => setPage(page + 1)}
-          className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
+          className='bg-gray-200 disabled:opacity-50 disabled:cursor-not-allowed px-3 py-1 rounded'
         >Siguiente</button>
 
         <select
@@ -275,7 +275,7 @@ function ListOrdersPage() {
             setPage(1);
             setPageSize(Number(evt.target.value));
           }}
-          className='ml-3 px-2 py-1'
+          className='ml-3 px-2 py-1 border border-gray-300 rounded-lg'
         >
           <option value="2">2</option>
           <option value="10">10</option>

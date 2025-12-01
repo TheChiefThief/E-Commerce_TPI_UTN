@@ -63,18 +63,18 @@ function LoginForm({ openSignup }) {
         error={errors.password?.message}
       />
 
-      <Button type='submit' className="w-full py-2 rounded-md font-medium">Iniciar Sesión</Button>
+      <Button type='submit' className="w-full py-2 rounded-md font-medium text-sm sm:text-base">Iniciar Sesión</Button>
 
       <div className="w-full text-center mt-2">
         <Button
           type="button"
           variant="secondary"
           onClick={openSignup || (() => navigate('/signup'))}
-          className="w-full py-2 rounded-md font-medium"
+          className="w-full py-2 rounded-md font-medium text-sm sm:text-base"
         >
           Registrar Usuario
         </Button>
-        {errorMessage && <p className='text-red-500 mt-2'>{errorMessage}</p>}
+        {errorMessage && <p className='text-red-500 mt-2 text-sm sm:text-base'>{errorMessage}</p>}
       </div>
     </form>
   );

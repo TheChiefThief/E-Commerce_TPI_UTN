@@ -75,11 +75,11 @@ function RegisterForm() {
                 } 
                 error={errors.email?.message} 
             />
-            <label className="block">
+            <label className="block text-sm sm:text-base">
             Rol
-            <select {...register('role')} className="block w-full mt-1">
-                <option value="USER">User</option>
-                <option value="ADMIN">Admin</option>
+            <select {...register('role')} className="block w-full mt-1 p-2 border border-gray-300 rounded-lg text-base">
+                <option value="USER">Usuario</option>
+                <option value="ADMIN">Administrador</option>
             </select>
             </label>
             <Input 
@@ -107,10 +107,11 @@ function RegisterForm() {
             />
             <Button 
                 type="submit" 
-                disabled={loading}>
+                disabled={loading}
+                className="w-full py-2 rounded-md font-medium text-sm sm:text-base">
                     {loading ? 'Creando...' : 'Crear usuario'}
             </Button>
-            {serverError && <p className="text-red-500">{serverError}</p>}
+            {serverError && <p className="text-red-500 text-sm sm:text-base">{serverError}</p>}
         
     </form>
     );

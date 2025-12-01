@@ -2,7 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Card from '../../shared/components/Card';
 import Header from '../../shared/components/Header';
 import { getProductsClient } from '../../products/services/listClient';
-
+import Button from '../../shared/components/Button';
 import AddToCartButton from '../../shared/components/AddToCartButton';
 import { useCart } from '../../shared/context/CartProvider';
 import useAuth from '../../auth/hook/useAuth';
@@ -119,16 +119,16 @@ const ClientHome = () => {
             if (visibleProducts.length === 0) {
               return (
                 <div className="col-span-full flex flex-col items-center justify-center py-12">
-                  <p className="text-gray-500 mb-4">No se encontraron productos</p>
-                  <button
+                  <p className="text-gray-500 mb-4 text-center">No se encontraron productos para tu búsqueda.</p>
+                  <Button
                     onClick={() => {
                       setSearchInput('');
                       setPage(1);
                     }}
-                    className="bg-orange-200 text-orange-800 font-semibold py-2 px-6 rounded-lg hover:bg-orange-300 transition-colors"
+                    variant="default"
                   >
                     Volver
-                  </button>
+                  </Button>
                 </div>
               );
             }
@@ -163,26 +163,26 @@ const ClientHome = () => {
 
                 <div className="p-5 flex-1 flex flex-col">
                   <div className="mb-4">
-                    <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">{product.name || product.title}</h3>
-                    <p className="text-xs text-gray-500 mt-2 line-clamp-2">{product.description?.slice(0, 60)}</p>
+                    <h3 className="text-sm sm:text-base font-semibold text-gray-900 line-clamp-2">{product.name || product.title}</h3>
+                    <p className="text-xs sm:text-sm text-gray-500 mt-2 line-clamp-2">{product.description?.slice(0, 60)}</p>
                   </div>
 
                   <div className="mt-auto pt-4 border-t border-gray-200 space-y-4">
                     <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold text-gray-900">${(product.currentUnitPrice ?? 0).toLocaleString()}</span>
+                      <span className="text-xl sm:text-2xl font-bold text-gray-900">${(product.currentUnitPrice ?? 0).toLocaleString()}</span>
                     </div>
 
-                    <div className="flex items-center gap-2">
-                      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                    <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
+                      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden justify-center">
                         <button type="button" onClick={() => changeQty(product.id, -1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition">−</button>
-                        <div className="w-8 text-center text-sm font-medium">{quantities[product.id] || 1}</div>
+                        <div className="w-10 text-center text-sm font-medium">{quantities[product.id] || 1}</div>
                         <button type="button" onClick={() => changeQty(product.id, 1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition">+</button>
                       </div>
 
                       {!isAdmin && (
                         <AddToCartButton
                           price={product.currentUnitPrice ?? 0}
-                          onClick={() => handleAddToCart(product)}
+                          onClick={() => handleAddToCart(product)} className="w-full sm:w-auto"
                         />
                       )}
                     </div>
@@ -195,9 +195,15 @@ const ClientHome = () => {
 
         {products.length > 0 && (
           <div className="mt-8 flex items-center justify-center gap-4">
-            <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-1 bg-gray-200 rounded" >Anterior</button>
-            <div>Pagina {page} / {totalPages}</div>
-            <button disabled={page >= totalPages} onClick={() => setPage((p) => p + 1)} className="px-3 py-1 bg-gray-200 rounded">Siguiente</button>
+            <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-4 py-2 bg-gray-200 rounded-lg text-sm font-medium hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed" >
+              <span className="hidden sm:inline">Anterior</span>
+              <span className="sm:hidden">&lt;</span>
+            </button>
+            <div className="text-sm text-gray-700">Página {page} / {totalPages}</div>
+            <button disabled={page >= totalPages} onClick={() => setPage((p) => p + 1)} className="px-4 py-2 bg-gray-200 rounded-lg text-sm font-medium hover:bg-gray-300 disabled:opacity-50 disabled:cursor-not-allowed">
+              <span className="hidden sm:inline">Siguiente</span>
+              <span className="sm:hidden">&gt;</span>
+            </button>
           </div>
         )}
       </div>

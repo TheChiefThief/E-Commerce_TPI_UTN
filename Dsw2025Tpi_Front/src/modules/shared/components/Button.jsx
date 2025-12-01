@@ -3,15 +3,21 @@ function Button({ children, type = 'button', variant = 'default', ...restProps }
     console.warn('type prop not supported');
   }
 
+  const baseStyle = 'py-2 px-4 rounded-md font-medium text-sm sm:text-base transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed';
+
   const variantStyle = {
-    default: 'bg-orange-200 hover:bg-orange-300 text-orange-800 transition',
-    secondary: 'bg-gray-100 hover:bg-gray-200 transition',
+    default: 'bg-orange-200 hover:bg-orange-300 text-orange-800',
+    secondary: 'bg-gray-100 hover:bg-gray-200 text-gray-800',
   };
 
   return (
     <button
       {...restProps}
-      className={`${variantStyle[variant]} ${restProps.className}`}
+      className={`
+        ${baseStyle} 
+        ${variantStyle[variant]} 
+        ${restProps.className}
+      `}
       type={type}
     >
       {children}
