@@ -78,27 +78,28 @@ const ClientHome = () => {
     });
   };
 
-const handleAddToCart = (product) => {
-  const qty = quantities[product.id] || 1;
+  const handleAddToCart = (product) => {
+    const qty = quantities[product.id] || 1;
+    const minQty = Math.max(1, qty);
 
-  const stored = JSON.parse(localStorage.getItem('cart') || '[]');
+    const stored = JSON.parse(localStorage.getItem('cart') || '[]');
+    const exists = stored.find((it) => it.id === product.id);
+    if (exists) {
+      exists.quantity = Math.max(1, (exists.quantity || 0) + minQty);
+    } else {
+      stored.push({ id: product.id, product, quantity: minQty });
+    }
 
-  const exists = stored.find((it) => it.productId === product.id);
+    localStorage.setItem('cart', JSON.stringify(stored));
+  };
 
-  if (exists) {
-    exists.quantity += qty;
-  } else {
-    stored.push({
-      productId: product.id,
-      name: product.name,
-      price: Number(product.price) || 0,
-      quantity: qty
-    });
+  if (isLoading) {
+    return (
+      <div className="min-h-[60vh] flex items-center justify-center">
+        <p className="text-gray-500">Cargando...</p>
+      </div>
+    );
   }
-
-  localStorage.setItem('cart', JSON.stringify(stored));
-};
-
 
   const handleHeaderSearch = (q) => {
     setPage(1);
@@ -115,8 +116,8 @@ const handleAddToCart = (product) => {
             <div className="col-span-full text-center text-gray-500 py-12">No se encontraron productos</div>
           ) : (
             products.map((product) => (
-              <Card key={product.id} className="flex flex-col">
-                <div className="h-56 sm:h-44 bg-gray-50 flex items-center justify-center overflow-hidden">
+              <Card key={product.id} className="flex flex-col h-full">
+                <div className="h-56 sm:h-44 bg-gray-50 flex items-center justify-center overflow-hidden rounded-t-lg">
                   {product.image ? (
                     <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
                   ) : (
@@ -124,26 +125,26 @@ const handleAddToCart = (product) => {
                   )}
                 </div>
 
-                <div className="p-4 flex-1 flex flex-col">
-                  <div className="flex items-start justify-between gap-4">
-                    <div className="flex-1">
-                      <h3 className="text-sm font-medium text-gray-900">{product.name || product.title}</h3>
-                      <p className="text-xs text-gray-500 mt-1">{product.description?.slice(0, 60)}</p>
-                    </div>
+                <div className="p-5 flex-1 flex flex-col">
+                  <div className="mb-4">
+                    <h3 className="text-sm font-semibold text-gray-900 line-clamp-2">{product.name || product.title}</h3>
+                    <p className="text-xs text-gray-500 mt-2 line-clamp-2">{product.description?.slice(0, 60)}</p>
                   </div>
 
-                  <div className="mt-auto border-t border-gray-100 pt-3 flex items-center justify-between">
-                    <div className="text-lg font-semibold text-gray-800">${product.price ?? 0}</div>
+                  <div className="mt-auto pt-4 border-t border-gray-200 space-y-4">
+                    <div className="flex items-center justify-between">
+                      <span className="text-2xl font-bold text-gray-900">${(product.currentUnitPrice ?? 0).toLocaleString()}</span>
+                    </div>
 
-                    <div className="flex items-center gap-3">
-                      <div className="flex items-center border border-gray-200 rounded-full px-2 py-1">
-                        <button type="button" onClick={() => changeQty(product.id, -1)} className="text-gray-600 px-2">-</button>
-                        <div className="w-6 text-center text-sm">{quantities[product.id] || 1}</div>
-                        <button type="button" onClick={() => changeQty(product.id, 1)} className="text-gray-600 px-2">+</button>
+                    <div className="flex items-center gap-2">
+                      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
+                        <button type="button" onClick={() => changeQty(product.id, -1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition">−</button>
+                        <div className="w-8 text-center text-sm font-medium">{quantities[product.id] || 1}</div>
+                        <button type="button" onClick={() => changeQty(product.id, 1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition">+</button>
                       </div>
-                          
+
                       <AddToCartButton
-                        price={product.price ?? 0}
+                        price={product.currentUnitPrice ?? 0}
                         onClick={() => handleAddToCart(product)}
                       />
                     </div>

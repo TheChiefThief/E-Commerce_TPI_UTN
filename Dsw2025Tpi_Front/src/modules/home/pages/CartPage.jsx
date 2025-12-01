@@ -85,7 +85,8 @@ const LoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
 // --- Componente de Fila de Producto en el Carrito ---
 const CartItem = ({ item, updateQuantity, removeItem }) => {
   const quantity = Number(item.quantity) || 0;
-  const price = Number(item.price) || 0;
+  // Obtener el precio del producto dentro del objeto item
+  const price = Number(item.product?.currentUnitPrice) || Number(item.price) || 0;
   const subTotal = quantity * price;
   const subTotalDisplay = subTotal.toFixed(2);
 
@@ -94,7 +95,7 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
 
       <div className="flex-grow mb-3 sm:mb-0">
         <h3 className="text-xl font-bold text-gray-800">
-          {item.name || "Nombre de producto"}
+          {item.product?.name || item.name || "Nombre de producto"}
         </h3>
 
         <p className="text-sm text-gray-600">
@@ -106,7 +107,7 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
       <div className="flex items-center space-x-3">
         {/* Restar */}
         <button
-          onClick={() => updateQuantity(item.productId, quantity - 1)}
+          onClick={() => updateQuantity(item.productId || item.id, quantity - 1)}
           className="text-gray-500 hover:text-gray-700 font-bold px-2 py-1 border rounded-md"
           disabled={quantity <= 0}
         >
@@ -117,7 +118,7 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
 
         {/* Sumar */}
         <button
-          onClick={() => updateQuantity(item.productId, quantity + 1)}
+          onClick={() => updateQuantity(item.productId || item.id, quantity + 1)}
           className="text-gray-500 hover:text-gray-700 font-bold px-2 py-1 border rounded-md"
         >
           +
@@ -125,7 +126,7 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
 
         {/* Borrar */}
         <Button
-          onClick={() => removeItem(item.productId)}
+          onClick={() => removeItem(item.productId || item.id)}
           variant="default"
           className="py-1 px-3 text-purple-700 font-medium"
         >
@@ -150,7 +151,8 @@ function CartPage() {
       const parsed = JSON.parse(saved).map(item => ({
         ...item,
         quantity: Number(item.quantity) || 0,
-        price: Number(item.price) || 0
+        price: Number(item.product?.currentUnitPrice) || Number(item.price) || 0,
+        productId: item.productId || item.id
       }));
       setCartItems(parsed);
     }
@@ -169,7 +171,7 @@ function CartPage() {
 
   const updateQuantity = (productId, newQuantity) => {
     const updated = cartItems.map(item =>
-      item.productId === productId
+      (item.productId === productId || item.id === productId)
         ? { ...item, quantity: Math.max(0, Number(newQuantity) || 0) }
         : item
     );
@@ -177,7 +179,7 @@ function CartPage() {
   };
 
   const removeItem = (productId) => {
-    const filtered = cartItems.filter(item => item.productId !== productId);
+    const filtered = cartItems.filter(item => item.productId !== productId && item.id !== productId);
     saveCart(filtered);
   };
 
