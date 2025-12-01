@@ -151,14 +151,15 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
 function CartPage() {
   const navigate = useNavigate();
   const { cartItems, totalItems, totalAmount, updateQuantity, removeItem, clearCart } = useCart();
+  const { isAdmin } = useAuth();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
 
-  // Cart items now come from useCart and are persisted there
-
-  // totalItems and totalAmount now come from the cart context
-
-  // updateQuantity/removeItem are provided by context
+  useEffect(() => {
+    if (isAdmin) {
+      navigate('/admin/home');
+    }
+  }, [isAdmin, navigate]);
 
   const processOrder = async () => {
     const customerId = localStorage.getItem("customerId");

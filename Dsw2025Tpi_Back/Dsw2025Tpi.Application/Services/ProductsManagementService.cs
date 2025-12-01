@@ -102,6 +102,7 @@ public class ProductsManagementService : IProductsManagementService
             throw new DuplicatedEntityException($"Ya existe un producto con Sku {request.Sku}");
         }
         var product = new Product(request.Sku, request.InternalCode, request.Name, request.Description, request.CurrentUnitPrice, request.StockQuantity);
+        _logger.LogInformation("Received ImageUrl in request: '{ImageUrl}'", request.ImageUrl);
         product.ImageUrl = request.ImageUrl;
         _logger.LogInformation("Creating product with ImageUrl: {ImageUrl}", request.ImageUrl);
         await _repository.Add(product);

@@ -13,6 +13,32 @@ function AuthProvider({ children }) {
     }
   });
 
+  const parseJwt = (token) => {
+    try {
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(window.atob(base64).split('').map(function (c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+      return JSON.parse(jsonPayload);
+    } catch (e) {
+      return null;
+    }
+  };
+
+  const [isAdmin, setIsAdmin] = useState(() => {
+    try {
+      const t = typeof window !== 'undefined' ? (window.localStorage.getItem('token') || window.localStorage.getItem('userToken')) : null;
+      if (!t) return false;
+      const payload = parseJwt(t);
+      // Check for common role claims
+      const role = payload['role'] || payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+      return role === 'Admin' || role === 'admin' || role === 'Administrator';
+    } catch (e) {
+      return false;
+    }
+  });
+
   const singout = () => {
     try {
       localStorage.removeItem('token');
@@ -22,6 +48,7 @@ function AuthProvider({ children }) {
       // ignore
     }
     setIsAuthenticated(false);
+    setIsAdmin(false);
   };
 
   const singin = async (username, password) => {
@@ -38,6 +65,10 @@ function AuthProvider({ children }) {
         localStorage.setItem('token', token);
         // keep compatibility with other parts of the app that use 'userToken'
         localStorage.setItem('userToken', token);
+
+        const payload = parseJwt(token);
+        const role = payload['role'] || payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+        setIsAdmin(role === 'Admin' || role === 'admin' || role === 'Administrator');
       }
       // if response includes customer id or user payload, store it for usage by orders
       const customerId = data && (data.customerId || (data.user && data.user.id) || (data.customer && data.customer.id));
@@ -54,11 +85,12 @@ function AuthProvider({ children }) {
 
   return (
     <AuthContext.Provider
-      value={ {
+      value={{
         isAuthenticated,
+        isAdmin,
         singin,
         singout,
-      } }
+      }}
     >
       {children}
     </AuthContext.Provider>

@@ -44,6 +44,11 @@ public class CustomExceptionHandlingMiddleware : IMiddleware
                 UnprocessableEntityException => HttpStatusCode.UnprocessableEntity,
                 InsufficientStockException => HttpStatusCode.UnprocessableEntity,
 
+                // Bad Request (400)
+                ArgumentException => HttpStatusCode.BadRequest,
+                BadRequestException => HttpStatusCode.BadRequest,
+                ValidationException => HttpStatusCode.BadRequest,
+
                 // Too Many Requests (429)
                 TooManyRequestsException => (HttpStatusCode)429,
 

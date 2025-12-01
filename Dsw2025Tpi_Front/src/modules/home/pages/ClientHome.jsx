@@ -5,8 +5,11 @@ import { getProductsClient } from '../../products/services/listClient';
 
 import AddToCartButton from '../../shared/components/AddToCartButton';
 import { useCart } from '../../shared/context/CartProvider';
+import useAuth from '../../auth/hook/useAuth';
 
 const ClientHome = () => {
+  const { addToCart } = useCart();
+  const { isAdmin } = useAuth();
   const [isLoading, setIsLoading] = useState(true);
   const [products, setProducts] = useState([]);
   const [searchInput, setSearchInput] = useState('');
@@ -86,7 +89,7 @@ const ClientHome = () => {
     });
   };
 
-  const { addToCart } = useCart();
+
   const handleAddToCart = (product) => {
     const qty = quantities[product.id] || 1;
     const minQty = Math.max(1, qty);
@@ -135,7 +138,13 @@ const ClientHome = () => {
                 <div className="h-56 sm:h-44 bg-gray-50 flex items-center justify-center overflow-hidden rounded-t-lg">
                   {product.imageUrl ? (
                     <img
-                      src={product.imageUrl.startsWith('http') || product.imageUrl.startsWith('/') ? product.imageUrl : `/${product.imageUrl}`}
+                      src={
+                        product.imageUrl.startsWith('http')
+                          ? product.imageUrl
+                          : product.imageUrl.startsWith('/')
+                            ? product.imageUrl
+                            : `/products_img/${product.imageUrl}`
+                      }
                       alt={product.name}
                       className="w-full h-full object-cover"
                       onError={(e) => {
@@ -170,10 +179,12 @@ const ClientHome = () => {
                         <button type="button" onClick={() => changeQty(product.id, 1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition">+</button>
                       </div>
 
-                      <AddToCartButton
-                        price={product.currentUnitPrice ?? 0}
-                        onClick={() => handleAddToCart(product)}
-                      />
+                      {!isAdmin && (
+                        <AddToCartButton
+                          price={product.currentUnitPrice ?? 0}
+                          onClick={() => handleAddToCart(product)}
+                        />
+                      )}
                     </div>
                   </div>
                 </div>

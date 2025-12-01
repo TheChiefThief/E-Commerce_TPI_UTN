@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Button from '../../shared/components/Button';
 import Card from '../../shared/components/Card';
@@ -24,6 +24,7 @@ function ListProductsPage() {
   const [allProducts, setAllProducts] = useState([]); // Cache all fetched products
 
   const [loading, setLoading] = useState(false);
+  const isFirstRun = useRef(true);
 
   // Fetch total count on initial mount to know exact number of pages
   useEffect(() => {
@@ -79,11 +80,33 @@ function ListProductsPage() {
     fetchProducts();
   }, [status, pageSize, pageNumber]);
 
+  // Live search with debounce
+  useEffect(() => {
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      if (pageNumber !== 1) {
+        setPageNumber(1);
+      } else {
+        fetchProducts();
+      }
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [searchTerm]);
+
   // Use exact total count (fetched on mount) to calculate pages
   const totalPages = total > 0 ? Math.ceil(total / pageSize) : 1;
 
   const handleSearch = async () => {
-    await fetchProducts();
+    if (pageNumber !== 1) {
+      setPageNumber(1);
+    } else {
+      await fetchProducts();
+    }
   };
 
   return (
@@ -157,7 +180,13 @@ function ListProductsPage() {
                         <div className='flex gap-4'>
                           <div className='flex-shrink-0'>
                             {product.imageUrl ? (
-                              <img src={product.imageUrl} alt={product.name} className='w-40 h-28 object-cover rounded-md border' />
+                              <img src={
+                                product.imageUrl.startsWith('http')
+                                  ? product.imageUrl
+                                  : product.imageUrl.startsWith('/')
+                                    ? product.imageUrl
+                                    : `/products_img/${product.imageUrl}`
+                              } alt={product.name} className='w-40 h-28 object-cover rounded-md border' />
                             ) : (
                               <div className='w-40 h-28 bg-gray-100 rounded-md border flex items-center justify-center text-gray-400'>No imagen</div>
                             )}

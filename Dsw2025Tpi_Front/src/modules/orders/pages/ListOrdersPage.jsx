@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
@@ -15,6 +15,7 @@ function ListOrdersPage() {
   const [total, setTotal] = useState(0);
   const [expanded, setExpanded] = useState({});
   const navigate = useNavigate();
+  const isFirstRun = useRef(true);
 
   const getVal = (o, ...names) => {
     for (const n of names) {
@@ -76,14 +77,35 @@ function ListOrdersPage() {
   };
 
   useEffect(() => {
-    fetchOrders({ pageNumber: page, pageS: pageSize });
+    fetchOrders({ customerName: search.trim() === '' ? null : search.trim(), statusFilter: status, pageNumber: page, pageS: pageSize });
   }, [page, pageSize]);
 
-  // When status or search changes, refetch total to compute pages accurately.
+  // When status changes, refetch total to compute pages accurately.
   useEffect(() => {
     fetchTotal({ customerName: search.trim() === '' ? null : search.trim(), statusFilter: status });
     setPage(1);
-  }, [status, search]);
+  }, [status]);
+
+  // Live search with debounce
+  useEffect(() => {
+    if (isFirstRun.current) {
+      isFirstRun.current = false;
+      return;
+    }
+
+    const timer = setTimeout(() => {
+      const customerName = search.trim() === '' ? null : search.trim();
+      fetchTotal({ customerName, statusFilter: status });
+
+      if (page !== 1) {
+        setPage(1);
+      } else {
+        fetchOrders({ customerName, statusFilter: status, pageNumber: 1, pageS: pageSize });
+      }
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, [search]);
 
   const handleSearch = (e) => {
     e && e.preventDefault();
