@@ -237,7 +237,7 @@ function ListOrdersPage() {
           <button
             key={pg}
             onClick={() => setPage(pg)}
-            className={`px-3 py-1 rounded ${page === pg ? 'bg-purple-400 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
+            className={`px-3 py-1 rounded ${page === pg ? 'bg-orange-400 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
           >{pg}</button>
         ))}
 

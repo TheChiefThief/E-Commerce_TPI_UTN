@@ -4,7 +4,7 @@ function Button({ children, type = 'button', variant = 'default', ...restProps }
   }
 
   const variantStyle = {
-    default: 'bg-purple-200 hover:bg-purple-300 transition',
+    default: 'bg-orange-200 hover:bg-orange-300 text-orange-800 transition',
     secondary: 'bg-gray-100 hover:bg-gray-200 transition',
   };
 

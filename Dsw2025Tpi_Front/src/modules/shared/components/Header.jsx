@@ -89,7 +89,7 @@ const Header = ({ onSearch }) => {
                 <div className="flex items-center justify-between md:hidden">
                     {/* Logo */}
                     <Link to="/" className="text-2xl font-extrabold text-gray-800 flex items-center">
-
+                        <img src="/LogoNombre.png" alt="Logo" className="h-12 w-auto" />
                         <span className="sr-only">E-commerce Logo</span>
                     </Link>
 
@@ -106,7 +106,7 @@ const Header = ({ onSearch }) => {
                         />
                         <button
                             type="submit"
-                            className="bg-white p-2 text-gray-500 hover:text-purple-600 transition h-full"
+                            className="bg-white p-2 text-gray-500 hover:text-orange-600 transition h-full"
                         >
                             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -135,14 +135,14 @@ const Header = ({ onSearch }) => {
                 {menuOpen && (
                     <div className="md:hidden mt-4 space-y-3 border-t border-gray-200 pt-4">
                         {/* Links de navegación */}
-                        <Link to="/" onClick={() => setMenuOpen(false)} className="block text-gray-800 hover:text-purple-600 font-medium py-2">
+                        <Link to="/" onClick={() => setMenuOpen(false)} className="block text-gray-800 hover:text-orange-600 font-medium py-2">
                             Productos
                         </Link>
-                        <Link to="/cart" onClick={() => setMenuOpen(false)} className="flex items-center text-gray-800 hover:text-purple-600 font-medium py-2">
+                        <Link to="/cart" onClick={() => setMenuOpen(false)} className="flex items-center text-gray-800 hover:text-orange-600 font-medium py-2">
                             <div className="relative inline-block mr-2">
-                                <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5" />
+                                <img src="/cart-outline.svg" alt="Carrito" className="w-5 h-5" />
                                 {totalItems > 0 && (
-                                    <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full px-1.5">{totalItems}</span>
+                                    <span className="absolute -top-2 -right-2 bg-orange-600 text-white text-xs rounded-full px-1.5">{totalItems}</span>
                                 )}
                             </div>
                             Carrito de compras
@@ -184,25 +184,11 @@ const Header = ({ onSearch }) => {
                     {/* Logo y Links de Navegación */}
                     <div className="flex items-center space-x-6">
                         <Link to="/" className="text-2xl font-extrabold text-gray-800 flex items-center">
-                            <svg className="w-6 h-6 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M4 12V4H12V12H4Z" />
-                                <path d="M4 20V12H12V20H4Z" opacity="0.7" />
-                                <path d="M12 4H20V12H12V4Z" opacity="0.5" />
-                                <path d="M12 12H20V20H12V12Z" opacity="0.3" />
-                            </svg>
+                            <img src="/LogoNombre.png" alt="Logo" className="h-20 w-auto mr-2" />
                             <span className="sr-only">E-commerce Logo</span>
                         </Link>
-                        <Link to="/" className="text-gray-800 hover:text-purple-600 font-medium">
+                        <Link to="/" className="text-gray-800 hover:text-orange-600 font-medium">
                             Productos
-                        </Link>
-                        <Link to="/cart" className="flex items-center text-gray-800 hover:text-purple-600 font-medium">
-                            <div className="relative inline-block mr-2">
-                                <img src="/cart-fill.svg" alt="Carrito" className="w-5 h-5" />
-                                {totalItems > 0 && (
-                                    <span className="absolute -top-2 -right-2 bg-purple-600 text-white text-xs rounded-full px-1.5">{totalItems}</span>
-                                )}
-                            </div>
-                            Carrito de compras
                         </Link>
                     </div>
 
@@ -219,7 +205,7 @@ const Header = ({ onSearch }) => {
                         />
                         <button
                             type="submit"
-                            className="bg-white p-2 text-gray-500 hover:text-purple-600 transition h-full"
+                            className="bg-white p-2 text-gray-500 hover:text-orange-600 transition h-full"
                         >
                             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -228,32 +214,44 @@ const Header = ({ onSearch }) => {
                     </form>
 
                     {/* Botones de Autenticación - Lógica de Modal Aplicada */}
-                    <div className="flex space-x-3">
-                        {isAuthenticated ? (
-                            <Button
-                                onClick={handleLogout}
-                                variant="secondary"
-                                className="py-2 px-4 rounded-md font-medium"
-                            >
-                                Cerrar Sesión
-                            </Button>
-                        ) : (
-                            <>
+                    <div className="flex items-center space-x-6">
+                        <Link to="/cart" className="flex items-center text-gray-800 hover:text-orange-600 font-medium">
+                            <div className="relative inline-block mr-2">
+                                <img src="/cart-outline.svg" alt="Carrito" className="w-8 h-8" />
+                                {totalItems > 0 && (
+                                    <span className="absolute -top-2 -right-2 bg-orange-600 text-white text-xs rounded-full px-1.5">{totalItems}</span>
+                                )}
+                            </div>
+                            Carrito de compras
+                        </Link>
+
+                        <div className="flex space-x-3">
+                            {isAuthenticated ? (
                                 <Button
-                                    onClick={() => openModal('login')} // Abrir Modal
-                                    className="py-2 px-4 rounded-md font-medium"
-                                >
-                                    Iniciar Sesión
-                                </Button>
-                                <Button
-                                    onClick={() => openModal('signup')} // Abrir Modal
+                                    onClick={handleLogout}
                                     variant="secondary"
                                     className="py-2 px-4 rounded-md font-medium"
                                 >
-                                    Registrarse
+                                    Cerrar Sesión
                                 </Button>
-                            </>
-                        )}
+                            ) : (
+                                <>
+                                    <Button
+                                        onClick={() => openModal('login')} // Abrir Modal
+                                        className="py-2 px-4 rounded-md font-medium"
+                                    >
+                                        Iniciar Sesión
+                                    </Button>
+                                    <Button
+                                        onClick={() => openModal('signup')} // Abrir Modal
+                                        variant="secondary"
+                                        className="py-2 px-4 rounded-md font-medium"
+                                    >
+                                        Registrarse
+                                    </Button>
+                                </>
+                            )}
+                        </div>
                     </div>
                 </div>
             </div>

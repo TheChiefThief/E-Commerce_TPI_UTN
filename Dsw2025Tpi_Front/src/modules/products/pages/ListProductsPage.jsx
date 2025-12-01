@@ -194,7 +194,7 @@ function ListProductsPage() {
           <button
             key={page}
             onClick={() => setPageNumber(page)}
-            className={`px-3 py-1 rounded ${pageNumber === page ? 'bg-purple-400 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
+            className={`px-3 py-1 rounded ${pageNumber === page ? 'bg-orange-400 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
           >
             {page}
           </button>

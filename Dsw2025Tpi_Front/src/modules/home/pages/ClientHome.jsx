@@ -122,7 +122,7 @@ const ClientHome = () => {
                       setSearchInput('');
                       setPage(1);
                     }}
-                    className="bg-purple-200 text-purple-700 font-semibold py-2 px-6 rounded-lg hover:bg-purple-300 transition-colors"
+                    className="bg-orange-200 text-orange-800 font-semibold py-2 px-6 rounded-lg hover:bg-orange-300 transition-colors"
                   >
                     Volver
                   </button>

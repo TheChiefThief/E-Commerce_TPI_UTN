@@ -134,7 +134,7 @@ select {
 
 .add-to-cart-wrapper .button:hover {
 
-    background: #e9d5ff; /* Pastel purple background on hover */
+    background: #fed7aa; /* Pastel orange background on hover */
 
 }
 
@@ -152,7 +152,7 @@ select {
 
     top: 0;
 
-    color: #6b21a8; /* Dark purple icon on hover */
+    color: #c2410c; /* Dark orange icon on hover */
 
 }
 

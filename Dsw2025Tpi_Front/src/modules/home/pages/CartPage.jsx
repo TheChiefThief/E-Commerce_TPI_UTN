@@ -3,8 +3,8 @@ import { useCart } from '../../shared/context/CartProvider';
 import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
-import Header from '../../shared/components/Header'; 
-import { postOrder } from '../../orders/services/listServices'; 
+import Header from '../../shared/components/Header';
+import { postOrder } from '../../orders/services/listServices';
 import useAuth from '../../auth/hook/useAuth';
 
 // --- Componente Modal de Login (Para usuarios no logueados) ---
@@ -39,51 +39,51 @@ const LoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
       <Card className="w-full max-w-md p-6">
         <div className="flex justify-between items-center mb-4">
-            <h2 className="text-2xl font-bold">Iniciar Sesión para Finalizar Compra</h2>
-            <button onClick={onClose} className="text-gray-500 hover:text-gray-800 font-bold text-xl">
-                &times;
-            </button>
+          <h2 className="text-2xl font-bold">Iniciar Sesión para Finalizar Compra</h2>
+          <button onClick={onClose} className="text-gray-500 hover:text-gray-800 font-bold text-xl">
+            &times;
+          </button>
         </div>
-        
+
         {/* Formulario de Login como se muestra en la página 11 del TPI */}
         <form onSubmit={handleLogin} className='space-y-4'>
           <div>
             <label className="block text-gray-700 font-medium mb-1">Usuario</label>
-            <input 
-              type="text" 
-              value={username} 
-              onChange={(e) => setUsername(e.target.value)} 
+            <input
+              type="text"
+              value={username}
+              onChange={(e) => setUsername(e.target.value)}
               className="w-full p-2 border border-gray-300 rounded-lg text-lg"
               required
             />
           </div>
           <div>
             <label className="block text-gray-700 font-medium mb-1">Password</label>
-            <input 
-              type="password" 
-              value={password} 
-              onChange={(e) => setPassword(e.target.value)} 
+            <input
+              type="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="w-full p-2 border border-gray-300 rounded-lg text-lg"
               required
             />
           </div>
-          <Button 
-            type="submit" 
-            variant="default" // bg-purple-200
-            className="w-full py-2 font-semibold text-purple-700"
+          <Button
+            type="submit"
+            variant="default" // bg-orange-200
+            className="w-full py-2 font-semibold text-orange-800"
           >
             Iniciar Sesión
           </Button>
           {errorMessage && <p className="text-red-500">{errorMessage}</p>}
         </form>
-        
+
         {/* Botón Registrar Usuario (simulado, debería navegar a /signup) */}
-        <Button 
-            onClick={() => navigate('/signup')} 
-            variant="secondary" // bg-gray-100
-            className="w-full py-2 font-semibold mt-2 text-gray-700"
+        <Button
+          onClick={() => navigate('/signup')}
+          variant="secondary" // bg-gray-100
+          className="w-full py-2 font-semibold mt-2 text-gray-700"
         >
-            Registrar Usuario
+          Registrar Usuario
         </Button>
       </Card>
     </div>
@@ -137,7 +137,7 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
         <Button
           onClick={() => removeItem(item.productId || item.id)}
           variant="default"
-          className="py-1 px-3 text-purple-700 font-medium"
+          className="py-1 px-3 text-orange-800 font-medium"
         >
           Borrar
         </Button>
@@ -278,7 +278,7 @@ function CartPage() {
             <Button
               onClick={handleCheckout}
               variant="default"
-              className="w-full mt-6 py-3 font-bold text-purple-700"
+              className="w-full mt-6 py-3 font-bold text-orange-800"
               disabled={totalItems === 0 || isProcessing}
             >
               {isProcessing ? "Procesando..." : "Finalizar Compra"}

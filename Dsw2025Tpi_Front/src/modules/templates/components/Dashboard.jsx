@@ -22,7 +22,7 @@ function Dashboard() {
     `
       pl-4 w-full block  pt-4 pb-4 rounded-4xl transition hover:bg-gray-100
       ${isActive
-      ? 'bg-purple-200 hover:bg-purple-100 '
+      ? 'bg-orange-200 hover:bg-orange-100 text-orange-800 '
       : ''
     }
     `
