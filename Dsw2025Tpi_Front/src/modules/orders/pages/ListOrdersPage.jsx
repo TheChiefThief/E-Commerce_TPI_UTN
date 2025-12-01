@@ -141,126 +141,126 @@ function ListOrdersPage() {
       </Card>
 
       <div className='mt-4 flex flex-col gap-4'>
-          {!loading && orders.length === 0 && (
-            <div className='p-6 text-center text-gray-600'>
-              {status && status !== 'all'
-                ? `No se encontraron ordenes con el estado ${status}`
-                : (search && search.trim() !== ''
-                  ? `No se encontraron ordenes para "${search.trim()}"`
-                  : 'No hay órdenes')
-              }
-            </div>
-          )}
+        {!loading && orders.length === 0 && (
+          <div className='p-6 text-center text-gray-600'>
+            {status && status !== 'all'
+              ? `No se encontraron ordenes con el estado ${status}`
+              : (search && search.trim() !== ''
+                ? `No se encontraron ordenes para "${search.trim()}"`
+                : 'No hay órdenes')
+            }
+          </div>
+        )}
 
-          {!loading && orders.map((o) => {
-            const id = getVal(o, 'id', 'Id');
-            const customerName = getVal(o, 'customerName', 'CustomerName') || 'Nombre de Cliente';
-            const statusVal = getVal(o, 'status', 'Status');
-            const key = id || Math.random();
-            const isOpen = Boolean(expanded[key]);
+        {!loading && orders.map((o) => {
+          const id = getVal(o, 'id', 'Id');
+          const customerName = getVal(o, 'customerName', 'CustomerName') || 'Nombre de Cliente';
+          const statusVal = getVal(o, 'status', 'Status');
+          const key = id || Math.random();
+          const isOpen = Boolean(expanded[key]);
 
-            return (
-              <Card key={key}>
-                <div className="p-4">
-                  <div className='flex items-start justify-between gap-4'>
-                    <div className='flex-1'>
-                      <div className='text-lg font-semibold'>#{id ? String(id).slice(0, 8) : '#'} - {customerName}</div>
-                      <div className='text-sm text-gray-600 mt-1'>{statusVal}</div>
-                    </div>
-
-                    <div className='flex-shrink-0 ml-4'>
-                      <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar' : 'Ver'}</Button>
-                    </div>
+          return (
+            <Card key={key}>
+              <div className="p-4">
+                <div className='flex items-start justify-between gap-4'>
+                  <div className='flex-1'>
+                    <div className='text-lg font-semibold'>#{id ? String(id).slice(0, 8) : '#'} - {customerName}</div>
+                    <div className='text-sm text-gray-600 mt-1'>{statusVal}</div>
                   </div>
 
-                  {isOpen && (
-                      <div className='mt-3 border-t pt-3 text-sm text-gray-700'>
-                      <div className='mb-1'><strong>Estado:</strong> {statusVal}</div>
-                      <div className='mb-1'><strong>ID:</strong> {id || '-'}</div>
-                      {/* Show more details inline: addresses, timestamps, order items, totals, etc. */}
-                      <div className='mb-2'><strong>Fecha:</strong> {getVal(o, 'createdAt', 'CreatedAt', 'created') || '-'}</div>
-                      <div className='mb-2'><strong>Dirección de envío:</strong> {getVal(o, 'shippingAddress', 'ShippingAddress') ?? '-'}</div>
-                      <div className='mb-2'><strong>Dirección de facturación:</strong> {getVal(o, 'billingAddress', 'BillingAddress') ?? '-'}</div>
+                  <div className='flex-shrink-0 ml-4'>
+                    <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar' : 'Ver'}</Button>
+                  </div>
+                </div>
 
-                      <div className='mt-3'>
-                        <h4 className='text-md font-semibold mb-2'>Items</h4>
-                        <div className='space-y-2'>
-                          {(getVal(o, 'orderItems') || []).map((it, idx) => {
-                            const itemName = it?.product?.name ?? it?.name ?? it?.productName ?? 'Item';
-                            const sku = it?.product?.sku ?? it?.sku ?? it?.productSku ?? '-';
-                            const qty = it?.quantity ?? it?.qty ?? 0;
-                            const price = Number(it?.product?.currentUnitPrice ?? it?.price ?? it?.unitPrice ?? 0);
-                            const sub = (qty * price).toFixed(2);
-                            return (
-                              <div key={idx} className='flex items-center justify-between border rounded p-2'>
-                                <div className='flex-1'>
-                                  <div className='font-semibold'>{itemName}</div>
-                                  <div className='text-sm text-gray-600'>SKU: {sku}</div>
-                                </div>
-                                <div className='flex flex-col items-end'>
-                                  <div className='text-sm'>Cantidad: {qty}</div>
-                                  <div className='text-sm'>Precio: ${price.toFixed(2)}</div>
-                                  <div className='text-sm font-semibold'>Subtotal: ${sub}</div>
-                                </div>
+                {isOpen && (
+                  <div className='mt-3 border-t pt-3 text-sm text-gray-700'>
+                    <div className='mb-1'><strong>Estado:</strong> {statusVal}</div>
+                    <div className='mb-1'><strong>ID:</strong> {id || '-'}</div>
+                    {/* Show more details inline: addresses, timestamps, order items, totals, etc. */}
+                    <div className='mb-2'><strong>Fecha:</strong> {getVal(o, 'createdAt', 'CreatedAt', 'created') || '-'}</div>
+                    <div className='mb-2'><strong>Dirección de envío:</strong> {getVal(o, 'shippingAddress', 'ShippingAddress') ?? '-'}</div>
+                    <div className='mb-2'><strong>Dirección de facturación:</strong> {getVal(o, 'billingAddress', 'BillingAddress') ?? '-'}</div>
+
+                    <div className='mt-3'>
+                      <h4 className='text-md font-semibold mb-2'>Items</h4>
+                      <div className='space-y-2'>
+                        {(getVal(o, 'orderItems') || []).map((it, idx) => {
+                          const itemName = it?.product?.name ?? it?.name ?? it?.productName ?? 'Item';
+                          const sku = it?.product?.sku ?? it?.sku ?? it?.productSku ?? '-';
+                          const qty = it?.quantity ?? it?.qty ?? 0;
+                          const price = Number(it?.product?.currentUnitPrice ?? it?.price ?? it?.unitPrice ?? 0);
+                          const sub = (qty * price).toFixed(2);
+                          return (
+                            <div key={idx} className='flex items-center justify-between border rounded p-2'>
+                              <div className='flex-1'>
+                                <div className='font-semibold'>{itemName}</div>
+                                <div className='text-sm text-gray-600'>SKU: {sku}</div>
                               </div>
-                            );
-                          })}
-                        </div>
-                      </div>
-
-                      <div className='mt-3 flex justify-between items-center'>
-                        <div className='text-sm text-gray-600'>Total: {getVal(o, 'total', 'amount', 'Total') ? '$' + Number(getVal(o, 'total', 'amount', 'Total')).toFixed(2) : '-'}</div>
-                        {/* change the 'Ir al detalle' to toggle the expansion if desired, but keep link if you want external page too */}
-                        <div className='flex items-center gap-2'>
-                          <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar detalle' : 'Ir al detalle'}</Button>
-                          {/* Optional: keep link to full page */}
-                          {/* <Button onClick={() => navigate(`/admin/orders/${id}`)} className='px-3 py-1'>Ver página</Button> */}
-                        </div>
+                              <div className='flex flex-col items-end'>
+                                <div className='text-sm'>Cantidad: {qty}</div>
+                                <div className='text-sm'>Precio: ${price.toFixed(2)}</div>
+                                <div className='text-sm font-semibold'>Subtotal: ${sub}</div>
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
                     </div>
-                  )}
-                </div>
-              </Card>
-            );
-          })}
-        </div>
 
-        {/* Pagination controls */}
-        <div className='flex justify-center items-center gap-2 mt-3 p-4 flex-wrap'>
+                    <div className='mt-3 flex justify-between items-center'>
+                      <div className='text-sm text-gray-600'>Total: {getVal(o, 'total', 'amount', 'Total') ? '$' + Number(getVal(o, 'total', 'amount', 'Total')).toFixed(2) : '-'}</div>
+                      {/* change the 'Ir al detalle' to toggle the expansion if desired, but keep link if you want external page too */}
+                      <div className='flex items-center gap-2'>
+                        <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar detalle' : 'Ir al detalle'}</Button>
+                        {/* Optional: keep link to full page */}
+                        {/* <Button onClick={() => navigate(`/admin/orders/${id}`)} className='px-3 py-1'>Ver página</Button> */}
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </Card>
+          );
+        })}
+      </div>
+
+      {/* Pagination controls */}
+      <div className='flex justify-center items-center gap-2 mt-3 p-4 flex-wrap'>
+        <button
+          disabled={page === 1}
+          onClick={() => setPage(page - 1)}
+          className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
+        >Anterior</button>
+
+        {Array.from({ length: totalPages }, (_, i) => i + 1).map(pg => (
           <button
-            disabled={page === 1}
-            onClick={() => setPage(page - 1)}
-            className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
-          >Anterior</button>
+            key={pg}
+            onClick={() => setPage(pg)}
+            className={`px-3 py-1 rounded ${page === pg ? 'bg-purple-400 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
+          >{pg}</button>
+        ))}
 
-          {Array.from({ length: totalPages }, (_, i) => i + 1).map(pg => (
-            <button
-              key={pg}
-              onClick={() => setPage(pg)}
-              className={`px-3 py-1 rounded ${page === pg ? 'bg-purple-400 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
-            >{pg}</button>
-          ))}
+        <button
+          disabled={!canNext}
+          onClick={() => setPage(page + 1)}
+          className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
+        >Siguiente</button>
 
-          <button
-            disabled={!canNext}
-            onClick={() => setPage(page + 1)}
-            className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
-          >Siguiente</button>
-
-          <select
-            value={pageSize}
-            onChange={(evt) => {
-              setPage(1);
-              setPageSize(Number(evt.target.value));
-            }}
-            className='ml-3 px-2 py-1'
-          >
-            <option value="2">2</option>
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-          </select>
-        </div>
+        <select
+          value={pageSize}
+          onChange={(evt) => {
+            setPage(1);
+            setPageSize(Number(evt.target.value));
+          }}
+          className='ml-3 px-2 py-1'
+        >
+          <option value="2">2</option>
+          <option value="10">10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+        </select>
+      </div>
     </div>
   );
 };

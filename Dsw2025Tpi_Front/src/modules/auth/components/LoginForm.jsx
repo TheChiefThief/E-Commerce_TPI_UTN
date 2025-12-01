@@ -6,7 +6,7 @@ import Button from '../../shared/components/Button';
 import useAuth from '../hook/useAuth';
 import { backendErrorMessage } from '../helpers/backendError';
 
-function LoginForm() {
+function LoginForm({ openSignup }) {
   const [errorMessage, setErrorMessage] = useState('');
   const {
     register,
@@ -45,32 +45,35 @@ function LoginForm() {
         gap-4
         
       '
-    onSubmit={handleSubmit(onValid)}
+      onSubmit={handleSubmit(onValid)}
     >
       <Input
         label='Usuario'
-        { ...register('username', {
+        {...register('username', {
           required: 'Usuario es obligatorio',
-        }) }
+        })}
         error={errors.username?.message}
       />
       <Input
         label='Contraseña'
-        { ...register('password', {
+        {...register('password', {
           required: 'Contraseña es obligatorio',
-        }) }
+        })}
         type='password'
         error={errors.password?.message}
       />
 
-      <Button type='submit'>Iniciar Sesión</Button>
+      <Button type='submit' className="w-full py-2 rounded-md font-medium">Iniciar Sesión</Button>
+
       <div className="w-full text-center mt-2">
-        <a
-          className="text-sm text-indigo-600 hover:underline cursor-pointer"
-          onClick={() => navigate('/signup')}
+        <Button
+          type="button"
+          variant="secondary"
+          onClick={openSignup || (() => navigate('/signup'))}
+          className="w-full py-2 rounded-md font-medium"
         >
           Registrar Usuario
-        </a>
+        </Button>
         {errorMessage && <p className='text-red-500 mt-2'>{errorMessage}</p>}
       </div>
     </form>

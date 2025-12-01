@@ -31,7 +31,7 @@ public class ProductsController : ControllerBase
         _logger.LogInformation("Solicitud para obtener productos recibida. Filtros: {@Request}", request);
 
         IEnumerable<ProductModel.ResponseProductModel>? products;
-        if (request != null && (request.PageNumber > 0 || request.PageSize > 0 || !string.IsNullOrWhiteSpace(request.Search)))
+        if (request != null && (request.PageNumber > 0 || request.PageSize > 0 || !string.IsNullOrWhiteSpace(request.Search) || request.IsActive.HasValue))
         {
             products = await _service.GetAllProducts(request);
         }

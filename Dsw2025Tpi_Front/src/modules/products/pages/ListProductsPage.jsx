@@ -5,23 +5,23 @@ import Card from '../../shared/components/Card';
 import { getProducts } from '../services/list';
 
 const productStatus = {
-  ALL: 'all',
-  ENABLED: 'active',   
-  DISABLED: 'inactive',   
+  ALL: '',
+  ENABLED: 'true',
+  DISABLED: 'false',
 };
 
 function ListProductsPage() {
   const navigate = useNavigate();
   const [expanded, setExpanded] = useState({});
 
-  const [ searchTerm, setSearchTerm ] = useState('');
-  const [ status, setStatus ] = useState(productStatus.ALL);
-  const [ pageNumber, setPageNumber ] = useState(1);
-  const [ pageSize, setPageSize ] = useState(10);
+  const [searchTerm, setSearchTerm] = useState('');
+  const [status, setStatus] = useState(productStatus.ALL);
+  const [pageNumber, setPageNumber] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
 
-  const [ total, setTotal ] = useState(0);
-  const [ products, setProducts ] = useState([]);
-  const [ allProducts, setAllProducts ] = useState([]); // Cache all fetched products
+  const [total, setTotal] = useState(0);
+  const [products, setProducts] = useState([]);
+  const [allProducts, setAllProducts] = useState([]); // Cache all fetched products
 
   const [loading, setLoading] = useState(false);
 
@@ -117,7 +117,7 @@ function ListProductsPage() {
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
               </Button>
             </div>
-            <select onChange={evt => setStatus(evt.target.value)} className='text-[1.3rem]'>
+            <select value={status} onChange={evt => setStatus(evt.target.value)} className='text-[1.3rem]'>
               <option value={productStatus.ALL}>Todos</option>
               <option value={productStatus.ENABLED}>Habilitados</option>
               <option value={productStatus.DISABLED}>Inhabilitados</option>
@@ -156,8 +156,8 @@ function ListProductsPage() {
                       <div className='mt-3 border-t pt-3 text-sm text-gray-700'>
                         <div className='flex gap-4'>
                           <div className='flex-shrink-0'>
-                            {product.image ? (
-                              <img src={product.image} alt={product.name} className='w-40 h-28 object-cover rounded-md border' />
+                            {product.imageUrl ? (
+                              <img src={product.imageUrl} alt={product.name} className='w-40 h-28 object-cover rounded-md border' />
                             ) : (
                               <div className='w-40 h-28 bg-gray-100 rounded-md border flex items-center justify-center text-gray-400'>No imagen</div>
                             )}

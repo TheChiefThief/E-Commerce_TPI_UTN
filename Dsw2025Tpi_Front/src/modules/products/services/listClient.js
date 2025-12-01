@@ -3,7 +3,7 @@ import { instance } from '../../shared/api/axiosInstance';
 export const getProductsClient = async (search = null, status = null, pageNumber = 1, pageSize = 12) => {
   const params = {};
   if (search) params.search = search;
-  if (status) params.status = status;
+  if (status) params.isActive = status;
   if (pageNumber) params.pageNumber = pageNumber;
   if (pageSize) params.pageSize = pageSize;
 

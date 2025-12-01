@@ -8,9 +8,9 @@ namespace Dsw2025Tpi.Application.Dtos;
 
 public record ProductModel
 {
-    public record RequestProductModel(string Sku, string InternalCode, string Name, string Description, decimal CurrentUnitPrice, int StockQuantity);
+    public record RequestProductModel(string Sku, string InternalCode, string Name, string Description, decimal CurrentUnitPrice, int StockQuantity, string? ImageUrl = null);
 
-    public record ResponseProductModel(Guid Id, string Sku, string InternalCode, string Name, string Description, decimal CurrentUnitPrice, int StockQuantity, bool IsActive);
+    public record ResponseProductModel(Guid Id, string Sku, string InternalCode, string Name, string Description, decimal CurrentUnitPrice, int StockQuantity, bool IsActive, string? ImageUrl);
 
-    public record SearchProduct(string? Search = null, int PageNumber = 1, int PageSize = 10);
+    public record SearchProduct(string? Search = null, int PageNumber = 1, int PageSize = 10, bool? IsActive = null);
 }

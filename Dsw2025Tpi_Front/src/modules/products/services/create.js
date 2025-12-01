@@ -10,5 +10,6 @@ export const createProduct = async (formData) => {
     description: formData.description,
     currentUnitPrice: formData.currentUnitPrice,
     stockQuantity: formData.stockQuantity,
+    imageUrl: formData.imageUrl,
   });
 };

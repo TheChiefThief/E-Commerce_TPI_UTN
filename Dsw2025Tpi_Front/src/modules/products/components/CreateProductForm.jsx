@@ -27,24 +27,24 @@ function CreateProductForm() {
   const navigate = useNavigate();
 
   const onValid = async (formData) => {
-    
+
     try {
-    const payload = {
-      sku: `SKU-${formData.sku}`,
-      internalCode: `INT-${formData.cui}`,
-      name: formData.name,
-      description: formData.description,
-      currentUnitPrice: Number(formData.price),
-      stockQuantity: Number(formData.stock),   
-    };
-      
+      const payload = {
+        sku: formData.sku,
+        internalCode: formData.cui,
+        name: formData.name,
+        description: formData.description,
+        currentUnitPrice: Number(formData.price),
+        stockQuantity: Number(formData.stock),
+        imageUrl: formData.imageUrl,
+      };
+
       await createProduct(payload);
 
       navigate('/admin/products');
     } catch (error) {
       if (error.response?.data?.detail) {
         const errorMessage = backendErrorMessage[error.response.data.code];
-
         setErrorBackendMessage(errorMessage);
       } else {
         setErrorBackendMessage('Contactar a Soporte');
@@ -111,12 +111,17 @@ function CreateProductForm() {
             },
           })}
         />
+        <Input
+          label='URL de Imagen'
+          {...register('imageUrl')}
+          placeholder='https://ejemplo.com/imagen.jpg'
+        />
         <div className='sm:text-end'>
           <Button type='submit' className='w-full sm:w-fit'>Crear Producto</Button>
         </div>
         {errorBackendMessage && <span className='text-red-500'>{errorBackendMessage}</span>}
-      </form>
-    </Card>
+      </form >
+    </Card >
   );
 };
 

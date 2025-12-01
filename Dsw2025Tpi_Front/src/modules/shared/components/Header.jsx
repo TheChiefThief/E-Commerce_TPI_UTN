@@ -26,17 +26,17 @@ const Header = ({ onSearch }) => {
     const { totalItems } = useCart();
 
     const handleLogout = () => {
-            // Navigate to the public home page first, then clear auth tokens
-                // Use replace to avoid going back to a protected page in history
-                navigate('/', { replace: true });
-                // call provider signout (supports both names); delay slightly to avoid protected route redirect
-                setTimeout(() => {
-                    if (typeof signout === 'function') signout();
-                    if (typeof singout === 'function') singout();
-                }, 150);
+        // Navigate to the public home page first, then clear auth tokens
+        // Use replace to avoid going back to a protected page in history
+        navigate('/', { replace: true });
+        // call provider signout (supports both names); delay slightly to avoid protected route redirect
+        setTimeout(() => {
+            if (typeof signout === 'function') signout();
+            if (typeof singout === 'function') singout();
+        }, 150);
         // also clear any legacy keys
-        try { localStorage.removeItem('userToken'); } catch(e) {}
-        try { localStorage.removeItem('customerId'); } catch(e) {}
+        try { localStorage.removeItem('userToken'); } catch (e) { }
+        try { localStorage.removeItem('customerId'); } catch (e) { }
         setMenuOpen(false);
     };
 
@@ -89,12 +89,7 @@ const Header = ({ onSearch }) => {
                 <div className="flex items-center justify-between md:hidden">
                     {/* Logo */}
                     <Link to="/" className="text-2xl font-extrabold text-gray-800 flex items-center">
-                        <svg className="w-6 h-6 mr-1" viewBox="0 0 24 24" fill="currentColor">
-                            <path d="M4 12V4H12V12H4Z" />
-                            <path d="M4 20V12H12V20H4Z" opacity="0.7" />
-                            <path d="M12 4H20V12H12V4Z" opacity="0.5" />
-                            <path d="M12 12H20V20H12V12Z" opacity="0.3" />
-                        </svg>
+
                         <span className="sr-only">E-commerce Logo</span>
                     </Link>
 

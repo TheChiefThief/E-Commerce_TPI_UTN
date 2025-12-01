@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Card from '../../shared/components/Card';
 import Header from '../../shared/components/Header';
 import { getProductsClient } from '../../products/services/listClient';
+
 import AddToCartButton from '../../shared/components/AddToCartButton';
 import { useCart } from '../../shared/context/CartProvider';
 
@@ -11,7 +12,7 @@ const ClientHome = () => {
   const [searchInput, setSearchInput] = useState('');
   const [searchTerms, setSearchTerms] = useState('');
   const [page, setPage] = useState(1);
-  const [pageSize] = useState(8);
+  const [pageSize] = useState(12);
   const [totalPages, setTotalPages] = useState(1);
   const [quantities, setQuantities] = useState({});
   const debounceRef = useRef(null);
@@ -34,27 +35,33 @@ const ClientHome = () => {
     const load = async () => {
       setIsLoading(true);
       try {
-        const { data } = await getProductsClient(searchTerms || null, null, page, pageSize);
+        // Fetch total count for pagination
+        // We fetch a large number to get the total count of active products
+        // This is a workaround because the API doesn't return total count in the paginated response
+        const totalResponse = await getProductsClient(searchTerms || null, 'true', 1, 10000);
+        let totalCount = 0;
+        if (totalResponse.data) {
+          if (Array.isArray(totalResponse.data)) {
+            totalCount = totalResponse.data.length;
+          } else if (totalResponse.data.items) {
+            totalCount = totalResponse.data.items.length;
+          }
+        }
+        setTotalPages(Math.ceil(totalCount / pageSize));
 
-        // API may return { items: [], totalPages } or an array directly
+        const { data } = await getProductsClient(searchTerms || null, 'true', page, pageSize);
+
         if (!mounted) return;
         if (data) {
           if (Array.isArray(data)) {
             setProducts(data);
-            setTotalPages(1);
           } else if (data.items) {
             setProducts(data.items);
-            setTotalPages(data.totalPages || 1);
-          } else if (data.data && Array.isArray(data.data)) {
-            setProducts(data.data);
-            setTotalPages(data.totalPages || 1);
           } else {
             setProducts([]);
-            setTotalPages(1);
           }
         } else {
           setProducts([]);
-          setTotalPages(1);
         }
       } catch (err) {
         console.error('Error cargando productos:', err);
@@ -86,6 +93,10 @@ const ClientHome = () => {
     addToCart(product, minQty);
   };
 
+  const handleHeaderSearch = (value) => {
+    setSearchInput(value);
+  };
+
   if (isLoading) {
     return (
       <div className="min-h-[60vh] flex items-center justify-center">
@@ -94,30 +105,50 @@ const ClientHome = () => {
     );
   }
 
-  const handleHeaderSearch = (q) => {
-    setPage(1);
-    setSearchInput(q || '');
-  };
-
   return (
     <>
       <Header onSearch={handleHeaderSearch} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {(() => {
             const visibleProducts = products.filter(p => Number(p.stockQuantity ?? p.stock ?? 0) >= 1);
             if (visibleProducts.length === 0) {
-              return <div className="col-span-full text-center text-gray-500 py-12">No se encontraron productos</div>;
+              return (
+                <div className="col-span-full flex flex-col items-center justify-center py-12">
+                  <p className="text-gray-500 mb-4">No se encontraron productos</p>
+                  <button
+                    onClick={() => {
+                      setSearchInput('');
+                      setPage(1);
+                    }}
+                    className="bg-purple-200 text-purple-700 font-semibold py-2 px-6 rounded-lg hover:bg-purple-300 transition-colors"
+                  >
+                    Volver
+                  </button>
+                </div>
+              );
             }
 
             return visibleProducts.map((product) => (
               <Card key={product.id} className="flex flex-col h-full">
                 <div className="h-56 sm:h-44 bg-gray-50 flex items-center justify-center overflow-hidden rounded-t-lg">
-                  {product.image ? (
-                    <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
+                  {product.imageUrl ? (
+                    <img
+                      src={product.imageUrl.startsWith('http') || product.imageUrl.startsWith('/') ? product.imageUrl : `/${product.imageUrl}`}
+                      alt={product.name}
+                      className="w-full h-full object-cover"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = '/404PC.svg';
+                        e.target.className = "w-full h-full object-contain p-4 opacity-50";
+                      }}
+                    />
                   ) : (
-                    <div className="text-gray-300">Imagen</div>
+                    <div className="text-gray-300 flex flex-col items-center">
+                      <svg className="w-12 h-12 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                      <span>Sin Imagen</span>
+                    </div>
                   )}
                 </div>
 
@@ -147,16 +178,18 @@ const ClientHome = () => {
                   </div>
                 </div>
               </Card>
-            ))
+            ));
           })()}
-      </div>
+        </div>
 
-      <div className="mt-8 flex items-center justify-center gap-4">
-        <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-1 bg-gray-200 rounded" >Anterior</button>
-        <div>Pagina {page} / {totalPages}</div>
-        <button disabled={page >= totalPages} onClick={() => setPage((p) => p + 1)} className="px-3 py-1 bg-gray-200 rounded">Siguiente</button>
+        {products.length > 0 && (
+          <div className="mt-8 flex items-center justify-center gap-4">
+            <button disabled={page <= 1} onClick={() => setPage((p) => Math.max(1, p - 1))} className="px-3 py-1 bg-gray-200 rounded" >Anterior</button>
+            <div>Pagina {page} / {totalPages}</div>
+            <button disabled={page >= totalPages} onClick={() => setPage((p) => p + 1)} className="px-3 py-1 bg-gray-200 rounded">Siguiente</button>
+          </div>
+        )}
       </div>
-    </div>
     </>
   );
 };

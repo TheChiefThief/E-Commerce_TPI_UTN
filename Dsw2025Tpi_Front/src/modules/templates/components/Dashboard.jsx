@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import useAuth from '../../auth/hook/useAuth';
@@ -30,7 +29,7 @@ function Dashboard() {
   );
 
   const renderLogoutButton = (mobile = false) => (
-    <Button className={`${mobile ? 'block w-full sm:hidden' :  'hidden sm:block' }`} onClick={logout}>Cerrar sesión</Button>
+    <Button className={`${mobile ? 'block w-full sm:hidden' : 'hidden sm:block'}`} onClick={logout}>Cerrar sesión</Button>
   );
 
   return (
@@ -58,7 +57,7 @@ function Dashboard() {
           sm:col-span-2
         "
       >
-        <span>Mi Dashboard</span>
+        <img src="/eCommerceEscaparate.png" alt="Logo" className="h-16 w-auto object-contain" />
         {renderLogoutButton()}
         <button
           className="
@@ -69,7 +68,7 @@ function Dashboard() {
             sm:hidden
           "
           onClick={() => setOpenMenu(!openMenu)}
-        >{ openMenu ? <span>&#215;</span> : <span>&#9776;</span>}</button>
+        >{openMenu ? <span>&#215;</span> : <span>&#9776;</span>}</button>
       </header>
       <aside
         className={`
