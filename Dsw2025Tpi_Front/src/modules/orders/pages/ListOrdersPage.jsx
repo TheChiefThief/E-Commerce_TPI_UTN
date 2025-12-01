@@ -11,8 +11,9 @@ function ListOrdersPage() {
   const [search, setSearch] = useState('');
   const [status, setStatus] = useState('all');
   const [page, setPage] = useState(1);
+  const [pageSize, setPageSize] = useState(10);
+  const [total, setTotal] = useState(0);
   const [expanded, setExpanded] = useState({});
-  const pageSize = 10;
   const navigate = useNavigate();
 
   const getVal = (o, ...names) => {
@@ -27,16 +28,24 @@ function ListOrdersPage() {
     return undefined;
   };
 
-  const fetchOrders = async ({ customerName = null, statusFilter = null, pageNumber = 1 } = {}) => {
+  const fetchOrders = async ({ customerName = null, statusFilter = null, pageNumber = 1, pageS = pageSize } = {}) => {
     setLoading(true);
     setError(null);
     try {
-      const { data, error: svcError } = await listOrders({ customerName, status: statusFilter === 'all' ? null : statusFilter, pageNumber, pageSize });
+      const { data, error: svcError } = await listOrders({ customerName, status: statusFilter === 'all' ? null : statusFilter, pageNumber, pageSize: pageS });
       if (svcError) {
         setError(svcError);
         setOrders([]);
       } else {
-        setOrders(Array.isArray(data) ? data : []);
+        // If server returns a structured object, try to detect items; otherwise, fallback to array
+        if (Array.isArray(data)) {
+          setOrders(data);
+        } else {
+          const items = data.items ?? data.orderItems ?? data.orders ?? [];
+          setOrders(items);
+          const totalCount = data.total ?? data.totalCount ?? items.length ?? 0;
+          setTotal(totalCount);
+        }
       }
     } catch (e) {
       setError(e);
@@ -46,23 +55,51 @@ function ListOrdersPage() {
     }
   };
 
+  // Fetch total count so we can render exact page numbers, like products list
+  const fetchTotal = async ({ customerName = null, statusFilter = null } = {}) => {
+    try {
+      const { data, error: svcError } = await listOrders({ customerName, status: statusFilter === 'all' ? null : statusFilter, pageNumber: 1, pageSize: 10000 });
+      if (svcError) {
+        setTotal(0);
+      } else {
+        if (Array.isArray(data)) {
+          setTotal(data.length);
+        } else {
+          const items = data.items ?? data.orderItems ?? data.orders ?? [];
+          const t = data.total ?? data.totalCount ?? items.length ?? 0;
+          setTotal(t);
+        }
+      }
+    } catch (e) {
+      setTotal(0);
+    }
+  };
+
   useEffect(() => {
-    fetchOrders({ pageNumber: page });
-  }, [page]);
+    fetchOrders({ pageNumber: page, pageS: pageSize });
+  }, [page, pageSize]);
+
+  // When status or search changes, refetch total to compute pages accurately.
+  useEffect(() => {
+    fetchTotal({ customerName: search.trim() === '' ? null : search.trim(), statusFilter: status });
+    setPage(1);
+  }, [status, search]);
 
   const handleSearch = (e) => {
     e && e.preventDefault();
     setPage(1);
-    fetchOrders({ customerName: search.trim() === '' ? null : search.trim(), statusFilter: status, pageNumber: 1 });
+    fetchOrders({ customerName: search.trim() === '' ? null : search.trim(), statusFilter: status, pageNumber: 1, pageS: pageSize });
   };
 
   const handleStatusChange = (e) => {
     setStatus(e.target.value);
     setPage(1);
-    fetchOrders({ customerName: search.trim() === '' ? null : search.trim(), statusFilter: e.target.value, pageNumber: 1 });
+    fetchOrders({ customerName: search.trim() === '' ? null : search.trim(), statusFilter: e.target.value, pageNumber: 1, pageS: pageSize });
   };
 
-  const canNext = orders.length === pageSize;
+  // Calculate total pages from server-provided total (if available) or fallback to page-by-page method
+  const totalPages = total > 0 ? Math.ceil(total / pageSize) : Math.max(1, page);
+  const canNext = total > 0 ? page < totalPages : orders.length === pageSize;
 
   return (
     <div>
@@ -137,12 +174,48 @@ function ListOrdersPage() {
                   </div>
 
                   {isOpen && (
-                    <div className='mt-3 border-t pt-3 text-sm text-gray-700'>
+                      <div className='mt-3 border-t pt-3 text-sm text-gray-700'>
                       <div className='mb-1'><strong>Estado:</strong> {statusVal}</div>
                       <div className='mb-1'><strong>ID:</strong> {id || '-'}</div>
-                      {/* Additional details if present */}
+                      {/* Show more details inline: addresses, timestamps, order items, totals, etc. */}
+                      <div className='mb-2'><strong>Fecha:</strong> {getVal(o, 'createdAt', 'CreatedAt', 'created') || '-'}</div>
+                      <div className='mb-2'><strong>Dirección de envío:</strong> {getVal(o, 'shippingAddress', 'ShippingAddress') ?? '-'}</div>
+                      <div className='mb-2'><strong>Dirección de facturación:</strong> {getVal(o, 'billingAddress', 'BillingAddress') ?? '-'}</div>
+
                       <div className='mt-3'>
-                        <Button onClick={() => navigate(`/admin/orders/${id}`)} className='px-3 py-1'>Ir al detalle</Button>
+                        <h4 className='text-md font-semibold mb-2'>Items</h4>
+                        <div className='space-y-2'>
+                          {(getVal(o, 'orderItems') || []).map((it, idx) => {
+                            const itemName = it?.product?.name ?? it?.name ?? it?.productName ?? 'Item';
+                            const sku = it?.product?.sku ?? it?.sku ?? it?.productSku ?? '-';
+                            const qty = it?.quantity ?? it?.qty ?? 0;
+                            const price = Number(it?.product?.currentUnitPrice ?? it?.price ?? it?.unitPrice ?? 0);
+                            const sub = (qty * price).toFixed(2);
+                            return (
+                              <div key={idx} className='flex items-center justify-between border rounded p-2'>
+                                <div className='flex-1'>
+                                  <div className='font-semibold'>{itemName}</div>
+                                  <div className='text-sm text-gray-600'>SKU: {sku}</div>
+                                </div>
+                                <div className='flex flex-col items-end'>
+                                  <div className='text-sm'>Cantidad: {qty}</div>
+                                  <div className='text-sm'>Precio: ${price.toFixed(2)}</div>
+                                  <div className='text-sm font-semibold'>Subtotal: ${sub}</div>
+                                </div>
+                              </div>
+                            );
+                          })}
+                        </div>
+                      </div>
+
+                      <div className='mt-3 flex justify-between items-center'>
+                        <div className='text-sm text-gray-600'>Total: {getVal(o, 'total', 'amount', 'Total') ? '$' + Number(getVal(o, 'total', 'amount', 'Total')).toFixed(2) : '-'}</div>
+                        {/* change the 'Ir al detalle' to toggle the expansion if desired, but keep link if you want external page too */}
+                        <div className='flex items-center gap-2'>
+                          <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar detalle' : 'Ir al detalle'}</Button>
+                          {/* Optional: keep link to full page */}
+                          {/* <Button onClick={() => navigate(`/admin/orders/${id}`)} className='px-3 py-1'>Ver página</Button> */}
+                        </div>
                       </div>
                     </div>
                   )}
@@ -153,18 +226,40 @@ function ListOrdersPage() {
         </div>
 
         {/* Pagination controls */}
-        <div className='flex items-center justify-center gap-3 mt-6'>
+        <div className='flex justify-center items-center gap-2 mt-3 p-4 flex-wrap'>
           <button
-            onClick={() => setPage((p) => Math.max(1, p - 1))}
             disabled={page === 1}
-            className='px-3 py-1 rounded disabled:opacity-50'
-          >Previous</button>
-          <div className='px-3 py-1 border rounded'>{page}</div>
+            onClick={() => setPage(page - 1)}
+            className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
+          >Anterior</button>
+
+          {Array.from({ length: totalPages }, (_, i) => i + 1).map(pg => (
+            <button
+              key={pg}
+              onClick={() => setPage(pg)}
+              className={`px-3 py-1 rounded ${page === pg ? 'bg-purple-400 text-white' : 'bg-gray-200 hover:bg-gray-300'}`}
+            >{pg}</button>
+          ))}
+
           <button
-            onClick={() => { if (canNext) setPage((p) => p + 1); }}
             disabled={!canNext}
-            className='px-3 py-1 rounded disabled:opacity-50'
-          >Next</button>
+            onClick={() => setPage(page + 1)}
+            className='bg-gray-200 disabled:bg-gray-100 px-3 py-1 rounded'
+          >Siguiente</button>
+
+          <select
+            value={pageSize}
+            onChange={(evt) => {
+              setPage(1);
+              setPageSize(Number(evt.target.value));
+            }}
+            className='ml-3 px-2 py-1'
+          >
+            <option value="2">2</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+          </select>
         </div>
     </div>
   );

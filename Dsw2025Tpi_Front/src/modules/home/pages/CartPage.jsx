@@ -117,8 +117,8 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
         {/* Restar */}
         <button
           onClick={() => updateQuantity(item.productId || item.id, quantity - 1)}
-          className="text-gray-500 hover:text-gray-700 font-bold px-2 py-1 border rounded-md"
-          disabled={quantity <= 0}
+          className="text-gray-500 hover:text-gray-700 font-bold px-2 py-1 border rounded-md disabled:text-gray-300 disabled:border-gray-200 disabled:bg-transparent disabled:cursor-not-allowed"
+          disabled={quantity <= 1}
         >
           −
         </button>
