@@ -4,27 +4,34 @@ import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
 import Header from '../../shared/components/Header'; 
-// import { postOrder } from '../../orders/services/listServices'; 
+import { postOrder } from '../../orders/services/listServices'; 
+import useAuth from '../../auth/hook/useAuth';
 
 // --- Componente Modal de Login (Para usuarios no logueados) ---
 const LoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
   const navigate = useNavigate();
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const { singin } = useAuth();
+  const [errorMessage, setErrorMessage] = useState('');
 
   if (!isOpen) return null;
 
-  const handleLogin = (e) => {
+  const handleLogin = async (e) => {
     e.preventDefault();
-    // NOTA: En la realidad, esto llamaría a /api/auth/login [cite: 607]
-    
-    // Simulación de Login Exitoso:
-    localStorage.setItem('userToken', 'fake-jwt-token');
-    localStorage.setItem('customerId', 'a1b2c3d4-e5f6-7890-1234-567890abcdef');
-    
-    // Continuar con el checkout [cite: 607]
-    onLoginSuccess();
-    onClose();
+    setErrorMessage('');
+    try {
+      const { error } = await singin(username, password);
+      if (error) {
+        setErrorMessage(error && (error.detail || error.message || error.title) || 'Error de autenticación');
+        return;
+      }
+      // login successful. call callback and close
+      onLoginSuccess();
+      onClose();
+    } catch (err) {
+      setErrorMessage('Error de autenticación: ' + (err?.message || 'Inténtalo de nuevo'));
+    }
   };
 
   return (
@@ -67,6 +74,7 @@ const LoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
           >
             Iniciar Sesión
           </Button>
+          {errorMessage && <p className="text-red-500">{errorMessage}</p>}
         </form>
         
         {/* Botón Registrar Usuario (simulado, debería navegar a /signup) */}
@@ -174,14 +182,37 @@ function CartPage() {
 
     try {
       setIsProcessing(true);
-      await new Promise(res => setTimeout(res, 1000));
 
-      alert("Orden creada exitosamente");
 
+      const { data, error, status } = await postOrder(orderData);
+      if (error) {
+        // If the API returns NotFound for the given customerId, fallback to local order creation so admin can still see it.
+        console.error('postOrder error', error, status);
+        const detail = (error && (error.detail || error.message || '')).toString();
+        const title = (error && error.title) || '';
+        const isNotFound = (status === 404) || /notfound/i.test(title) || /cliente/i.test(detail) || /cliente/i.test(title);
+        if (isNotFound) {
+          // If the server returned NotFound for the given customer, instruct the user to login or register.
+          alert('Error creando la orden: el cliente no existe en el servidor. Por favor, inicia sesión o registra un cliente válido antes de finalizar la compra.');
+          return;
+        }
+        // Show a readable error if possible and guide to login for auth issues
+        const errMsg = (error && (error.detail || error.message || error.title)) || JSON.stringify(error);
+        if (status === 401 || status === 403) {
+          alert('No autorizado: por favor inicia sesión con un usuario válido para crear la orden.');
+          setIsLoginModalOpen(true);
+          return;
+        }
+        alert('Error procesando la orden: ' + errMsg + '\nSi el problema persiste, por favor inicia sesión y verifica tu cuenta.');
+        return;
+      }
+
+      alert('Orden creada exitosamente');
       clearCart();
-      navigate("/");
+      navigate('/');
     } catch (err) {
-      alert("Error procesando la orden");
+      console.error('Unexpected error creating order', err);
+      alert('Error procesando la orden');
     } finally {
       setIsProcessing(false);
     }
@@ -193,7 +224,7 @@ function CartPage() {
       return;
     }
 
-    const isLogged = !!localStorage.getItem("userToken");
+    const isLogged = !!localStorage.getItem("token");
 
     if (isLogged) processOrder();
     else setIsLoginModalOpen(true);

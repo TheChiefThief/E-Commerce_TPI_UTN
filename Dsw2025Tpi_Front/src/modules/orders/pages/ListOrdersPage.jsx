@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Card from '../../shared/components/Card';
-import Input from '../../shared/components/Input';
 import Button from '../../shared/components/Button';
 import { listOrders } from '../services/listServices';
 
@@ -12,6 +11,7 @@ function ListOrdersPage() {
   const [search, setSearch] = useState('');
   const [status, setStatus] = useState('all');
   const [page, setPage] = useState(1);
+  const [expanded, setExpanded] = useState({});
   const pageSize = 10;
   const navigate = useNavigate();
 
@@ -67,21 +67,27 @@ function ListOrdersPage() {
   return (
     <div>
       <Card>
-        <div className='flex items-center justify-between mb-4'>
-          <h2 className='text-2xl font-bold'>Ordenes</h2>
-          <div className='flex items-center gap-3'>
-            <form onSubmit={handleSearch} className='flex items-center gap-2'>
-              <Input
+        <div className='p-4'>
+          <div className='flex justify-between items-center mb-3'>
+            <h1 className='text-3xl'>Ordenes</h1>
+            <div className='flex items-center gap-3'>
+              {/* Optional action buttons could go here */}
+            </div>
+          </div>
+
+          <div className='flex flex-col sm:flex-row gap-4'>
+            <div className='flex items-center gap-3'>
+              <input
                 placeholder='Buscar'
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className='w-64'
+                className='text-[1.3rem] w-full sm:w-64'
               />
-              <Button type='submit' className='h-11 w-11'>
+              <Button className='h-11 w-11 p-0 flex items-center justify-center' onClick={handleSearch}>
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth="0"></g><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M15.7955 15.8111L21 21M18 10.5C18 14.6421 14.6421 18 10.5 18C6.35786 18 3 14.6421 3 10.5C3 6.35786 6.35786 3 10.5 3C14.6421 3 18 6.35786 18 10.5Z" stroke="#000000" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path> </g></svg>
               </Button>
-            </form>
-            <select value={status} onChange={handleStatusChange} className='border rounded p-2'>
+            </div>
+            <select value={status} onChange={handleStatusChange} className='text-[1.3rem]'>
               <option value='all'>Estado de Orden</option>
               <option value='PENDING'>PENDING</option>
               <option value='PROCESSING'>PROCESSING</option>
@@ -95,7 +101,9 @@ function ListOrdersPage() {
         {loading && <p>Cargando órdenes...</p>}
         {error && console.error('Error cargando órdenes:', error)}
 
-        <div className='space-y-4'>
+      </Card>
+
+      <div className='mt-4 flex flex-col gap-4'>
           {!loading && orders.length === 0 && (
             <div className='p-6 text-center text-gray-600'>
               {status && status !== 'all'
@@ -111,16 +119,35 @@ function ListOrdersPage() {
             const id = getVal(o, 'id', 'Id');
             const customerName = getVal(o, 'customerName', 'CustomerName') || 'Nombre de Cliente';
             const statusVal = getVal(o, 'status', 'Status');
+            const key = id || Math.random();
+            const isOpen = Boolean(expanded[key]);
+
             return (
-              <div key={id || Math.random()} className='flex items-center justify-between p-4 border rounded-md bg-white shadow-sm'>
-                <div>
-                  <div className='text-lg font-semibold'>#{id ? String(id).slice(0, 8) : '#'} - {customerName}</div>
-                  <div className='text-sm text-gray-500'>{statusVal}</div>
+              <Card key={key}>
+                <div className="p-4">
+                  <div className='flex items-start justify-between gap-4'>
+                    <div className='flex-1'>
+                      <div className='text-lg font-semibold'>#{id ? String(id).slice(0, 8) : '#'} - {customerName}</div>
+                      <div className='text-sm text-gray-600 mt-1'>{statusVal}</div>
+                    </div>
+
+                    <div className='flex-shrink-0 ml-4'>
+                      <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar' : 'Ver'}</Button>
+                    </div>
+                  </div>
+
+                  {isOpen && (
+                    <div className='mt-3 border-t pt-3 text-sm text-gray-700'>
+                      <div className='mb-1'><strong>Estado:</strong> {statusVal}</div>
+                      <div className='mb-1'><strong>ID:</strong> {id || '-'}</div>
+                      {/* Additional details if present */}
+                      <div className='mt-3'>
+                        <Button onClick={() => navigate(`/admin/orders/${id}`)} className='px-3 py-1'>Ir al detalle</Button>
+                      </div>
+                    </div>
+                  )}
                 </div>
-                <div>
-                  <Button onClick={() => navigate(`/admin/orders/${id}`)} className='px-4'>Ver</Button>
-                </div>
-              </div>
+              </Card>
             );
           })}
         </div>
@@ -139,7 +166,6 @@ function ListOrdersPage() {
             className='px-3 py-1 rounded disabled:opacity-50'
           >Next</button>
         </div>
-      </Card>
     </div>
   );
 };

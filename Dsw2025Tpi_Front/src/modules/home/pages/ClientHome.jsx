@@ -105,10 +105,13 @@ const ClientHome = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {products.length === 0 ? (
-            <div className="col-span-full text-center text-gray-500 py-12">No se encontraron productos</div>
-          ) : (
-            products.map((product) => (
+          {(() => {
+            const visibleProducts = products.filter(p => Number(p.stockQuantity ?? p.stock ?? 0) >= 1);
+            if (visibleProducts.length === 0) {
+              return <div className="col-span-full text-center text-gray-500 py-12">No se encontraron productos</div>;
+            }
+
+            return visibleProducts.map((product) => (
               <Card key={product.id} className="flex flex-col h-full">
                 <div className="h-56 sm:h-44 bg-gray-50 flex items-center justify-center overflow-hidden rounded-t-lg">
                   {product.image ? (
@@ -145,7 +148,7 @@ const ClientHome = () => {
                 </div>
               </Card>
             ))
-          )}
+          })()}
       </div>
 
       <div className="mt-8 flex items-center justify-center gap-4">

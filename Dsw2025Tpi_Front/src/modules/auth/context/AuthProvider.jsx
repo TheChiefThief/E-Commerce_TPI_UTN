@@ -32,9 +32,18 @@ function AuthProvider({ children }) {
     }
 
     try {
-      localStorage.setItem('token', data);
-      // keep compatibility with other parts of the app that use 'userToken'
-      localStorage.setItem('userToken', data);
+      // data may be either a token string or an object containing token and other info
+      const token = data && (data.token || data.accessToken) ? (data.token || data.accessToken) : (typeof data === 'string' ? data : null);
+      if (token) {
+        localStorage.setItem('token', token);
+        // keep compatibility with other parts of the app that use 'userToken'
+        localStorage.setItem('userToken', token);
+      }
+      // if response includes customer id or user payload, store it for usage by orders
+      const customerId = data && (data.customerId || (data.user && data.user.id) || (data.customer && data.customer.id));
+      if (customerId) {
+        localStorage.setItem('customerId', customerId);
+      }
     } catch (e) {
       // ignore
     }
