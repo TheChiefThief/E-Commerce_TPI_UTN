@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
 import { listOrders } from '../services/listServices';
+import { getProductById } from '../../products/services/getById';
 
 function ListOrdersPage() {
   const [orders, setOrders] = useState([]);
@@ -14,6 +15,7 @@ function ListOrdersPage() {
   const [pageSize, setPageSize] = useState(10);
   const [total, setTotal] = useState(0);
   const [expanded, setExpanded] = useState({});
+  const [productCache, setProductCache] = useState({});
   const navigate = useNavigate();
   const isFirstRun = useRef(true);
 
@@ -27,6 +29,47 @@ function ListOrdersPage() {
       if (o[upper] !== undefined && o[upper] !== null) return o[upper];
     }
     return undefined;
+  };
+
+  const formatDateVal = (val) => {
+    try {
+      if (!val) return '-';
+      // If it's an ISO string or timestamp, convert to Date
+      const d = typeof val === 'number' ? new Date(val) : new Date(String(val));
+      if (isNaN(d.getTime())) return String(val);
+      return d.toLocaleString();
+    } catch (e) {
+      return String(val);
+    }
+  };
+
+  const isGuidLike = (val) => {
+    if (!val) return false;
+    const s = String(val).trim();
+    // UUID/GUID pattern
+    const guidRegex = /^[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}$/;
+    if (guidRegex.test(s)) return true;
+    // also test for long numeric ids
+    if (/^[0-9]{10,}$/.test(s)) return true;
+    return false;
+  };
+
+  const findInAttributes = (arr, key) => {
+    if (!Array.isArray(arr)) return undefined;
+    const k = String(key || '').toLowerCase();
+    const a = arr.find(x => {
+      const label = (x?.key ?? x?.name ?? x?.label ?? '').toString().toLowerCase();
+      return label === k;
+    });
+    return a?.value ?? a?.val ?? a?.v;
+  };
+
+  const parseNumber = (v) => {
+    if (v === undefined || v === null) return NaN;
+    if (typeof v === 'number') return v;
+    const cleaned = String(v).replace(/[^0-9.-]+/g, '');
+    if (!cleaned) return NaN;
+    return parseFloat(cleaned);
   };
 
   const fetchOrders = async ({ customerName = null, statusFilter = null, pageNumber = 1, pageS = pageSize } = {}) => {
@@ -53,6 +96,25 @@ function ListOrdersPage() {
       setOrders([]);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const handleToggleExpand = async (key, order) => {
+    setExpanded(prev => ({ ...prev, [key]: !prev[key] }));
+    // if we're expanding, prefetch product details for items that lack SKU
+    if (!expanded[key]) {
+      const items = getVal(order, 'orderItems') || [];
+      const productIdsToFetch = Array.from(new Set(items.map(it => it?.product?.id ?? it?.productId).filter(Boolean).filter(pid => !productCache[pid])));
+      if (productIdsToFetch.length > 0) {
+        for (const pid of productIdsToFetch) {
+          try {
+            const { data } = await getProductById(pid);
+            if (data) setProductCache(prev => ({ ...prev, [pid]: data }));
+          } catch (e) {
+            // ignore
+          }
+        }
+      }
     }
   };
 
@@ -176,8 +238,29 @@ function ListOrdersPage() {
 
         {!loading && orders.map((o) => {
           const id = getVal(o, 'id', 'Id');
-          const customerName = getVal(o, 'customerName', 'CustomerName') || 'Nombre de Cliente';
-          const statusVal = getVal(o, 'status', 'Status');
+            const customerName = getVal(o, 'customerName', 'CustomerName') || 'Nombre de Cliente';
+            const statusVal = getVal(o, 'status', 'Status');
+            const orderDate = formatDateVal(getVal(o, 'createdAt', 'CreatedAt', 'created', 'createdDate', 'date', 'orderDate'));
+            const orderTotal = (() => {
+              const t = getVal(o, 'total', 'amount', 'Total', 'totalAmount', 'grandTotal', 'totalPrice', 'price', 'orderTotal');
+              if (t !== undefined && t !== null && String(t).trim() !== '') return '$' + Number(t || 0).toFixed(2);
+              // fallback: compute total from items
+              const items = getVal(o, 'orderItems') || [];
+              const computed = items.reduce((s, it) => {
+                const qty = Number(it?.quantity ?? it?.qty ?? 0) || 0;
+                const price = parseNumber(it?.product?.currentUnitPrice ?? it?.price ?? it?.unitPrice ?? 0) || 0;
+                return s + (qty * price);
+              }, 0);
+              return computed > 0 ? '$' + Number(computed).toFixed(2) : '-';
+            })();
+            const orderSkus = Array.from(new Set((getVal(o, 'orderItems') || []).map(it => {
+                // try a set of candidate fields across different API shapes
+                const pid = it?.product?.id ?? it?.productId ?? it?.product?.productId;
+                const cached = pid && productCache[pid] ? productCache[pid] : null;
+                const candidate = cached?.sku ?? cached?.code ?? cached?.reference ?? it?.product?.sku ?? it?.product?.code ?? it?.product?.reference ?? it?.sku ?? it?.productSku ?? it?.product?.productCode ?? it?.product?.externalCode ?? it?.product?.product_sku ?? findInAttributes(it?.product?.attributes, 'sku') ?? findInAttributes(it?.attributes, 'sku') ?? it?.meta?.sku ?? it?.product?.meta?.sku ?? (pid || null);
+                if (candidate && !isGuidLike(candidate)) return candidate;
+                return null;
+              }).filter(Boolean)));
           const key = id || Math.random();
           const isOpen = Boolean(expanded[key]);
 
@@ -188,10 +271,11 @@ function ListOrdersPage() {
                   <div className='flex-1'>
                     <div className='text-base sm:text-lg font-semibold'>#{id ? String(id).slice(0, 8) : '#'} - {customerName}</div>
                     <div className='text-sm text-gray-600 mt-1'>{statusVal}</div>
+                    <div className='text-xs text-gray-500 mt-1'>Fecha: {orderDate} • Total: {orderTotal}</div>
                   </div>
 
                   <div className='flex-shrink-0 ml-4'>
-                    <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar' : 'Ver'}</Button>
+                    <Button onClick={() => handleToggleExpand(key, o)} className='px-3 py-1'>{isOpen ? 'Ocultar' : 'Ver'}</Button>
                   </div>
                 </div>
 
@@ -200,24 +284,37 @@ function ListOrdersPage() {
                     <div className='mb-1'><strong>Estado:</strong> {statusVal}</div>
                     <div className='mb-1'><strong>ID:</strong> {id || '-'}</div>
                     {/* Show more details inline: addresses, timestamps, order items, totals, etc. */}
-                    <div className='mb-2'><strong>Fecha:</strong> {getVal(o, 'createdAt', 'CreatedAt', 'created') || '-'}</div>
+                    <div className='mb-2'><strong>Fecha:</strong> {formatDateVal(getVal(o, 'createdAt', 'CreatedAt', 'created', 'createdDate', 'date', 'orderDate'))}</div>
                     <div className='mb-2'><strong>Dirección de envío:</strong> {getVal(o, 'shippingAddress', 'ShippingAddress') ?? '-'}</div>
                     <div className='mb-2'><strong>Dirección de facturación:</strong> {getVal(o, 'billingAddress', 'BillingAddress') ?? '-'}</div>
+                          <div className='mb-2'><strong>SKU(s):</strong> {(orderSkus.length ? orderSkus.join(', ') : (getVal(o, 'orderItems') || []).map(it => (it?.product?.sku ?? it?.sku ?? it?.productId ?? it?.product?.id)).filter(Boolean).map(s => (isGuidLike(s) ? `ID:${String(s).slice(0,8)}` : s)).join(', ')) || '-'}</div>
 
                     <div className='mt-3'>
                       <h4 className='text-md font-semibold mb-2'>Items</h4>
                       <div className='space-y-2'>
                         {(getVal(o, 'orderItems') || []).map((it, idx) => {
-                          const itemName = it?.product?.name ?? it?.name ?? it?.productName ?? 'Item';
-                          const sku = it?.product?.sku ?? it?.sku ?? it?.productSku ?? '-';
+                          // if product object does not contain SKU or name, try to fetch product details by id and cache
+                          const pid = it?.product?.id ?? it?.productId ?? it?.product?.productId;
+                          // product details are prefetched on expand (handleToggleExpand), so simply rely on cached values if present
+                          const productObj = it?.product ?? (pid && productCache[pid] ? productCache[pid] : null);
+                          const itemName = productObj?.name ?? it?.name ?? it?.productName ?? 'Item';
+                          // Prefer real sku-like fields (sku, code, reference) but avoid showing GUIDs
+                          const cachedItem = pid && productCache[pid] ? productCache[pid] : null;
+                          const candidateSku = cachedItem?.sku ?? cachedItem?.code ?? cachedItem?.reference ?? it?.product?.sku ?? it?.product?.code ?? it?.product?.reference ?? it?.sku ?? it?.productSku ?? it?.product?.productCode ?? it?.product?.externalCode ?? it?.product?.product_sku ?? it?.reference ?? findInAttributes(it?.product?.attributes, 'sku') ?? findInAttributes(it?.attributes, 'sku') ?? it?.meta?.sku ?? it?.product?.meta?.sku ?? null;
+                            let sku = '-';
+                            if (candidateSku && !isGuidLike(candidateSku)) sku = candidateSku;
                           const qty = it?.quantity ?? it?.qty ?? 0;
-                          const price = Number(it?.product?.currentUnitPrice ?? it?.price ?? it?.unitPrice ?? 0);
+                              // If still not SKU, optionally show short ID to avoid confusing with SKU
+                              if (sku === '-' && it?.product?.reference && !isGuidLike(it.product.reference)) sku = it.product.reference;
+                              if (sku === '-' && it?.product?.id) sku = `ID:${String(it.product.id).slice(0, 8)}`;
+                          const price = parseNumber(productObj?.currentUnitPrice ?? it?.product?.currentUnitPrice ?? it?.price ?? it?.unitPrice ?? 0) || 0;
                           const sub = (qty * price).toFixed(2);
                           return (
                             <div key={idx} className='flex flex-col sm:flex-row items-start sm:items-center justify-between border rounded p-2 gap-2'>
                               <div className='flex-1'>
                                 <div className='font-semibold'>{itemName}</div>
-                                <div className='text-sm text-gray-600'>SKU: {sku}</div>
+                                  <div className='text-sm text-gray-600'>SKU: {sku}</div>
+                                  <div className='text-xs text-gray-500 mt-1'>Producto ID: {it?.product?.id ?? it?.productId ?? it?.id ?? '-'}</div>
                               </div>
                               <div className='flex flex-col items-start sm:items-end w-full sm:w-auto'>
                                 <div className='text-sm'>Cantidad: {qty}</div>
@@ -231,11 +328,9 @@ function ListOrdersPage() {
                     </div>
 
                     <div className='mt-3 flex justify-between items-center'>
-                      <div className='text-sm text-gray-600'>Total: {getVal(o, 'total', 'amount', 'Total') ? '$' + Number(getVal(o, 'total', 'amount', 'Total')).toFixed(2) : '-'}</div>
-                      {/* change the 'Ir al detalle' to toggle the expansion if desired, but keep link if you want external page too */}
+                      <div className='text-sm text-gray-600'>Total: {orderTotal}</div>
+                      {/* Optional: keep link to full page */}
                       <div className='flex items-center gap-2'>
-                        <Button onClick={() => setExpanded(prev => ({ ...prev, [key]: !prev[key] }))} className='px-3 py-1'>{isOpen ? 'Ocultar detalle' : 'Ir al detalle'}</Button>
-                        {/* Optional: keep link to full page */}
                         {/* <Button onClick={() => navigate(`/admin/orders/${id}`)} className='px-3 py-1'>Ver página</Button> */}
                       </div>
                     </div>

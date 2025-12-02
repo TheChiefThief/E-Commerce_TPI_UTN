@@ -3,92 +3,14 @@ import { useCart } from '../../shared/context/CartProvider';
 import { useNavigate, Link } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import Button from '../../shared/components/Button';
+import Input from '../../shared/components/Input';
 import Header from '../../shared/components/Header';
+import ModalWrapper from '../../shared/components/ModalWrapper';
+import LoginForm from '../../auth/components/LoginForm';
 import { postOrder } from '../../orders/services/listServices';
 import useAuth from '../../auth/hook/useAuth';
 
-// --- Componente Modal de Login (Para usuarios no logueados) ---
-const LoginModal = ({ isOpen, onClose, onLoginSuccess }) => {
-  const navigate = useNavigate();
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const { singin } = useAuth();
-  const [errorMessage, setErrorMessage] = useState('');
-
-  if (!isOpen) return null;
-
-  const handleLogin = async (e) => {
-    e.preventDefault();
-    setErrorMessage('');
-    try {
-      const { error } = await singin(username, password);
-      if (error) {
-        setErrorMessage(error && (error.detail || error.message || error.title) || 'Error de autenticación');
-        return;
-      }
-      // login successful. call callback and close
-      onLoginSuccess();
-      onClose();
-    } catch (err) {
-      setErrorMessage('Error de autenticación: ' + (err?.message || 'Inténtalo de nuevo'));
-    }
-  };
-
-  return (
-    // Estilos para el overlay
-    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <Card className="w-full max-w-md p-6">
-        <div className="flex justify-between items-center mb-4">
-          <h2 className="text-2xl font-bold">Iniciar Sesión para Finalizar Compra</h2>
-          <button onClick={onClose} className="text-gray-500 hover:text-gray-800 font-bold text-xl">
-            &times;
-          </button>
-        </div>
-
-        {/* Formulario de Login como se muestra en la página 11 del TPI */}
-        <form onSubmit={handleLogin} className='space-y-4'>
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">Usuario</label>
-            <input
-              type="text"
-              value={username}
-              onChange={(e) => setUsername(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-lg text-lg"
-              required
-            />
-          </div>
-          <div>
-            <label className="block text-gray-700 font-medium mb-1">Password</label>
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-2 border border-gray-300 rounded-lg text-lg"
-              required
-            />
-          </div>
-          <Button
-            type="submit"
-            variant="default" // bg-orange-200
-            className="w-full py-2 font-semibold text-orange-800"
-          >
-            Iniciar Sesión
-          </Button>
-          {errorMessage && <p className="text-red-500">{errorMessage}</p>}
-        </form>
-
-        {/* Botón Registrar Usuario (simulado, debería navegar a /signup) */}
-        <Button
-          onClick={() => navigate('/signup')}
-          variant="secondary" // bg-gray-100
-          className="w-full py-2 font-semibold mt-2 text-gray-700"
-        >
-          Registrar Usuario
-        </Button>
-      </Card>
-    </div>
-  );
-};
+// Using `LoginForm` and `ModalWrapper` imported above
 
 
 // --- Componente de Fila de Producto en el Carrito ---
@@ -129,6 +51,8 @@ const CartItem = ({ item, updateQuantity, removeItem }) => {
         <button
           onClick={() => updateQuantity(item.productId || item.id, quantity + 1)}
           className="text-gray-500 hover:text-gray-700 font-bold px-2 py-1 border rounded-md"
+          disabled={quantity >= Number(item.product?.stockQuantity ?? item.product?.stock ?? 0)}
+          title={quantity >= Number(item.product?.stockQuantity ?? item.product?.stock ?? 0) ? 'No hay más stock disponible' : undefined}
         >
           +
         </button>
@@ -154,6 +78,11 @@ function CartPage() {
   const { isAdmin } = useAuth();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
   const [isProcessing, setIsProcessing] = useState(false);
+  const [shippingAddress, setShippingAddress] = useState('');
+  const [billingAddress, setBillingAddress] = useState('');
+  const [sameAsShipping, setSameAsShipping] = useState(false);
+  const [shippingError, setShippingError] = useState('');
+  const [billingError, setBillingError] = useState('');
 
   useEffect(() => {
     if (isAdmin) {
@@ -162,6 +91,19 @@ function CartPage() {
   }, [isAdmin, navigate]);
 
   const processOrder = async () => {
+    // Validate addresses first
+    setShippingError('');
+    setBillingError('');
+    if (!shippingAddress || !shippingAddress.trim()) {
+      setShippingError('La dirección de envío es obligatoria');
+      return;
+    }
+    const finalBilling = sameAsShipping ? shippingAddress : billingAddress;
+    if (!finalBilling || !finalBilling.trim()) {
+      setBillingError('La dirección de facturación es obligatoria');
+      return;
+    }
+
     const customerId = localStorage.getItem("customerId");
     if (!customerId) {
       alert("Error de autenticación. Por favor inicia sesión nuevamente.");
@@ -171,8 +113,8 @@ function CartPage() {
 
     const orderData = {
       customerId,
-      shippingAddress: "Dirección por defecto",
-      billingAddress: "Dirección por defecto",
+      shippingAddress: shippingAddress,
+      billingAddress: finalBilling,
       orderItems: cartItems
         .filter(i => i.quantity > 0)
         .map(i => ({
@@ -225,6 +167,19 @@ function CartPage() {
       return;
     }
 
+    // Validate addresses before proceeding
+    setShippingError('');
+    setBillingError('');
+    if (!shippingAddress || !shippingAddress.trim()) {
+      setShippingError('La dirección de envío es obligatoria');
+      return;
+    }
+    const finalBilling = sameAsShipping ? shippingAddress : billingAddress;
+    if (!finalBilling || !finalBilling.trim()) {
+      setBillingError('La dirección de facturación es obligatoria');
+      return;
+    }
+
     const isLogged = !!localStorage.getItem("token");
 
     if (isLogged) processOrder();
@@ -274,13 +229,46 @@ function CartPage() {
                 <span>Total a pagar:</span>
                 <span>${totalAmount.toFixed(2)}</span>
               </p>
+
+              <div className="mt-4 space-y-3">
+                <Input
+                  label="Dirección de envío"
+                  value={shippingAddress}
+                  onChange={(e) => {
+                    setShippingAddress(e.target.value);
+                    if (sameAsShipping) setBillingAddress(e.target.value);
+                  }}
+                  error={shippingError}
+                />
+
+                <div className="flex items-center gap-3">
+                  <input id="sameAsShipping" type="checkbox" checked={sameAsShipping} onChange={(e) => {
+                    setSameAsShipping(e.target.checked);
+                    if (e.target.checked) setBillingAddress(shippingAddress);
+                  }} />
+                  <label htmlFor="sameAsShipping" className="text-sm text-gray-700">Usar misma dirección para facturación</label>
+                </div>
+
+                {!sameAsShipping && (
+                  <Input
+                    label="Dirección de facturación"
+                    value={billingAddress}
+                    onChange={(e) => setBillingAddress(e.target.value)}
+                    error={billingError}
+                  />
+                )}
+              </div>
             </div>
 
             <Button
               onClick={handleCheckout}
               variant="default"
               className="w-full mt-6 py-3 font-bold text-orange-800"
-              disabled={totalItems === 0 || isProcessing}
+              disabled={
+                totalItems === 0 || isProcessing ||
+                !shippingAddress || !shippingAddress.trim() ||
+                (!sameAsShipping && (!billingAddress || !billingAddress.trim()))
+              }
             >
               {isProcessing ? "Procesando..." : "Finalizar Compra"}
             </Button>
@@ -288,11 +276,15 @@ function CartPage() {
         </div>
       </main>
 
-      <LoginModal
-        isOpen={isLoginModalOpen}
-        onClose={() => setIsLoginModalOpen(false)}
-        onLoginSuccess={handleLoginSuccess}
-      />
+      {isLoginModalOpen && (
+        <ModalWrapper title="Iniciar Sesión" onClose={() => setIsLoginModalOpen(false)}>
+          <LoginForm
+            onClose={() => setIsLoginModalOpen(false)}
+            onSuccess={handleLoginSuccess}
+            openSignup={() => { setIsLoginModalOpen(false); navigate('/signup'); }}
+          />
+        </ModalWrapper>
+      )}
     </div>
   );
 }

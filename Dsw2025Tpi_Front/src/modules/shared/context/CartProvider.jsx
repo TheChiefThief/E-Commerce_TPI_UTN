@@ -32,15 +32,21 @@ export const CartProvider = ({ children }) => {
     const qty = Math.max(1, Number(quantity) || 1);
     setCartItems(prev => {
       const exists = prev.find(i => (i.productId || i.id) === (product.id));
+      const maxStock = Number(product.stockQuantity ?? product.stock ?? 0);
       if (exists) {
-        return prev.map(i => ((i.productId || i.id) === product.id) ? ({ ...i, quantity: (Number(i.quantity) || 0) + qty }) : i);
+        return prev.map(i => ((i.productId || i.id) === product.id) ? ({ ...i, quantity: Math.min(maxStock || Infinity, (Number(i.quantity) || 0) + qty) }) : i);
       }
-      return [...prev, { id: product.id, productId: product.id, product, quantity: qty, price: Number(product.currentUnitPrice) || 0 }];
+      return [...prev, { id: product.id, productId: product.id, product, quantity: Math.min(maxStock || Infinity, qty), price: Number(product.currentUnitPrice) || 0 }];
     });
   };
 
   const updateQuantity = (productId, newQuantity) => {
-    setCartItems(prev => prev.map(i => ((i.productId || i.id) === productId) ? ({ ...i, quantity: Math.max(0, Number(newQuantity) || 0) }) : i));
+    setCartItems(prev => prev.map(i => {
+      if ((i.productId || i.id) !== productId) return i;
+      const maxStock = Number(i.product?.stockQuantity ?? i.product?.stock ?? 0) || Infinity;
+      const q = Math.max(0, Number(newQuantity) || 0);
+      return { ...i, quantity: Math.min(maxStock, q) };
+    }));
   };
 
   const removeItem = (productId) => {

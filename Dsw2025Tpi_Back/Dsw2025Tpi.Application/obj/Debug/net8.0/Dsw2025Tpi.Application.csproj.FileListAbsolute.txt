@@ -164,3 +164,24 @@ C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\D
 C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\refint\Dsw2025Tpi.Application.dll
 C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.pdb
 C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\ref\Dsw2025Tpi.Application.dll
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Sources\products.json
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Sources\customers.json
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Sources\orders.json
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.deps.json
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.dll
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.dll
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Data.pdb
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\bin\Debug\net8.0\Dsw2025Tpi.Domain.pdb
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.AssemblyReference.cache
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfoInputs.cache
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.AssemblyInfo.cs
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.csproj.CoreCompileInputs.cache
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.sourcelink.json
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025T.52074EDD.Up2Date
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.dll
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\refint\Dsw2025Tpi.Application.dll
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\Dsw2025Tpi.Application.pdb
+C:\Users\Frand\OneDrive\Escritorio\DSW TPI Front\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\obj\Debug\net8.0\ref\Dsw2025Tpi.Application.dll

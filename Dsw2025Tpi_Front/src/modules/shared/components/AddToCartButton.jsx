@@ -1,17 +1,18 @@
 import React from 'react';
 
-const AddToCartButton = ({ price, onClick }) => {
+const AddToCartButton = ({ price, onClick, disabled = false, className = '' }) => {
   // Asegúrate de que `elements.css` donde están los estilos del botón se importe en tu aplicación, 
   // por ejemplo, en `main.jsx` o `App.jsx`.
 
   return (
     <div className="add-to-cart-wrapper">
       <div 
-        className="button" 
-        onClick={onClick}
+        className={`button ${className} ${disabled ? 'opacity-50 cursor-not-allowed pointer-events-none' : ''}`} 
+        onClick={!disabled ? onClick : undefined}
         role="button" 
-        tabIndex="0"   
-        onKeyPress={(e) => { if (e.key === 'Enter') onClick(e); }} 
+        tabIndex={!disabled ? "0" : "-1"}  
+        aria-disabled={disabled}
+        onKeyPress={(e) => { if (e.key === 'Enter' && !disabled) onClick(e); }} 
       >
         <div className="button-wrapper">
           <div className=" text px-4 py-2 rounded-full text-sm font-medium shadow-sm active:scale-95 transition">Agregar al Carrito</div>

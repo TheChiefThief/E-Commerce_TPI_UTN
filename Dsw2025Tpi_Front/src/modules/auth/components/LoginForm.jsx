@@ -6,7 +6,7 @@ import Button from '../../shared/components/Button';
 import useAuth from '../hook/useAuth';
 import { backendErrorMessage } from '../helpers/backendError';
 
-function LoginForm({ openSignup }) {
+function LoginForm({ openSignup, onClose, onSuccess }) {
   const [errorMessage, setErrorMessage] = useState('');
   const {
     register,
@@ -24,11 +24,19 @@ function LoginForm({ openSignup }) {
 
       if (error) {
         setErrorMessage(error.backendErrorMessage);
-
         return;
       }
 
-      navigate('/admin/home');
+      // If a parent provided an onSuccess handler, call it and do not navigate.
+      if (typeof onSuccess === 'function') {
+        onSuccess();
+      } else {
+        // default behavior: navigate to admin home
+        navigate('/admin/home');
+      }
+
+      // Close modal if requested
+      if (typeof onClose === 'function') onClose();
     } catch (error) {
       if (error?.response?.data?.code) {
         setErrorMessage(backendErrorMessage[error?.response?.data?.code]);

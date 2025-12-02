@@ -81,10 +81,11 @@ const ClientHome = () => {
     };
   }, [searchTerms, page, pageSize]);
 
-  const changeQty = (id, delta) => {
+  const changeQty = (id, delta, max) => {
     setQuantities((prev) => {
       const current = prev[id] || 1;
-      const next = Math.max(0, current + delta);
+      // Aseguramos que no baje de 1 y no suba más del stock máximo (max)
+      const next = Math.max(1, Math.min(current + delta, max || Infinity));
       return { ...prev, [id]: next };
     });
   };
@@ -92,7 +93,8 @@ const ClientHome = () => {
 
   const handleAddToCart = (product) => {
     const qty = quantities[product.id] || 1;
-    const minQty = Math.max(1, qty);
+    const maxStock = Number(product.stockQuantity ?? product.stock ?? Infinity);
+    const minQty = Math.min(maxStock, Math.max(1, qty));
     addToCart(product, minQty);
   };
 
@@ -174,15 +176,17 @@ const ClientHome = () => {
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
                       <div className="flex items-center border border-gray-300 rounded-full overflow-hidden justify-center   w-full max-w-[140px] h-8">
-                        <button type="button" onClick={() => changeQty(product.id, -1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition ">−</button>
-                        <div className="w-10 text-center text-sm font-medium">{quantities[product.id] || 1}</div>
-                        <button type="button" onClick={() => changeQty(product.id, 1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition ">+</button>
+                        <button type="button" onClick={() => changeQty(product.id, -1, Number(product.stockQuantity ?? product.stock ?? 1))} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition " disabled={(quantities[product.id] || 1) <= 1}>−</button>
+                        <div className="w-10 text-center text-sm font-medium">{Math.min(quantities[product.id] || 1, Number(product.stockQuantity ?? product.stock ?? Infinity))}</div>
+                        <button type="button" onClick={() => changeQty(product.id, 1, Number(product.stockQuantity ?? product.stock ?? 1))} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition " disabled={(quantities[product.id] || 1) >= Number(product.stockQuantity ?? product.stock ?? 0)} title={(quantities[product.id] || 1) >= Number(product.stockQuantity ?? product.stock ?? 0) ? 'No hay más stock disponible' : undefined}>+</button>
                       </div>
 
                       {!isAdmin && (
                         <AddToCartButton
                           price={product.currentUnitPrice ?? 0}
-                          onClick={() => handleAddToCart(product)} className="w-full sm:w-auto"
+                          onClick={() => handleAddToCart(product)}
+                          className="w-full sm:w-auto"
+                          disabled={(quantities[product.id] || 1) > Number(product.stockQuantity ?? product.stock ?? 0) || Number(product.stockQuantity ?? product.stock ?? 0) <= 0}
                         />
                       )}
                     </div>

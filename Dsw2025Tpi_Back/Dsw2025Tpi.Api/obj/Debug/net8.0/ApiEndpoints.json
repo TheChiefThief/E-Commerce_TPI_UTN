@@ -32,6 +32,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "Dsw2025Tpi.Api.Controllers.ImageUploadController",
+    "Method": "UploadImage",
+    "RelativePath": "api/images/upload",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "file",
+        "Type": "Microsoft.AspNetCore.Http.IFormFile",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "Dsw2025Tpi.Api.Controllers.OrdersController",
     "Method": "GetAllOrders",
     "RelativePath": "api/orders",

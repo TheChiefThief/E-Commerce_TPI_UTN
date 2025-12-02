@@ -21,7 +21,7 @@ public class ImageUploadController : ControllerBase
 
     [HttpPost("upload")]
     [Authorize(Roles = "Admin")]
-    public async Task<IActionResult> UploadImage([FromForm] IFormFile file)
+    public async Task<IActionResult> UploadImage(IFormFile file)
     {
         if (file == null || file.Length == 0)
             return BadRequest("No file uploaded.");

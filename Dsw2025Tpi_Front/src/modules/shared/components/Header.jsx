@@ -4,6 +4,7 @@ import useAuth from '../../auth/hook/useAuth';
 import Button from './Button';
 // ⚠️ Asegúrate de que las rutas sean correctas para tu proyecto
 import LoginForm from '../../auth/components/LoginForm';
+import ModalWrapper from '../components/ModalWrapper';
 import RegisterForm from '../../auth/components/RegisterForm';
 import { useCart } from '../context/CartProvider';
 
@@ -51,34 +52,7 @@ const Header = ({ onSearch }) => {
         setMenuOpen(false);
     }
 
-    // COMPONENTE ENVOLTORIO DEL MODAL (similar a la apariencia de tus imágenes)
-    const ModalWrapper = ({ children, title }) => (
-        // Fondo oscuro que ocupa toda la pantalla
-        <div
-            className="fixed inset-0 bg-transparent backdrop-blur-md flex items-center justify-center z-[999]"
-            onClick={closeModal}
-        >
-            {/* Contenedor principal del Modal */}
-            <div
-                // Estilos basados en tus imágenes: un contenedor blanco centrado
-                className="bg-white rounded-xl shadow-2xl p-6 w-11/12 max-w-md max-h-[90vh] overflow-y-auto"
-                onClick={e => e.stopPropagation()} // Evita que se cierre al hacer click dentro
-            >
-                {/* Título y botón de cerrar */}
-                <div className="flex justify-between items-start mb-4">
-                    <h2 className="text-lg sm:text-xl font-semibold text-gray-800">{title}</h2>
-                    <button
-                        onClick={closeModal}
-                        className="text-gray-400 hover:text-gray-600 p-1 rounded-full"
-                        aria-label="Cerrar"
-                    >
-                        <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                </div>
-                {children}
-            </div>
-        </div>
-    );
+    // ModalWrapper is now imported from shared components
 
 
     return (
@@ -258,7 +232,7 @@ const Header = ({ onSearch }) => {
 
             {/* RENDERIZADO CONDICIONAL DEL MODAL */}
             {authFormType === 'login' && (
-                <ModalWrapper title="Iniciar Sesión">
+                <ModalWrapper title="Iniciar Sesión" onClose={closeModal}>
                     {/* Pasamos 'onClose' para que el formulario lo use al iniciar sesión */}
                     <LoginForm
                         onClose={closeModal}
@@ -268,7 +242,7 @@ const Header = ({ onSearch }) => {
             )}
 
             {authFormType === 'signup' && (
-                <ModalWrapper title="Registrar Usuario">
+                <ModalWrapper title="Registrar Usuario" onClose={closeModal}>
                     {/* Pasamos 'onClose' para que el formulario lo use al registrarse */}
                     <RegisterForm
                         onClose={closeModal}
