@@ -30,7 +30,7 @@ public class OrdersManagementService : IOrdersManagementService
         _userManager = userManager;
         _logger = logger;
     }
-    public async Task<OrderModel.ResponseOrderModel?> GetOrderById(Guid id)
+    public async Task<OrderModel.ResponseOrderModel> GetOrderById(Guid id)
     {
         _logger.LogInformation("Iniciando la obtención del pedido con ID: {OrderId}", id);
         var order = await _repository.GetById<Order>(id, nameof(Order.OrderItems), "OrderItems.Product", nameof(Order.Customer));

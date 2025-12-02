@@ -1,0 +1,50 @@
+2025-12-02 15:28:59.569 -03:00 [INF] Starting up
+2025-12-02 15:29:00.986 -03:00 [WRN] The WebRootPath was not found: C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\wwwroot. Static files may be unavailable.
+2025-12-02 15:29:01.337 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:29:01.342 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-02 15:29:01.406 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:29:01.408 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-02 15:29:01.408 -03:00 [INF] Se encontraron 28 productos.
+2025-12-02 15:29:01.472 -03:00 [INF] HTTP GET /api/products responded 200 in 233.4431 ms
+2025-12-02 15:29:01.474 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:29:01.474 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-02 15:29:01.477 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:29:01.477 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-02 15:29:01.477 -03:00 [INF] Se encontraron 28 productos.
+2025-12-02 15:29:01.478 -03:00 [INF] HTTP GET /api/products responded 200 in 8.1024 ms
+2025-12-02 15:29:01.482 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:29:01.482 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-02 15:29:01.484 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:29:01.484 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-02 15:29:01.484 -03:00 [INF] Se encontraron 12 productos.
+2025-12-02 15:29:01.485 -03:00 [INF] HTTP GET /api/products responded 200 in 6.1630 ms
+2025-12-02 15:29:01.486 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:29:01.486 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-02 15:29:01.488 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:29:01.488 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-02 15:29:01.488 -03:00 [INF] Se encontraron 12 productos.
+2025-12-02 15:29:01.488 -03:00 [INF] HTTP GET /api/products responded 200 in 2.8546 ms
+2025-12-02 15:30:16.839 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:30:16.840 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-02 15:30:16.844 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:30:16.844 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-02 15:30:16.844 -03:00 [INF] Se encontraron 28 productos.
+2025-12-02 15:30:16.846 -03:00 [INF] HTTP GET /api/products responded 200 in 7.1148 ms
+2025-12-02 15:30:16.848 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:30:16.848 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-02 15:30:16.851 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:30:16.851 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-02 15:30:16.851 -03:00 [INF] Se encontraron 28 productos.
+2025-12-02 15:30:16.852 -03:00 [INF] HTTP GET /api/products responded 200 in 5.5009 ms
+2025-12-02 15:30:16.856 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:30:16.856 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-02 15:30:16.859 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:30:16.860 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-02 15:30:16.860 -03:00 [INF] Se encontraron 12 productos.
+2025-12-02 15:30:16.860 -03:00 [INF] HTTP GET /api/products responded 200 in 4.4102 ms
+2025-12-02 15:30:16.862 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-02 15:30:16.862 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-02 15:30:16.865 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-02 15:30:16.865 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-02 15:30:16.865 -03:00 [INF] Se encontraron 12 productos.
+2025-12-02 15:30:16.866 -03:00 [INF] HTTP GET /api/products responded 200 in 4.3307 ms

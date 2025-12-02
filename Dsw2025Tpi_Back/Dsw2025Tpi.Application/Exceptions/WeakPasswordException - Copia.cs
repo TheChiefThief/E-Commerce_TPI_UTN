@@ -1,6 +1,0 @@
-namespace Dsw2025Tpi.Application.Exceptions
-{
-    public class WeakPasswordException(string message) : ApplicationException(message)
-    {
-    }
-}
