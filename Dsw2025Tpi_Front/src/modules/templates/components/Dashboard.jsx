@@ -5,31 +5,35 @@ import Button from '../../shared/components/Button';
 
 function Dashboard() {
   const [openMenu, setOpenMenu] = useState(false);
-
   const navigate = useNavigate();
-
   const { singout } = useAuth();
 
   const logout = () => {
-    // Navigate first so we leave the protected admin route before clearing auth
-    // Use replace to avoid going back to admin with browser back button
     navigate('/', { replace: true });
-    // Give navigation time to complete before clearing auth (avoid ProtectedRoute redirecting to /login)
     setTimeout(() => singout(), 150);
   };
 
-  const getLinkStyles = ({ isActive }) => (
+  const getLinkStyles = ({ isActive }) =>
     `
-      pl-4 w-full block  pt-4 pb-4 rounded-4xl transition hover:bg-gray-100
-      ${isActive
-      ? 'bg-orange-200 hover:bg-orange-100 text-orange-800 '
-      : ''
-    }
-    `
-  );
+      block w-full
+    pl-2 py-2                 
+    rounded-xl               
+
+    text-base                
+    transition hover:bg-gray-100
+
+    sm:pl-4 sm:py-4 sm:rounded-2xl sm:text-lg   /* Desktop crece */
+    ${isActive ? 'bg-orange-200 hover:bg-orange-100 text-orange-800' : ''}
+  `;
+    
 
   const renderLogoutButton = (mobile = false) => (
-    <Button className={`${mobile ? 'block w-full sm:hidden' : 'hidden sm:block'}`} onClick={logout}>Cerrar sesión</Button>
+    <Button
+      className={mobile ? 'block w-full sm:hidden' : 'hidden sm:block'}
+      onClick={logout}
+    >
+      Cerrar sesión
+    </Button>
   );
 
   return (
@@ -39,93 +43,82 @@ function Dashboard() {
         grid
         grid-cols-1
         grid-rows-[auto_1fr]
-
-        sm:gap-3
         sm:grid-cols-[256px_1fr]
+        sm:gap-3
       "
     >
+
+      {/* HEADER */}
       <header
         className="
-          flex
-          items-center
-          justify-between
-          p-4
-          shadow
-          rounded
-          bg-white
-
+          flex items-center justify-between
+          p-4 bg-white shadow rounded
           sm:col-span-2
         "
       >
-        <img src="/eCommerceEscaparate.png" alt="Logo" className="h-16 w-auto object-contain" />
-        {renderLogoutButton()}
-        <button
-          className="
-            bg-transparent
-            border-none
-            shadow-none
+        <img
+          src="/eCommerceEscaparate.png"
+          alt="Logo"
+          className="h-14 w-auto object-contain"
+        />
 
-            sm:hidden
-          "
+        {/* Logout desktop */}
+        {renderLogoutButton()}
+
+        {/* Mobile menu toggle */}
+        <button
+          className="sm:hidden text-3xl"
           onClick={() => setOpenMenu(!openMenu)}
-        >{openMenu ? <span>&#215;</span> : <span>&#9776;</span>}</button>
+        >
+          {openMenu ? '✕' : '☰'}
+        </button>
       </header>
+
+      {/* SIDEBAR */}
       <aside
         className={`
-          absolute
-          top-0
-          bottom-0
-          bg-white
-          w-64
-          p-6
-          ${openMenu ? 'left-0' : 'left-[-256px]'}
-          rounded
-          shadow
-          flex
-          flex-col
-          justify-between
+          fixed top-0 bottom-0 left-0
+          w-64 p-6 bg-white shadow rounded
+          flex flex-col justify-between
+          transition-all duration-300
+          z-40
+          ${openMenu ? 'translate-x-0' : '-translate-x-64'}
 
-          sm:relative
-          sm:left-0
+          sm:relative sm:translate-x-0
         `}
       >
         <nav>
-          <ul
-            className='flex flex-col'
-          >
+          <ul className="flex flex-col">
             <li>
-              <NavLink
-                to='/admin/home'
-                className={getLinkStyles}
-              >Principal</NavLink>
+              <NavLink to="/admin/home" className={getLinkStyles}>
+                Principal
+              </NavLink>
             </li>
             <li>
-              <NavLink
-                to='/admin/products'
-                className={getLinkStyles}
-              >Productos</NavLink>
+              <NavLink to="/admin/products" className={getLinkStyles}>
+                Productos
+              </NavLink>
             </li>
             <li>
-              <NavLink
-                to='/admin/orders'
-                className={getLinkStyles}
-              >Ordenes</NavLink>
+              <NavLink to="/admin/orders" className={getLinkStyles}>
+                Ordenes
+              </NavLink>
             </li>
           </ul>
-          <hr className='opacity-15 mt-4' />
+
+          <hr className="opacity-20 mt-4" />
         </nav>
+
+        {/* Logout mobile */}
         {renderLogoutButton(true)}
       </aside>
-      <main
-        className="
-          p-5
-          overflow-y-scroll
-        "
-      >
+
+      {/* MAIN CONTENT */}
+      <main className="p-5 overflow-y-auto">
         <Outlet />
       </main>
     </div>
   );
-};
+}
 
 export default Dashboard;

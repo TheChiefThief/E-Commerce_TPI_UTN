@@ -173,10 +173,10 @@ const ClientHome = () => {
                     </div>
 
                     <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-                      <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden justify-center">
-                        <button type="button" onClick={() => changeQty(product.id, -1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition">−</button>
+                      <div className="flex items-center border border-gray-300 rounded-full overflow-hidden justify-center   w-full max-w-[140px] h-8">
+                        <button type="button" onClick={() => changeQty(product.id, -1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition ">−</button>
                         <div className="w-10 text-center text-sm font-medium">{quantities[product.id] || 1}</div>
-                        <button type="button" onClick={() => changeQty(product.id, 1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition">+</button>
+                        <button type="button" onClick={() => changeQty(product.id, 1)} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition ">+</button>
                       </div>
 
                       {!isAdmin && (
