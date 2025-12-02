@@ -1,4 +1,4 @@
-import { createContext, useState, useEffect } from 'react';
+import { createContext, useState } from 'react';
 import { login } from '../services/login';
 
 const AuthContext = createContext();
@@ -26,6 +26,18 @@ function AuthProvider({ children }) {
     }
   };
 
+  const [userRole, setUserRole] = useState(() => {
+    try {
+      const t = typeof window !== 'undefined' ? (window.localStorage.getItem('token') || window.localStorage.getItem('userToken')) : null;
+      if (!t) return null;
+      const payload = parseJwt(t);
+      const role = payload && (payload['role'] || payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role']);
+      return role || null;
+    } catch (e) {
+      return null;
+    }
+  });
+
   const [isAdmin, setIsAdmin] = useState(() => {
     try {
       const t = typeof window !== 'undefined' ? (window.localStorage.getItem('token') || window.localStorage.getItem('userToken')) : null;
@@ -49,6 +61,7 @@ function AuthProvider({ children }) {
     }
     setIsAuthenticated(false);
     setIsAdmin(false);
+    setUserRole(null);
   };
 
   const singin = async (username, password) => {
@@ -69,6 +82,7 @@ function AuthProvider({ children }) {
         const payload = parseJwt(token);
         const role = payload['role'] || payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
         setIsAdmin(role === 'Admin' || role === 'admin' || role === 'Administrator');
+        setUserRole(role || null);
       }
       // if response includes customer id or user payload, store it for usage by orders
       const customerId = data && (data.customerId || (data.user && data.user.id) || (data.customer && data.customer.id));
@@ -90,6 +104,10 @@ function AuthProvider({ children }) {
         isAdmin,
         singin,
         singout,
+        // aliases to reduce bugs from typos
+        signIn: singin,
+        signOut: singout,
+        userRole,
       }}
     >
       {children}
