@@ -83,6 +83,7 @@ function CartPage() {
   const [sameAsShipping, setSameAsShipping] = useState(false);
   const [shippingError, setShippingError] = useState('');
   const [billingError, setBillingError] = useState('');
+  const [orderNote, setOrderNote] = useState('');
 
   useEffect(() => {
     if (isAdmin) {
@@ -115,6 +116,7 @@ function CartPage() {
       customerId,
       shippingAddress: shippingAddress,
       billingAddress: finalBilling,
+      description: orderNote,
       orderItems: cartItems
         .filter(i => i.quantity > 0)
         .map(i => ({
@@ -257,6 +259,16 @@ function CartPage() {
                     error={billingError}
                   />
                 )}
+                <div className="mt-3">
+                  <label className="block text-sm font-medium text-gray-700 mb-1">Nota opcional</label>
+                  <textarea
+                    className="w-full p-2 border border-gray-300 rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-orange-500 resize-none overflow-y-auto"
+                    rows="2"
+                    placeholder="Instrucciones especiales..."
+                    value={orderNote}
+                    onChange={(e) => setOrderNote(e.target.value)}
+                  />
+                </div>
               </div>
             </div>
 
