@@ -9,8 +9,8 @@ import Home from './modules/home/pages/Home';
 import ListProductsPage from './modules/products/pages/ListProductsPage';
 import CreateProductPage from './modules/products/pages/CreateProductPage';
 import RegisterPage from './modules/auth/pages/RegisterPage';
-import ClientHome from './modules/home/pages/ClientHome';
-import CartPage from './modules/home/pages/CartPage';
+import ClientHome from './modules/client/components/ClientHome';
+import CartPage from './modules/cart/components/pages/CartPage';
 
 function App() {
   const router = createBrowserRouter([
