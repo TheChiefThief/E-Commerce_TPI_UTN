@@ -32,3 +32,59 @@ dist-ssr
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+===========================
+Visual Studio / .NET
+===========================
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+*.cache
+*.csproj.user
+*.csproj.AssemblyReference.cache
+*.AssemblyInfoInputs.cache
+*.GeneratedMSBuildEditorConfig.editorconfig
+*.g.props
+*.g.targets
+*.nuget.cache
+*.asset.cache
+*.assets.cache
+*.nupkg
+*.nupkg.metadata
+*.nuget.g.props
+*.nuget.g.targets
+*.sourcehash.json
+*.dgspec.json
+
+NuGet folders
+packages/
+*.nuget/
+
+Build outputs
+bin/
+obj/
+
+===========================
+Visual Studio Code
+===========================
+.vscode/
+*.code-workspace
+
+===========================
+OneDrive (para evitar que suba archivos de sincronización)
+===========================
+/OneDrive/
+
+===========================
+Archivos temporales
+===========================
+*.tmp
+*.temp
+*.log
+*.db
+*.db-wal
+*.db-shm
+*.dtbcache.v2
+*.vscdb
+*.vscidx

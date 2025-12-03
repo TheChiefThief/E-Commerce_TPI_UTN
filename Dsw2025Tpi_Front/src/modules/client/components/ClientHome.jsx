@@ -4,8 +4,8 @@ import { getProductsClient } from '../../products/services/listClient';
 import Button from '../../shared/components/Button';
 import { useCart } from '../../shared/context/CartProvider';
 import useAuth from '../../auth/hook/useAuth';
-import ProductCard from './ProductCard';
-import Pagination from './Pagination';
+import ProductCatalogCard from './ProductCatalogCard';
+import Pagination from '../../shared/components/Pagination';
 
 const ClientHome = () => {
   const { addToCart } = useCart();
@@ -136,7 +136,7 @@ const ClientHome = () => {
             }
 
             return visibleProducts.map((product) => (
-              <ProductCard
+              <ProductCatalogCard
                 key={product.id}
                 product={product}
                 quantity={quantities[product.id] || 1}
@@ -149,7 +149,13 @@ const ClientHome = () => {
         </div>
 
         {products.length > 0 && (
-          <Pagination page={page} totalPages={totalPages} setPage={setPage} />
+          <Pagination 
+            page={page} 
+            totalPages={totalPages} 
+            setPage={setPage} 
+            showPageNumbers={false}
+            showPageSize={false}
+          />
         )}
       </div>
     </>

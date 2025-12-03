@@ -42,10 +42,10 @@ const ProductCard = ({ product, quantity, changeQty, handleAddToCart, isAdmin })
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 flex-wrap">
-            <div className="flex items-center border border-gray-300 rounded-full overflow-hidden justify-center w-full max-w-[140px] h-8 shrink-0">
-              <button type="button" onClick={() => changeQty(product.id, -1, Number(product.stockQuantity ?? product.stock ?? 1))} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition " disabled={quantity <= 1}>−</button>
-              <div className="w-10 text-center text-sm font-medium">{Math.min(quantity, Number(product.stockQuantity ?? product.stock ?? Infinity))}</div>
-              <button type="button" onClick={() => changeQty(product.id, 1, Number(product.stockQuantity ?? product.stock ?? 1))} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition " disabled={quantity >= Number(product.stockQuantity ?? product.stock ?? 0)} title={quantity >= Number(product.stockQuantity ?? product.stock ?? 0) ? 'No hay más stock disponible' : undefined}>+</button>
+            <div className="flex items-center gap-1 justify-center w-full max-w-[140px] h-10 shrink-0">
+              <button type="button" onClick={() => changeQty(product.id, -1, Number(product.stockQuantity ?? product.stock ?? 1))} className="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition border border-gray-300 rounded" disabled={quantity <= 1}>−</button>
+              <div className="w-10 h-10 flex items-center justify-center text-sm font-medium border border-gray-300 rounded">{Math.min(quantity, Number(product.stockQuantity ?? product.stock ?? Infinity))}</div>
+              <button type="button" onClick={() => changeQty(product.id, 1, Number(product.stockQuantity ?? product.stock ?? 1))} className="w-10 h-10 flex items-center justify-center text-gray-600 hover:bg-gray-100 transition border border-gray-300 rounded" disabled={quantity >= Number(product.stockQuantity ?? product.stock ?? 0)} title={quantity >= Number(product.stockQuantity ?? product.stock ?? 0) ? 'No hay más stock disponible' : undefined}>+</button>
             </div>
 
             {!isAdmin && (
