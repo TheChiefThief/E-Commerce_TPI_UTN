@@ -5,7 +5,7 @@ import { getProducts } from '../services/list';
 import { productStatus } from '../helpers/productHelpers';
 import ProductFilters from '../components/ProductFilters';
 import ProductCard from '../components/ProductCard';
-import ProductPagination from '../components/ProductPagination';
+import Pagination from '../../shared/components/Pagination';
 
 function ListProductsPage() {
   const navigate = useNavigate();
@@ -21,24 +21,25 @@ function ListProductsPage() {
   const [loading, setLoading] = useState(false);
   const isFirstRun = useRef(true);
 
-  useEffect(() => {
-    const fetchTotal = async () => {
-      try {
-        const { data, error } = await getProducts(searchTerm, status, 1, 10000);
-        if (error) throw error;
+  const fetchTotal = async () => {
+    try {
+      const { data, error } = await getProducts(searchTerm, status, 1, 10000);
+      if (error) throw error;
 
-        let totalCount = 0;
-        if (Array.isArray(data)) {
-          totalCount = data.length;
-        } else {
-          const items = data.productItems ?? data.products ?? data.items ?? [];
-          totalCount = data.total ?? data.totalCount ?? items.length ?? 0;
-        }
-        setTotal(totalCount);
-      } catch (err) {
-        console.error('Error fetching total:', err);
+      let totalCount = 0;
+      if (Array.isArray(data)) {
+        totalCount = data.length;
+      } else {
+        const items = data.productItems ?? data.products ?? data.items ?? [];
+        totalCount = data.total ?? data.totalCount ?? items.length ?? 0;
       }
-    };
+      setTotal(totalCount);
+    } catch (err) {
+      console.error('Error fetching total:', err);
+    }
+  };
+
+  useEffect(() => {
     fetchTotal();
   }, [status]);
 
@@ -67,22 +68,7 @@ function ListProductsPage() {
     fetchProducts();
   }, [status, pageSize, pageNumber]);
 
-  useEffect(() => {
-    if (isFirstRun.current) {
-      isFirstRun.current = false;
-      return;
-    }
 
-    const timer = setTimeout(() => {
-      if (pageNumber !== 1) {
-        setPageNumber(1);
-      } else {
-        fetchProducts();
-      }
-    }, 500);
-
-    return () => clearTimeout(timer);
-  }, [searchTerm]);
 
   const totalPages = total > 0 ? Math.ceil(total / pageSize) : 1;
 
@@ -92,6 +78,7 @@ function ListProductsPage() {
     } else {
       await fetchProducts();
     }
+    fetchTotal();
   };
 
   const handlePageChange = (newPage) => {
@@ -142,7 +129,7 @@ function ListProductsPage() {
         )}
       </div>
 
-      <ProductPagination
+      <Pagination
         pageNumber={pageNumber}
         totalPages={totalPages}
         pageSize={pageSize}

@@ -6,7 +6,7 @@ import { getProductById } from '../../products/services/getById';
 import { getVal } from '../helpers/orderHelpers';
 import OrderFilters from '../components/OrderFilters';
 import OrderCard from '../components/OrderCard';
-import OrderPagination from '../components/OrderPagination';
+import Pagination from '../../shared/components/Pagination';
 
 function ListOrdersPage() {
   const [orders, setOrders] = useState([]);
@@ -26,11 +26,11 @@ function ListOrdersPage() {
     setLoading(true);
     setError(null);
     try {
-      const { data, error: svcError } = await listOrders({ 
-        customerName, 
-        status: statusFilter === 'all' ? null : statusFilter, 
-        pageNumber, 
-        pageSize: pageS 
+      const { data, error: svcError } = await listOrders({
+        customerName,
+        status: statusFilter === 'all' ? null : statusFilter,
+        pageNumber,
+        pageSize: pageS
       });
       if (svcError) {
         setError(svcError);
@@ -77,11 +77,11 @@ function ListOrdersPage() {
 
   const fetchTotal = async ({ customerName = null, statusFilter = null } = {}) => {
     try {
-      const { data, error: svcError } = await listOrders({ 
-        customerName, 
-        status: statusFilter === 'all' ? null : statusFilter, 
-        pageNumber: 1, 
-        pageSize: 10000 
+      const { data, error: svcError } = await listOrders({
+        customerName,
+        status: statusFilter === 'all' ? null : statusFilter,
+        pageNumber: 1,
+        pageSize: 10000
       });
       if (svcError) {
         setTotal(0);
@@ -100,61 +100,45 @@ function ListOrdersPage() {
   };
 
   useEffect(() => {
-    fetchOrders({ 
-      customerName: search.trim() === '' ? null : search.trim(), 
-      statusFilter: status, 
-      pageNumber: page, 
-      pageS: pageSize 
+    fetchOrders({
+      customerName: search.trim() === '' ? null : search.trim(),
+      statusFilter: status,
+      pageNumber: page,
+      pageS: pageSize
     });
   }, [page, pageSize]);
 
   useEffect(() => {
-    fetchTotal({ 
-      customerName: search.trim() === '' ? null : search.trim(), 
-      statusFilter: status 
+    fetchTotal({
+      customerName: search.trim() === '' ? null : search.trim(),
+      statusFilter: status
     });
     setPage(1);
   }, [status]);
 
-  useEffect(() => {
-    if (isFirstRun.current) {
-      isFirstRun.current = false;
-      return;
-    }
 
-    const timer = setTimeout(() => {
-      const customerName = search.trim() === '' ? null : search.trim();
-      fetchTotal({ customerName, statusFilter: status });
-
-      if (page !== 1) {
-        setPage(1);
-      } else {
-        fetchOrders({ customerName, statusFilter: status, pageNumber: 1, pageS: pageSize });
-      }
-    }, 100);
-
-    return () => clearTimeout(timer);
-  }, [search]);
 
   const handleSearch = (e) => {
     e && e.preventDefault();
     setPage(1);
-    fetchOrders({ 
-      customerName: search.trim() === '' ? null : search.trim(), 
-      statusFilter: status, 
-      pageNumber: 1, 
-      pageS: pageSize 
+    const customerName = search.trim() === '' ? null : search.trim();
+    fetchTotal({ customerName, statusFilter: status });
+    fetchOrders({
+      customerName,
+      statusFilter: status,
+      pageNumber: 1,
+      pageS: pageSize
     });
   };
 
   const handleStatusChange = (e) => {
     setStatus(e.target.value);
     setPage(1);
-    fetchOrders({ 
-      customerName: search.trim() === '' ? null : search.trim(), 
-      statusFilter: e.target.value, 
-      pageNumber: 1, 
-      pageS: pageSize 
+    fetchOrders({
+      customerName: search.trim() === '' ? null : search.trim(),
+      statusFilter: e.target.value,
+      pageNumber: 1,
+      pageS: pageSize
     });
   };
 
@@ -220,7 +204,7 @@ function ListOrdersPage() {
         })}
       </div>
 
-      <OrderPagination
+      <Pagination
         page={page}
         totalPages={totalPages}
         canNext={canNext}

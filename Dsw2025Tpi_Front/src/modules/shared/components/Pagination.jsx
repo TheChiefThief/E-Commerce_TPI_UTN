@@ -1,4 +1,4 @@
-function ProductPagination({ 
+function Pagination({ 
   pageNumber, 
   totalPages, 
   pageSize, 
@@ -47,4 +47,4 @@ function ProductPagination({
   );
 }
 
-export default ProductPagination;
+export default Pagination;
