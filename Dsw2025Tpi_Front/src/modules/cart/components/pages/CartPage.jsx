@@ -6,6 +6,7 @@ import Button from '../../../shared/components/Button';
 import Header from '../../../shared/components/Header';
 import ModalWrapper from '../../../shared/components/ModalWrapper';
 import LoginForm from '../../../auth/components/LoginForm';
+import OrderSuccessModal from '../OrderSuccessModal';
 import { postOrder } from '../../../orders/services/listServices';
 import useAuth from '../../../auth/hook/useAuth';
 import CartItem from '../CartItem';
@@ -18,6 +19,8 @@ function CartPage() {
   const { cartItems, totalItems, totalAmount, updateQuantity, removeItem, clearCart } = useCart();
   const { isAdmin } = useAuth();
   const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
+  const [isSuccessModalOpen, setIsSuccessModalOpen] = useState(false);
+  const [orderSuccessData, setOrderSuccessData] = useState(null);
   const [isProcessing, setIsProcessing] = useState(false);
   const [shippingAddress, setShippingAddress] = useState('');
   const [billingAddress, setBillingAddress] = useState('');
@@ -93,9 +96,13 @@ function CartPage() {
         return;
       }
 
-      alert('Orden creada exitosamente');
+      setOrderSuccessData({
+        id: data?.id || Math.random().toString(36).substr(2, 9).toUpperCase(),
+        total: totalAmount,
+        items: cartItems.length
+      });
+      setIsSuccessModalOpen(true);
       clearCart();
-      navigate('/');
     } catch (err) {
       console.error('Unexpected error creating order', err);
       alert('Error procesando la orden');
@@ -187,6 +194,15 @@ function CartPage() {
           />
         </ModalWrapper>
       )}
+
+      <OrderSuccessModal
+        isOpen={isSuccessModalOpen}
+        onClose={() => {
+          setIsSuccessModalOpen(false);
+          navigate('/');
+        }}
+        orderData={orderSuccessData}
+      />
     </div>
   );
 }
