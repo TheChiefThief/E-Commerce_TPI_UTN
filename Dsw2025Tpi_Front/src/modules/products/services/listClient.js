@@ -4,6 +4,7 @@ export const getProductsClient = async (search = null, status = null, pageNumber
   const params = {};
   if (search) params.search = search;
   if (status) params.isActive = status;
+  params.inStockOnly = true;
   if (pageNumber) params.pageNumber = pageNumber;
   if (pageSize) params.pageSize = pageSize;
 

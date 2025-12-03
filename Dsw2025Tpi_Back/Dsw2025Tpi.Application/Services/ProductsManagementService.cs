@@ -74,6 +74,7 @@ public class ProductsManagementService : IProductsManagementService
         var products = await _repository
             .GetFiltered<Product>(p =>
                 (!request.IsActive.HasValue || p.IsActive == request.IsActive.Value) &&
+                (!request.InStockOnly.HasValue || !request.InStockOnly.Value || p.StockQuantity > 0) &&
                 (string.IsNullOrWhiteSpace(request.Search) ||
                 p.Name.Contains(request.Search) ||
                 p.Description.Contains(request.Search) ||

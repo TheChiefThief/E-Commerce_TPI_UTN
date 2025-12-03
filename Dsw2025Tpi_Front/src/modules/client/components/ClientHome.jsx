@@ -117,7 +117,7 @@ const ClientHome = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {(() => {
-            const visibleProducts = products.filter(p => Number(p.stockQuantity ?? p.stock ?? 0) >= 1);
+            const visibleProducts = products;
             if (visibleProducts.length === 0) {
               return (
                 <div className="col-span-full flex flex-col items-center justify-center py-12">

@@ -1087,3 +1087,121 @@ System.ArgumentException: An item with the same key has already been added. Key:
 2025-12-03 13:22:58.272 -03:00 [INF] Se encontraron 34 productos.
 2025-12-03 13:22:58.272 -03:00 [INF] HTTP GET /api/products responded 200 in 5.6872 ms
 2025-12-03 13:22:58.273 -03:00 [INF] HTTP GET /api/products responded 200 in 6.0612 ms
+2025-12-03 13:23:07.590 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:23:07.590 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:23:07.590 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:23:07.590 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:23:07.599 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:23:07.599 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:23:07.599 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:23:07.599 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:23:07.599 -03:00 [INF] HTTP GET /api/orders responded 200 in 11.4183 ms
+2025-12-03 13:23:07.599 -03:00 [INF] HTTP GET /api/orders responded 200 in 11.4904 ms
+2025-12-03 13:23:07.624 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:23:07.624 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:23:07.625 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:23:07.625 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:23:07.629 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:23:07.629 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:23:07.630 -03:00 [INF] HTTP GET /api/orders responded 200 in 7.4700 ms
+2025-12-03 13:23:07.632 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:23:07.632 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:23:07.632 -03:00 [INF] HTTP GET /api/orders responded 200 in 8.2840 ms
+2025-12-03 13:23:12.119 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089caf"
+2025-12-03 13:23:12.120 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089caf"
+2025-12-03 13:23:12.132 -03:00 [INF] Producto con id: "b9ed5544-42dc-439c-b4d7-15e720089caf" obtenido exitosamente
+2025-12-03 13:23:12.132 -03:00 [INF] Producto "b9ed5544-42dc-439c-b4d7-15e720089caf" encontrado.
+2025-12-03 13:23:12.132 -03:00 [INF] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089caf responded 200 in 18.8010 ms
+2025-12-03 13:23:19.863 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089caa"
+2025-12-03 13:23:19.863 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089caa"
+2025-12-03 13:23:19.865 -03:00 [WRN] El producto con id: "b9ed5544-42dc-439c-b4d7-15e720089caa" no está activo
+2025-12-03 13:23:19.934 -03:00 [ERR] Ocurrió una excepción no controlada: El producto no está activo
+Dsw2025Tpi.Application.Exceptions.ApplicationException: El producto no está activo
+   at Dsw2025Tpi.Application.Services.ProductsManagementService.GetProductById(Guid id) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\ProductsManagementService.cs:line 39
+   at Dsw2025Tpi.Api.Controllers.ProductsController.GetProductById(Guid id) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\ProductsController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:23:19.940 -03:00 [ERR] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089caa responded 500 in 77.7859 ms
+2025-12-03 13:23:26.987 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089cae"
+2025-12-03 13:23:26.987 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089cae"
+2025-12-03 13:23:26.990 -03:00 [INF] Producto con id: "b9ed5544-42dc-439c-b4d7-15e720089cae" obtenido exitosamente
+2025-12-03 13:23:26.990 -03:00 [INF] Producto "b9ed5544-42dc-439c-b4d7-15e720089cae" encontrado.
+2025-12-03 13:23:26.991 -03:00 [INF] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089cae responded 200 in 3.9083 ms
+2025-12-03 13:23:26.999 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089cad"
+2025-12-03 13:23:26.999 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089cad"
+2025-12-03 13:23:27.001 -03:00 [INF] Producto con id: "b9ed5544-42dc-439c-b4d7-15e720089cad" obtenido exitosamente
+2025-12-03 13:23:27.001 -03:00 [INF] Producto "b9ed5544-42dc-439c-b4d7-15e720089cad" encontrado.
+2025-12-03 13:23:27.001 -03:00 [INF] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089cad responded 200 in 3.0397 ms
+2025-12-03 13:23:55.923 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089cab"
+2025-12-03 13:23:55.923 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089cab"
+2025-12-03 13:23:55.926 -03:00 [WRN] El producto con id: "b9ed5544-42dc-439c-b4d7-15e720089cab" no está activo
+2025-12-03 13:23:55.980 -03:00 [ERR] Ocurrió una excepción no controlada: El producto no está activo
+Dsw2025Tpi.Application.Exceptions.ApplicationException: El producto no está activo
+   at Dsw2025Tpi.Application.Services.ProductsManagementService.GetProductById(Guid id) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\ProductsManagementService.cs:line 39
+   at Dsw2025Tpi.Api.Controllers.ProductsController.GetProductById(Guid id) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\ProductsController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:23:55.983 -03:00 [ERR] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089cab responded 500 in 60.0606 ms
+2025-12-03 13:23:55.991 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089cac"
+2025-12-03 13:23:55.991 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089cac"
+2025-12-03 13:23:55.994 -03:00 [INF] Producto con id: "b9ed5544-42dc-439c-b4d7-15e720089cac" obtenido exitosamente
+2025-12-03 13:23:55.994 -03:00 [INF] Producto "b9ed5544-42dc-439c-b4d7-15e720089cac" encontrado.
+2025-12-03 13:23:55.995 -03:00 [INF] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089cac responded 200 in 3.9924 ms
+2025-12-03 13:23:57.629 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089caa"
+2025-12-03 13:23:57.629 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089caa"
+2025-12-03 13:23:57.631 -03:00 [WRN] El producto con id: "b9ed5544-42dc-439c-b4d7-15e720089caa" no está activo
+2025-12-03 13:23:57.683 -03:00 [ERR] Ocurrió una excepción no controlada: El producto no está activo
+Dsw2025Tpi.Application.Exceptions.ApplicationException: El producto no está activo
+   at Dsw2025Tpi.Application.Services.ProductsManagementService.GetProductById(Guid id) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\ProductsManagementService.cs:line 39
+   at Dsw2025Tpi.Api.Controllers.ProductsController.GetProductById(Guid id) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\ProductsController.cs:line 58
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:23:57.685 -03:00 [ERR] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089caa responded 500 in 57.4338 ms
+2025-12-03 13:26:00.055 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:26:00.055 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 13:26:00.064 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:26:00.064 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 13:26:00.064 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 13:26:00.067 -03:00 [INF] HTTP GET /api/products responded 200 in 12.3314 ms
+2025-12-03 13:26:00.069 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:26:00.069 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 13:26:00.072 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:26:00.072 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 13:26:00.072 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 13:26:00.074 -03:00 [INF] HTTP GET /api/products responded 200 in 6.2884 ms
+2025-12-03 13:26:00.079 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:26:00.080 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 13:26:00.083 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:26:00.083 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 13:26:00.083 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 13:26:00.083 -03:00 [INF] HTTP GET /api/products responded 200 in 4.4448 ms
+2025-12-03 13:26:00.085 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:26:00.085 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 13:26:00.088 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:26:00.088 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 13:26:00.088 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 13:26:00.089 -03:00 [INF] HTTP GET /api/products responded 200 in 3.8513 ms

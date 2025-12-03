@@ -39,6 +39,9 @@ const ProductCard = ({ product, quantity, changeQty, handleAddToCart, isAdmin, c
         <div className="mt-auto pt-4 border-t border-gray-200 space-y-4">
           <div className="flex items-center justify-between">
             <span className="text-xl sm:text-2xl font-bold text-gray-900">${(product.currentUnitPrice ?? 0).toLocaleString()}</span>
+            <span className="text-sm font-medium text-gray-600">
+              Stock: {Number(product.stockQuantity ?? product.stock ?? 0)}
+            </span>
           </div>
 
           <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 flex-wrap">
