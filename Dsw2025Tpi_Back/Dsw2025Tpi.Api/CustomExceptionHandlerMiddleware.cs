@@ -75,8 +75,8 @@ public class CustomExceptionHandlingMiddleware : IMiddleware
 
             var internalCode = e switch
             {
-                Dsw2025Tpi.Application.Exceptions.NotAuthenticatedException => "AUTH-07", 
-                Dsw2025Tpi.Application.Exceptions.InvalidRoleException => "AUTH-12", 
+                Dsw2025Tpi.Application.Exceptions.NotAuthenticatedException => "AUTH-07",
+                Dsw2025Tpi.Application.Exceptions.InvalidRoleException => "AUTH-12",
                 // AUTH - Authentication/Authorization errors
                 InvalidTokenException => "AUTH-1001",
                 ExpiredTokenException => "AUTH-1002",
@@ -84,7 +84,7 @@ public class CustomExceptionHandlingMiddleware : IMiddleware
                 UnauthorizedException => "AUTH-1004",
                 ForbiddenException => "AUTH-2001",
                 InsufficientPermissionsException => "AUTH-2002",
-
+                EmailAlreadyExistsException => "AUTH-2003",
 
                 // VAL - Validation errors
 
@@ -109,7 +109,7 @@ public class CustomExceptionHandlingMiddleware : IMiddleware
                 DuplicateOrderException => "ORDER-4001",
 
                 // CUST - Customer errors
-                CustomerNotFoundException => "CUST-4001", 
+                CustomerNotFoundException => "CUST-4001",
 
                 // FILE - File errors
                 InvalidFileFormatException => "FILE-1001",
@@ -121,7 +121,7 @@ public class CustomExceptionHandlingMiddleware : IMiddleware
                 NoContentException => "RES-4003",
                 ConflictException => "RES-4004",
                 DuplicatedEntityException => "RES-4005",
-                EmailAlreadyExistsException => "RES-4006",
+
 
                 // SYS - System errors
                 ExternalServiceException => "SYS-5001",

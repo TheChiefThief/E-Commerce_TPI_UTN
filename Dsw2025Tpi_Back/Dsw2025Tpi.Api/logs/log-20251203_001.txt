@@ -1,0 +1,1178 @@
+2025-12-03 11:08:58.034 -03:00 [INF] Starting up
+2025-12-03 11:09:00.833 -03:00 [WRN] The WebRootPath was not found: C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\wwwroot. Static files may be unavailable.
+2025-12-03 11:09:19.755 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:19.762 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:09:19.840 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:19.841 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:09:19.842 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:09:19.922 -03:00 [INF] HTTP GET /api/products responded 200 in 316.3140 ms
+2025-12-03 11:09:19.924 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:19.925 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:09:19.928 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:19.928 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:09:19.928 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:09:19.930 -03:00 [INF] HTTP GET /api/products responded 200 in 9.7417 ms
+2025-12-03 11:09:19.935 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:19.936 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:09:19.938 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:19.938 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:09:19.938 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:09:19.939 -03:00 [INF] HTTP GET /api/products responded 200 in 6.9666 ms
+2025-12-03 11:09:19.941 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:19.941 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:09:19.943 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:19.944 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:09:19.944 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:09:19.944 -03:00 [INF] HTTP GET /api/products responded 200 in 3.9370 ms
+2025-12-03 11:09:38.096 -03:00 [INF] Intento de login para el usuario: Admin
+2025-12-03 11:09:38.195 -03:00 [INF] Login exitoso para el usuario Admin con rol Admin
+2025-12-03 11:09:38.227 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 158.8423 ms
+2025-12-03 11:09:38.284 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:09:38.284 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:09:38.293 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:38.293 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:09:38.293 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:09:38.294 -03:00 [INF] HTTP GET /api/products responded 200 in 18.8917 ms
+2025-12-03 11:09:38.296 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:09:38.296 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:09:38.298 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:38.298 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:09:38.298 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:09:38.299 -03:00 [INF] HTTP GET /api/products responded 200 in 4.0450 ms
+2025-12-03 11:09:38.328 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:09:38.330 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:09:38.460 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:09:38.460 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:09:38.476 -03:00 [INF] HTTP GET /api/orders responded 200 in 159.6748 ms
+2025-12-03 11:09:38.487 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:09:38.487 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:09:38.496 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:09:38.496 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:09:38.496 -03:00 [INF] HTTP GET /api/orders responded 200 in 12.2930 ms
+2025-12-03 11:09:50.191 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:50.191 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:09:50.195 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:50.195 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:09:50.196 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:09:50.197 -03:00 [INF] HTTP GET /api/products responded 200 in 7.1591 ms
+2025-12-03 11:09:50.199 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:50.199 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:09:50.203 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:50.203 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:09:50.203 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:09:50.204 -03:00 [INF] HTTP GET /api/products responded 200 in 5.6946 ms
+2025-12-03 11:09:50.223 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:50.223 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:09:50.226 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:50.226 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:09:50.226 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:09:50.227 -03:00 [INF] HTTP GET /api/products responded 200 in 4.5916 ms
+2025-12-03 11:09:50.229 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:09:50.229 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:09:50.232 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:09:50.232 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:09:50.232 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:09:50.232 -03:00 [INF] HTTP GET /api/products responded 200 in 4.2408 ms
+2025-12-03 11:10:36.987 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:36.987 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:10:36.990 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:36.990 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:10:36.990 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:10:36.991 -03:00 [INF] HTTP GET /api/products responded 200 in 4.9373 ms
+2025-12-03 11:10:36.997 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:36.997 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:10:37.000 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:37.000 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:10:37.000 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:10:37.000 -03:00 [INF] HTTP GET /api/products responded 200 in 3.5968 ms
+2025-12-03 11:10:38.701 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:38.701 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:10:38.703 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:38.703 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:10:38.703 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:10:38.704 -03:00 [INF] HTTP GET /api/products responded 200 in 3.8637 ms
+2025-12-03 11:10:38.709 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":3,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:38.709 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 3, PageSize = 12, IsActive = True }
+2025-12-03 11:10:38.711 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:38.711 -03:00 [INF] Se obtuvieron 4 productos activos
+2025-12-03 11:10:38.711 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:10:38.712 -03:00 [INF] HTTP GET /api/products responded 200 in 2.6936 ms
+2025-12-03 11:10:46.058 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:46.058 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:10:46.060 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:46.060 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:10:46.060 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:10:46.061 -03:00 [INF] HTTP GET /api/products responded 200 in 3.4013 ms
+2025-12-03 11:10:46.068 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:46.068 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:10:46.071 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:46.071 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:10:46.071 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:10:46.071 -03:00 [INF] HTTP GET /api/products responded 200 in 3.6118 ms
+2025-12-03 11:10:48.198 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:48.198 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:10:48.200 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:48.200 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:10:48.200 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:10:48.201 -03:00 [INF] HTTP GET /api/products responded 200 in 3.7630 ms
+2025-12-03 11:10:48.208 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:10:48.208 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:10:48.209 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:10:48.210 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:10:48.210 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:10:48.210 -03:00 [INF] HTTP GET /api/products responded 200 in 2.6145 ms
+2025-12-03 11:14:08.758 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:08.758 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:08.760 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:08.760 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:08.760 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:08.761 -03:00 [INF] HTTP GET /api/products responded 200 in 3.6202 ms
+2025-12-03 11:14:08.766 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:08.766 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:14:08.768 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:08.768 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:08.768 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:08.768 -03:00 [INF] HTTP GET /api/products responded 200 in 2.6013 ms
+2025-12-03 11:14:11.197 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:11.197 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:11.199 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:11.199 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:11.199 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:11.200 -03:00 [INF] HTTP GET /api/products responded 200 in 3.1626 ms
+2025-12-03 11:14:11.208 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:11.208 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:14:11.210 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:11.210 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:11.210 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:11.210 -03:00 [INF] HTTP GET /api/products responded 200 in 3.1994 ms
+2025-12-03 11:14:13.310 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:13.311 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:13.314 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:13.314 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:13.314 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:13.314 -03:00 [INF] HTTP GET /api/products responded 200 in 4.1177 ms
+2025-12-03 11:14:13.318 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:13.318 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:14:13.320 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:13.320 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:13.320 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:13.320 -03:00 [INF] HTTP GET /api/products responded 200 in 3.3964 ms
+2025-12-03 11:14:15.308 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:15.308 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:15.311 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:15.311 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:15.311 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:15.311 -03:00 [INF] HTTP GET /api/products responded 200 in 3.5329 ms
+2025-12-03 11:14:15.318 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":3,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:15.319 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 3, PageSize = 12, IsActive = True }
+2025-12-03 11:14:15.321 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:15.321 -03:00 [INF] Se obtuvieron 4 productos activos
+2025-12-03 11:14:15.321 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:14:15.321 -03:00 [INF] HTTP GET /api/products responded 200 in 3.2671 ms
+2025-12-03 11:14:16.801 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:16.801 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:16.804 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:16.804 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:16.804 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:16.804 -03:00 [INF] HTTP GET /api/products responded 200 in 3.4922 ms
+2025-12-03 11:14:16.810 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:16.810 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:14:16.812 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:16.812 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:16.812 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:16.812 -03:00 [INF] HTTP GET /api/products responded 200 in 2.4710 ms
+2025-12-03 11:14:20.333 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:20.333 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:20.335 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:20.336 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:20.336 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:20.336 -03:00 [INF] HTTP GET /api/products responded 200 in 3.4474 ms
+2025-12-03 11:14:20.341 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:20.341 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:14:20.343 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:20.343 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:20.343 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:20.343 -03:00 [INF] HTTP GET /api/products responded 200 in 2.4748 ms
+2025-12-03 11:14:25.728 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:25.729 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:25.731 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:25.731 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:25.731 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:25.732 -03:00 [INF] HTTP GET /api/products responded 200 in 3.6218 ms
+2025-12-03 11:14:25.736 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:25.736 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:14:25.738 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:25.738 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:25.738 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:25.738 -03:00 [INF] HTTP GET /api/products responded 200 in 2.6257 ms
+2025-12-03 11:14:40.153 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:40.153 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:40.155 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:40.156 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:40.156 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:40.156 -03:00 [INF] HTTP GET /api/products responded 200 in 4.1401 ms
+2025-12-03 11:14:40.162 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":3,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:40.162 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 3, PageSize = 12, IsActive = True }
+2025-12-03 11:14:40.164 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:40.164 -03:00 [INF] Se obtuvieron 4 productos activos
+2025-12-03 11:14:40.164 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:14:40.164 -03:00 [INF] HTTP GET /api/products responded 200 in 2.6036 ms
+2025-12-03 11:14:43.690 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:43.690 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:43.693 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:43.693 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:43.693 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:43.693 -03:00 [INF] HTTP GET /api/products responded 200 in 3.6196 ms
+2025-12-03 11:14:43.699 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:43.699 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:14:43.701 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:43.701 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:43.701 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:43.701 -03:00 [INF] HTTP GET /api/products responded 200 in 2.2416 ms
+2025-12-03 11:14:45.533 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:45.533 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:45.535 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:45.535 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:45.535 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:45.535 -03:00 [INF] HTTP GET /api/products responded 200 in 2.9179 ms
+2025-12-03 11:14:45.542 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:45.542 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:14:45.544 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:45.544 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:45.544 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:45.545 -03:00 [INF] HTTP GET /api/products responded 200 in 3.0904 ms
+2025-12-03 11:14:52.667 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:52.667 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:52.669 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:52.669 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:52.669 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:52.669 -03:00 [INF] HTTP GET /api/products responded 200 in 2.8457 ms
+2025-12-03 11:14:52.673 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:52.673 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:14:52.675 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:52.675 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:52.675 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:52.675 -03:00 [INF] HTTP GET /api/products responded 200 in 2.2273 ms
+2025-12-03 11:14:59.391 -03:00 [INF] Intento de login para el usuario: Francis
+2025-12-03 11:14:59.445 -03:00 [INF] Login exitoso para el usuario Francis con rol User
+2025-12-03 11:14:59.448 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 69.7207 ms
+2025-12-03 11:14:59.506 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:59.506 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:59.509 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:59.509 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:59.509 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:59.509 -03:00 [INF] HTTP GET /api/products responded 200 in 5.2978 ms
+2025-12-03 11:14:59.511 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:59.511 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:14:59.513 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:59.513 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:14:59.513 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:14:59.514 -03:00 [INF] HTTP GET /api/products responded 200 in 3.6437 ms
+2025-12-03 11:14:59.523 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:59.524 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:14:59.526 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:59.526 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:59.526 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:59.526 -03:00 [INF] HTTP GET /api/products responded 200 in 3.4449 ms
+2025-12-03 11:14:59.528 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:14:59.528 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:14:59.529 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:14:59.530 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:14:59.530 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:14:59.530 -03:00 [INF] HTTP GET /api/products responded 200 in 2.5739 ms
+2025-12-03 11:15:01.722 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:01.722 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:15:01.725 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:01.725 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:15:01.725 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:15:01.725 -03:00 [INF] HTTP GET /api/products responded 200 in 3.9286 ms
+2025-12-03 11:15:01.731 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:01.731 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:15:01.733 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:01.733 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:15:01.733 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:15:01.733 -03:00 [INF] HTTP GET /api/products responded 200 in 2.2823 ms
+2025-12-03 11:15:03.631 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:03.631 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:15:03.633 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:03.633 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:15:03.633 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:15:03.634 -03:00 [INF] HTTP GET /api/products responded 200 in 2.9294 ms
+2025-12-03 11:15:03.638 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":3,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:03.638 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 3, PageSize = 12, IsActive = True }
+2025-12-03 11:15:03.641 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:03.641 -03:00 [INF] Se obtuvieron 4 productos activos
+2025-12-03 11:15:03.641 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:15:03.641 -03:00 [INF] HTTP GET /api/products responded 200 in 3.4376 ms
+2025-12-03 11:15:07.882 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:07.882 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:15:07.884 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:07.884 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:15:07.884 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:15:07.885 -03:00 [INF] HTTP GET /api/products responded 200 in 3.3010 ms
+2025-12-03 11:15:07.890 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":2,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:07.890 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 2, PageSize = 12, IsActive = True }
+2025-12-03 11:15:07.892 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:07.892 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:15:07.892 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:15:07.892 -03:00 [INF] HTTP GET /api/products responded 200 in 2.4845 ms
+2025-12-03 11:15:13.697 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:13.697 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:15:13.699 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:13.699 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:15:13.699 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:15:13.699 -03:00 [INF] HTTP GET /api/products responded 200 in 2.8413 ms
+2025-12-03 11:15:13.719 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:13.719 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:15:13.722 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:13.722 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:15:13.722 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:15:13.722 -03:00 [INF] HTTP GET /api/products responded 200 in 3.6141 ms
+2025-12-03 11:15:29.350 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:29.350 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:15:29.353 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:29.353 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:15:29.354 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:15:29.354 -03:00 [INF] HTTP GET /api/products responded 200 in 4.7027 ms
+2025-12-03 11:15:29.356 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:29.356 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:15:29.358 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:29.358 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:15:29.358 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:15:29.359 -03:00 [INF] HTTP GET /api/products responded 200 in 3.5409 ms
+2025-12-03 11:15:29.367 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:29.367 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:15:29.368 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:29.368 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:15:29.368 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:15:29.369 -03:00 [INF] HTTP GET /api/products responded 200 in 2.4518 ms
+2025-12-03 11:15:29.370 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:15:29.370 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:15:29.372 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:29.372 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:15:29.372 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:15:29.372 -03:00 [INF] HTTP GET /api/products responded 200 in 2.6080 ms
+2025-12-03 11:15:39.778 -03:00 [INF] Intento de login para el usuario: Admin
+2025-12-03 11:15:39.828 -03:00 [INF] Login exitoso para el usuario Admin con rol Admin
+2025-12-03 11:15:39.830 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 57.7239 ms
+2025-12-03 11:15:39.872 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:39.872 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:15:39.875 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:39.875 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:15:39.875 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:15:39.876 -03:00 [INF] HTTP GET /api/products responded 200 in 4.7255 ms
+2025-12-03 11:15:39.877 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:39.877 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:15:39.878 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:15:39.878 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:15:39.879 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:39.879 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:15:39.879 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:15:39.880 -03:00 [INF] HTTP GET /api/products responded 200 in 2.7350 ms
+2025-12-03 11:15:39.888 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:15:39.888 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:15:39.889 -03:00 [INF] HTTP GET /api/orders responded 200 in 13.3461 ms
+2025-12-03 11:15:39.895 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:15:39.895 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:15:39.898 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:15:39.898 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:15:39.898 -03:00 [INF] HTTP GET /api/orders responded 200 in 3.7230 ms
+2025-12-03 11:15:40.854 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:40.855 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:15:40.857 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:40.857 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:15:40.857 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:15:40.858 -03:00 [INF] HTTP GET /api/products responded 200 in 3.7866 ms
+2025-12-03 11:15:40.859 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:40.859 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:15:40.861 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:40.867 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:15:40.867 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:15:40.868 -03:00 [INF] HTTP GET /api/products responded 200 in 9.0901 ms
+2025-12-03 11:15:40.869 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:40.869 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:15:40.880 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:40.880 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:15:40.880 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:15:40.880 -03:00 [INF] HTTP GET /api/products responded 200 in 11.2003 ms
+2025-12-03 11:15:40.884 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:40.884 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:15:40.889 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:40.889 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:15:40.889 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:15:40.889 -03:00 [INF] HTTP GET /api/products responded 200 in 6.0639 ms
+2025-12-03 11:15:41.593 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:15:41.593 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:15:41.593 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:15:41.593 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:15:41.602 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:15:41.602 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:15:41.602 -03:00 [INF] HTTP GET /api/orders responded 200 in 9.8731 ms
+2025-12-03 11:15:41.610 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:15:41.610 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:15:41.611 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:15:41.611 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:15:41.611 -03:00 [INF] HTTP GET /api/orders responded 200 in 17.9219 ms
+2025-12-03 11:15:41.614 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:15:41.614 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:15:41.615 -03:00 [INF] HTTP GET /api/orders responded 200 in 4.7484 ms
+2025-12-03 11:15:41.621 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:15:41.621 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:15:41.625 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:15:41.625 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:15:41.625 -03:00 [INF] HTTP GET /api/orders responded 200 in 6.0629 ms
+2025-12-03 11:15:42.354 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:42.354 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:42.355 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:15:42.355 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:15:42.358 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:42.358 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:15:42.358 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:15:42.358 -03:00 [INF] HTTP GET /api/products responded 200 in 3.9938 ms
+2025-12-03 11:15:42.359 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:42.359 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:15:42.361 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:42.361 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:15:42.361 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:15:42.362 -03:00 [INF] HTTP GET /api/products responded 200 in 2.5155 ms
+2025-12-03 11:15:42.363 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:42.363 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:15:42.363 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:15:42.364 -03:00 [INF] HTTP GET /api/products responded 200 in 9.6615 ms
+2025-12-03 11:15:42.365 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:15:42.365 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:15:42.367 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:15:42.367 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:15:42.367 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:15:42.368 -03:00 [INF] HTTP GET /api/products responded 200 in 2.9872 ms
+2025-12-03 11:28:13.856 -03:00 [INF] Starting up
+2025-12-03 11:28:16.336 -03:00 [WRN] The WebRootPath was not found: C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\wwwroot. Static files may be unavailable.
+2025-12-03 11:28:23.307 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:23.313 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:28:23.394 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:23.397 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:28:23.397 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:28:23.476 -03:00 [INF] HTTP GET /api/products responded 200 in 286.2101 ms
+2025-12-03 11:28:23.519 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:23.520 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:28:23.523 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:23.524 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:23.524 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:28:23.524 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:28:23.524 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:28:23.525 -03:00 [INF] HTTP GET /api/products responded 200 in 47.9382 ms
+2025-12-03 11:28:23.526 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:23.527 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:28:23.527 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:28:23.527 -03:00 [INF] HTTP GET /api/products responded 200 in 7.3098 ms
+2025-12-03 11:28:23.530 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:23.530 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:28:23.533 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:23.534 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:28:23.534 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:28:23.534 -03:00 [INF] HTTP GET /api/products responded 200 in 4.8370 ms
+2025-12-03 11:28:33.974 -03:00 [INF] Intento de login para el usuario: Francis
+2025-12-03 11:28:34.077 -03:00 [INF] Login exitoso para el usuario Francis con rol User
+2025-12-03 11:28:34.125 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 176.9325 ms
+2025-12-03 11:28:34.221 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:34.221 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:28:34.224 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:34.224 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:28:34.224 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:28:34.225 -03:00 [INF] HTTP GET /api/products responded 200 in 42.0591 ms
+2025-12-03 11:28:34.227 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:34.227 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:28:34.230 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:34.231 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:28:34.231 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:28:34.231 -03:00 [INF] HTTP GET /api/products responded 200 in 5.3603 ms
+2025-12-03 11:28:34.232 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:34.232 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:28:34.235 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:34.235 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:28:34.235 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:28:34.235 -03:00 [INF] HTTP GET /api/products responded 200 in 3.9265 ms
+2025-12-03 11:28:34.237 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:34.237 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:28:34.240 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:34.240 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:28:34.240 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:28:34.241 -03:00 [INF] HTTP GET /api/products responded 200 in 4.2120 ms
+2025-12-03 11:28:41.984 -03:00 [INF] Intento de login para el usuario: Admin
+2025-12-03 11:28:42.038 -03:00 [INF] Login exitoso para el usuario Admin con rol Admin
+2025-12-03 11:28:42.041 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 68.4387 ms
+2025-12-03 11:28:42.084 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:42.084 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:42.094 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:42.094 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:42.094 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:42.095 -03:00 [INF] HTTP GET /api/products responded 200 in 13.3588 ms
+2025-12-03 11:28:42.097 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:42.097 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:42.099 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:42.099 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:42.099 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:42.100 -03:00 [INF] HTTP GET /api/products responded 200 in 3.7723 ms
+2025-12-03 11:28:42.108 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:28:42.110 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:28:42.229 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:42.229 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:42.247 -03:00 [INF] HTTP GET /api/orders responded 200 in 155.9205 ms
+2025-12-03 11:28:42.255 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:28:42.255 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:28:42.259 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:42.259 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:42.260 -03:00 [INF] HTTP GET /api/orders responded 200 in 6.5558 ms
+2025-12-03 11:28:43.724 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:43.724 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:43.727 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:43.727 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:43.727 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:43.728 -03:00 [INF] HTTP GET /api/products responded 200 in 5.6458 ms
+2025-12-03 11:28:43.730 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:43.730 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:43.733 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:43.733 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:43.733 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:43.733 -03:00 [INF] HTTP GET /api/products responded 200 in 3.6141 ms
+2025-12-03 11:28:43.735 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:43.735 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:28:43.737 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:43.737 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:28:43.737 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:28:43.737 -03:00 [INF] HTTP GET /api/products responded 200 in 3.1242 ms
+2025-12-03 11:28:43.739 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:43.740 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:28:43.742 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:43.742 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:28:43.742 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:28:43.742 -03:00 [INF] HTTP GET /api/products responded 200 in 3.9412 ms
+2025-12-03 11:28:44.476 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:44.476 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:44.478 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:44.479 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:44.479 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:44.480 -03:00 [INF] HTTP GET /api/products responded 200 in 4.8278 ms
+2025-12-03 11:28:44.482 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:44.482 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:44.482 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:28:44.482 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:28:44.484 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:44.484 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:44.484 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:44.488 -03:00 [INF] HTTP GET /api/products responded 200 in 7.4487 ms
+2025-12-03 11:28:44.505 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:44.505 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:44.505 -03:00 [INF] HTTP GET /api/orders responded 200 in 25.4796 ms
+2025-12-03 11:28:44.513 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:28:44.513 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:28:44.523 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:44.523 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:44.523 -03:00 [INF] HTTP GET /api/orders responded 200 in 10.9405 ms
+2025-12-03 11:28:45.321 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:45.321 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:45.321 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:45.321 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:28:45.350 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:45.350 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:28:45.350 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:28:45.350 -03:00 [INF] HTTP GET /api/products responded 200 in 29.5421 ms
+2025-12-03 11:28:45.353 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:45.353 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:28:45.359 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:45.359 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:28:45.359 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:45.359 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:28:45.359 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:45.359 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:45.360 -03:00 [INF] HTTP GET /api/products responded 200 in 7.5651 ms
+2025-12-03 11:28:45.360 -03:00 [INF] HTTP GET /api/products responded 200 in 39.7198 ms
+2025-12-03 11:28:45.362 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:45.362 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:45.364 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:45.365 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:45.365 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:45.365 -03:00 [INF] HTTP GET /api/products responded 200 in 3.8671 ms
+2025-12-03 11:28:47.399 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:47.399 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:28:47.400 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive = True }
+2025-12-03 11:28:47.400 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:28:47.403 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:47.403 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:47.403 -03:00 [INF] Se obtuvieron 10 productos activos
+2025-12-03 11:28:47.403 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:28:47.403 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:28:47.403 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:28:47.403 -03:00 [INF] HTTP GET /api/products responded 200 in 4.2209 ms
+2025-12-03 11:28:47.403 -03:00 [INF] HTTP GET /api/products responded 200 in 4.5335 ms
+2025-12-03 11:28:48.785 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":false,"$type":"SearchProduct"}
+2025-12-03 11:28:48.785 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":false,"$type":"SearchProduct"}
+2025-12-03 11:28:48.785 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = False }
+2025-12-03 11:28:48.785 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive = False }
+2025-12-03 11:28:48.789 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:48.789 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:48.789 -03:00 [INF] Se obtuvieron 4 productos inactivos
+2025-12-03 11:28:48.789 -03:00 [INF] Se obtuvieron 4 productos inactivos
+2025-12-03 11:28:48.789 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:28:48.789 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:28:48.789 -03:00 [INF] HTTP GET /api/products responded 200 in 5.0561 ms
+2025-12-03 11:28:48.789 -03:00 [INF] HTTP GET /api/products responded 200 in 5.0561 ms
+2025-12-03 11:28:50.538 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:50.538 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:28:50.539 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:28:50.539 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:28:50.542 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:50.542 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:28:50.542 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:28:50.542 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:28:50.542 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:28:50.542 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:28:50.543 -03:00 [INF] HTTP GET /api/products responded 200 in 4.9736 ms
+2025-12-03 11:28:50.543 -03:00 [INF] HTTP GET /api/products responded 200 in 5.0560 ms
+2025-12-03 11:28:51.282 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:28:51.282 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:28:51.282 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:28:51.282 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:28:51.292 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:51.292 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:51.292 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:51.292 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:51.293 -03:00 [INF] HTTP GET /api/orders responded 200 in 12.0417 ms
+2025-12-03 11:28:51.293 -03:00 [INF] HTTP GET /api/orders responded 200 in 11.9403 ms
+2025-12-03 11:28:51.303 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:28:51.303 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:28:51.303 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:28:51.303 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:28:51.307 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:51.307 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:51.308 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:51.308 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:51.308 -03:00 [INF] HTTP GET /api/orders responded 200 in 5.0043 ms
+2025-12-03 11:28:51.308 -03:00 [INF] HTTP GET /api/orders responded 200 in 5.4040 ms
+2025-12-03 11:28:54.031 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"DELIVERED","PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:28:54.031 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"DELIVERED","PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:28:54.031 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = DELIVERED, PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:28:54.031 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = DELIVERED, PageNumber = 1, PageSize = 10 }
+2025-12-03 11:28:54.054 -03:00 [INF] No se encontraron pedidos con los filtros especificados.
+2025-12-03 11:28:54.054 -03:00 [INF] No se encontraron pedidos con los filtros especificados.
+2025-12-03 11:28:54.054 -03:00 [WRN] No se encontraron órdenes para los filtros proporcionados.
+2025-12-03 11:28:54.054 -03:00 [WRN] No se encontraron órdenes para los filtros proporcionados.
+2025-12-03 11:28:54.144 -03:00 [ERR] Ocurrió una excepción no controlada: Empty List
+Dsw2025Tpi.Application.Exceptions.NoContentException: Empty List
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:28:54.144 -03:00 [ERR] Ocurrió una excepción no controlada: Empty List
+Dsw2025Tpi.Application.Exceptions.NoContentException: Empty List
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:28:54.161 -03:00 [ERR] HTTP GET /api/orders responded 500 in 130.6535 ms
+2025-12-03 11:28:54.161 -03:00 [ERR] HTTP GET /api/orders responded 500 in 130.7057 ms
+2025-12-03 11:28:56.113 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:28:56.113 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:28:56.113 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:28:56.113 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:28:56.123 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:56.123 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:28:56.123 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:56.123 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:28:56.123 -03:00 [INF] HTTP GET /api/orders responded 200 in 10.5826 ms
+2025-12-03 11:28:56.123 -03:00 [INF] HTTP GET /api/orders responded 200 in 10.7156 ms
+2025-12-03 11:30:42.048 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:30:42.048 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:30:42.049 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:30:42.049 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:30:42.057 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:30:42.057 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:30:42.058 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:30:42.058 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:30:42.058 -03:00 [INF] HTTP GET /api/orders responded 200 in 33.9475 ms
+2025-12-03 11:30:42.058 -03:00 [INF] HTTP GET /api/orders responded 200 in 33.9476 ms
+2025-12-03 11:32:24.614 -03:00 [INF] Solicitud para obtener el producto con ID: "73e9ab08-b406-47c6-b36d-58b902b10c69"
+2025-12-03 11:32:24.615 -03:00 [INF] Obteniendo producto por id: "73e9ab08-b406-47c6-b36d-58b902b10c69"
+2025-12-03 11:32:24.625 -03:00 [INF] Producto con id: "73e9ab08-b406-47c6-b36d-58b902b10c69" obtenido exitosamente
+2025-12-03 11:32:24.625 -03:00 [INF] Producto "73e9ab08-b406-47c6-b36d-58b902b10c69" encontrado.
+2025-12-03 11:32:24.625 -03:00 [INF] HTTP GET /api/products/73e9ab08-b406-47c6-b36d-58b902b10c69 responded 200 in 16.8671 ms
+2025-12-03 11:32:30.212 -03:00 [INF] Solicitud para obtener el producto con ID: "b9ed5544-42dc-439c-b4d7-15e720089cac"
+2025-12-03 11:32:30.213 -03:00 [INF] Obteniendo producto por id: "b9ed5544-42dc-439c-b4d7-15e720089cac"
+2025-12-03 11:32:30.215 -03:00 [INF] Producto con id: "b9ed5544-42dc-439c-b4d7-15e720089cac" obtenido exitosamente
+2025-12-03 11:32:30.215 -03:00 [INF] Producto "b9ed5544-42dc-439c-b4d7-15e720089cac" encontrado.
+2025-12-03 11:32:30.215 -03:00 [INF] HTTP GET /api/products/b9ed5544-42dc-439c-b4d7-15e720089cac responded 200 in 3.2579 ms
+2025-12-03 11:37:07.969 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:37:07.969 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:37:07.970 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:37:07.970 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:37:07.977 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:07.977 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:37:07.977 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:37:07.978 -03:00 [INF] HTTP GET /api/products responded 200 in 13.5912 ms
+2025-12-03 11:37:07.986 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:37:07.986 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:37:07.989 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:07.989 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:37:07.989 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:37:07.991 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:07.991 -03:00 [INF] HTTP GET /api/products responded 200 in 8.0660 ms
+2025-12-03 11:37:07.991 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:37:07.991 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:37:07.991 -03:00 [INF] HTTP GET /api/products responded 200 in 21.6430 ms
+2025-12-03 11:37:07.993 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:37:07.993 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:37:07.996 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:07.996 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:37:07.996 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:37:07.997 -03:00 [INF] HTTP GET /api/products responded 200 in 3.9012 ms
+2025-12-03 11:37:09.378 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:37:09.378 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:37:09.378 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:37:09.378 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive = True }
+2025-12-03 11:37:09.381 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:09.381 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:09.381 -03:00 [INF] Se obtuvieron 10 productos activos
+2025-12-03 11:37:09.382 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:37:09.382 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:37:09.382 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:37:09.383 -03:00 [INF] HTTP GET /api/products responded 200 in 5.0516 ms
+2025-12-03 11:37:09.384 -03:00 [INF] HTTP GET /api/products responded 200 in 6.1389 ms
+2025-12-03 11:37:10.727 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":false,"$type":"SearchProduct"}
+2025-12-03 11:37:10.727 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":false,"$type":"SearchProduct"}
+2025-12-03 11:37:10.727 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive = False }
+2025-12-03 11:37:10.727 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = False }
+2025-12-03 11:37:10.729 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:10.729 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:37:10.729 -03:00 [INF] Se obtuvieron 4 productos inactivos
+2025-12-03 11:37:10.730 -03:00 [INF] Se obtuvieron 4 productos inactivos
+2025-12-03 11:37:10.730 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:37:10.730 -03:00 [INF] Se encontraron 4 productos.
+2025-12-03 11:37:10.730 -03:00 [INF] HTTP GET /api/products responded 200 in 3.0221 ms
+2025-12-03 11:37:10.730 -03:00 [INF] HTTP GET /api/products responded 200 in 3.0221 ms
+2025-12-03 11:37:14.135 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:37:14.135 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:37:14.135 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:37:14.135 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:37:14.150 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:37:14.150 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:37:14.150 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:37:14.150 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:37:14.150 -03:00 [INF] HTTP GET /api/orders responded 200 in 15.6826 ms
+2025-12-03 11:37:14.150 -03:00 [INF] HTTP GET /api/orders responded 200 in 15.8770 ms
+2025-12-03 11:37:14.160 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:37:14.160 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 11:37:14.160 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:37:14.160 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:37:14.164 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:37:14.164 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:37:14.164 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:37:14.164 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:37:14.164 -03:00 [INF] HTTP GET /api/orders responded 200 in 4.7508 ms
+2025-12-03 11:37:14.164 -03:00 [INF] HTTP GET /api/orders responded 200 in 5.3059 ms
+2025-12-03 11:37:15.481 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"SHIPPED","PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:37:15.481 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = SHIPPED, PageNumber = 1, PageSize = 10 }
+2025-12-03 11:37:15.481 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"SHIPPED","PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:37:15.481 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = SHIPPED, PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:37:15.486 -03:00 [INF] No se encontraron pedidos con los filtros especificados.
+2025-12-03 11:37:15.486 -03:00 [INF] No se encontraron pedidos con los filtros especificados.
+2025-12-03 11:37:15.486 -03:00 [WRN] No se encontraron órdenes para los filtros proporcionados.
+2025-12-03 11:37:15.486 -03:00 [WRN] No se encontraron órdenes para los filtros proporcionados.
+2025-12-03 11:37:15.533 -03:00 [ERR] Ocurrió una excepción no controlada: Empty List
+Dsw2025Tpi.Application.Exceptions.NoContentException: Empty List
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:37:15.543 -03:00 [ERR] Ocurrió una excepción no controlada: Empty List
+Dsw2025Tpi.Application.Exceptions.NoContentException: Empty List
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:37:15.544 -03:00 [ERR] HTTP GET /api/orders responded 500 in 63.4713 ms
+2025-12-03 11:37:15.545 -03:00 [ERR] HTTP GET /api/orders responded 500 in 63.9096 ms
+2025-12-03 11:37:16.941 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"PROCESSING","PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:37:16.941 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"PROCESSING","PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:37:16.941 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = PROCESSING, PageNumber = 1, PageSize = 10 }
+2025-12-03 11:37:16.941 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = PROCESSING, PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:37:16.942 -03:00 [INF] No se encontraron pedidos con los filtros especificados.
+2025-12-03 11:37:16.942 -03:00 [WRN] No se encontraron órdenes para los filtros proporcionados.
+2025-12-03 11:37:16.943 -03:00 [INF] No se encontraron pedidos con los filtros especificados.
+2025-12-03 11:37:16.943 -03:00 [WRN] No se encontraron órdenes para los filtros proporcionados.
+2025-12-03 11:37:16.991 -03:00 [ERR] Ocurrió una excepción no controlada: Empty List
+Dsw2025Tpi.Application.Exceptions.NoContentException: Empty List
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:37:17.001 -03:00 [ERR] Ocurrió una excepción no controlada: Empty List
+Dsw2025Tpi.Application.Exceptions.NoContentException: Empty List
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 34
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:37:17.002 -03:00 [ERR] HTTP GET /api/orders responded 500 in 61.8774 ms
+2025-12-03 11:37:17.003 -03:00 [ERR] HTTP GET /api/orders responded 500 in 61.9309 ms
+2025-12-03 11:37:18.430 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"PENDING","PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 11:37:18.430 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = PENDING, PageNumber = 1, PageSize = 10 }
+2025-12-03 11:37:18.430 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":"PENDING","PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 11:37:18.430 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = PENDING, PageNumber = 1, PageSize = 10000 }
+2025-12-03 11:37:18.436 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:37:18.436 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:37:18.436 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:37:18.436 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:37:18.436 -03:00 [INF] HTTP GET /api/orders responded 200 in 6.4880 ms
+2025-12-03 11:37:18.436 -03:00 [INF] HTTP GET /api/orders responded 200 in 7.1773 ms
+2025-12-03 11:41:46.939 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:41:46.940 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:41:47.022 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:41:47.022 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:41:47.022 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:41:47.023 -03:00 [INF] HTTP GET /api/products responded 200 in 83.7417 ms
+2025-12-03 11:41:47.027 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:41:47.028 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 11:41:47.030 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:41:47.030 -03:00 [INF] Se obtuvieron 28 productos activos
+2025-12-03 11:41:47.030 -03:00 [INF] Se encontraron 28 productos.
+2025-12-03 11:41:47.030 -03:00 [INF] HTTP GET /api/products responded 200 in 6.5122 ms
+2025-12-03 11:41:47.035 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:41:47.035 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:41:47.037 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:41:47.037 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:41:47.037 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:41:47.037 -03:00 [INF] HTTP GET /api/products responded 200 in 2.3602 ms
+2025-12-03 11:41:47.038 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 11:41:47.039 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 11:41:47.041 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:41:47.041 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 11:41:47.041 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 11:41:47.041 -03:00 [INF] HTTP GET /api/products responded 200 in 3.2960 ms
+2025-12-03 11:49:49.876 -03:00 [INF] Intento de login para el usuario: Admin
+2025-12-03 11:49:50.002 -03:00 [INF] Login exitoso para el usuario Admin con rol Admin
+2025-12-03 11:49:50.005 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 135.2181 ms
+2025-12-03 11:49:50.038 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:49:50.038 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:49:50.044 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:49:50.044 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:49:50.044 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:49:50.045 -03:00 [INF] HTTP GET /api/products responded 200 in 7.3351 ms
+2025-12-03 11:49:50.045 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:49:50.045 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:49:50.046 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:49:50.046 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:49:50.057 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:49:50.057 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:49:50.057 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:49:50.059 -03:00 [INF] HTTP GET /api/products responded 200 in 13.0010 ms
+2025-12-03 11:49:50.064 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:49:50.064 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:49:50.064 -03:00 [INF] HTTP GET /api/orders responded 200 in 20.0993 ms
+2025-12-03 11:49:50.072 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 11:49:50.072 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 11:49:50.076 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 11:49:50.076 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 11:49:50.076 -03:00 [INF] HTTP GET /api/orders responded 200 in 4.9751 ms
+2025-12-03 11:49:51.656 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:49:51.656 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:49:51.658 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:49:51.658 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:49:51.659 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:49:51.659 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:49:51.659 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:49:51.659 -03:00 [INF] HTTP GET /api/products responded 200 in 3.7889 ms
+2025-12-03 11:49:51.661 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:49:51.661 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:49:51.661 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:49:51.661 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:49:51.661 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 11:49:51.662 -03:00 [INF] HTTP GET /api/products responded 200 in 3.4609 ms
+2025-12-03 11:49:51.664 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:49:51.664 -03:00 [INF] Se obtuvieron 32 productos totales
+2025-12-03 11:49:51.664 -03:00 [INF] Se encontraron 32 productos.
+2025-12-03 11:49:51.664 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:49:51.664 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 11:49:51.664 -03:00 [INF] HTTP GET /api/products responded 200 in 3.7044 ms
+2025-12-03 11:49:51.666 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:49:51.666 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 11:49:51.667 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 11:49:51.667 -03:00 [INF] HTTP GET /api/products responded 200 in 3.3212 ms
+2025-12-03 11:50:30.043 -03:00 [INF] Solicitud para crear un nuevo producto recibida: {"Sku":"ABC123","InternalCode":"ABC123","Name":"Producto prototipo","Description":"descripcion","CurrentUnitPrice":200,"StockQuantity":12,"ImageUrl":"","$type":"RequestProductModel"}
+2025-12-03 11:50:30.046 -03:00 [INF] Añadiendo un nuevo producto: RequestProductModel { Sku = ABC123, InternalCode = ABC123, Name = Producto prototipo, Description = descripcion, CurrentUnitPrice = 200, StockQuantity = 12, ImageUrl =  }
+2025-12-03 11:50:30.051 -03:00 [WRN] Ya existe un producto con Sku ABC123
+2025-12-03 11:50:30.096 -03:00 [ERR] Ocurrió una excepción no controlada: Ya existe un producto con Sku ABC123
+Dsw2025Tpi.Application.Exceptions.DuplicatedEntityException: Ya existe un producto con Sku ABC123
+   at Dsw2025Tpi.Application.Services.ProductsManagementService.AddProduct(RequestProductModel request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\ProductsManagementService.cs:line 102
+   at Dsw2025Tpi.Api.Controllers.ProductsController.AddProduct(RequestProductModel request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\ProductsController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:50:30.097 -03:00 [ERR] HTTP POST /api/products responded 500 in 63.9799 ms
+2025-12-03 11:50:35.906 -03:00 [INF] Solicitud para crear un nuevo producto recibida: {"Sku":"ABC123","InternalCode":"ABC123","Name":"Producto prototipo","Description":"descripcion","CurrentUnitPrice":200,"StockQuantity":12,"ImageUrl":"","$type":"RequestProductModel"}
+2025-12-03 11:50:35.906 -03:00 [INF] Añadiendo un nuevo producto: RequestProductModel { Sku = ABC123, InternalCode = ABC123, Name = Producto prototipo, Description = descripcion, CurrentUnitPrice = 200, StockQuantity = 12, ImageUrl =  }
+2025-12-03 11:50:35.907 -03:00 [WRN] Ya existe un producto con Sku ABC123
+2025-12-03 11:50:35.943 -03:00 [ERR] Ocurrió una excepción no controlada: Ya existe un producto con Sku ABC123
+Dsw2025Tpi.Application.Exceptions.DuplicatedEntityException: Ya existe un producto con Sku ABC123
+   at Dsw2025Tpi.Application.Services.ProductsManagementService.AddProduct(RequestProductModel request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\ProductsManagementService.cs:line 102
+   at Dsw2025Tpi.Api.Controllers.ProductsController.AddProduct(RequestProductModel request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\ProductsController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 11:50:35.945 -03:00 [ERR] HTTP POST /api/products responded 500 in 40.1412 ms
+2025-12-03 11:54:31.898 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":"ABC123","PageNumber":1,"PageSize":20,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:54:31.898 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = ABC123, PageNumber = 1, PageSize = 20, IsActive =  }
+2025-12-03 11:54:31.917 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:54:31.917 -03:00 [INF] Se obtuvieron 1 productos totales
+2025-12-03 11:54:31.917 -03:00 [INF] Se encontraron 1 productos.
+2025-12-03 11:54:31.917 -03:00 [INF] HTTP GET /api/products responded 200 in 20.2383 ms
+2025-12-03 11:59:22.760 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":"ABC123","PageNumber":1,"PageSize":20,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 11:59:22.760 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = ABC123, PageNumber = 1, PageSize = 20, IsActive =  }
+2025-12-03 11:59:22.841 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 11:59:22.841 -03:00 [INF] Se obtuvieron 1 productos totales
+2025-12-03 11:59:22.841 -03:00 [INF] Se encontraron 1 productos.
+2025-12-03 11:59:22.841 -03:00 [INF] HTTP GET /api/products responded 200 in 81.6496 ms
+2025-12-03 12:01:15.499 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":"ABC231","PageNumber":1,"PageSize":20,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:15.500 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = ABC231, PageNumber = 1, PageSize = 20, IsActive =  }
+2025-12-03 12:01:15.503 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:15.503 -03:00 [INF] Se obtuvieron 0 productos totales
+2025-12-03 12:01:15.503 -03:00 [WRN] No se encontraron productos para los filtros proporcionados.
+2025-12-03 12:01:15.503 -03:00 [INF] HTTP GET /api/products responded 200 in 5.6917 ms
+2025-12-03 12:01:15.509 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":"ABC123","PageNumber":1,"PageSize":20,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:15.509 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = ABC123, PageNumber = 1, PageSize = 20, IsActive =  }
+2025-12-03 12:01:15.511 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:15.511 -03:00 [INF] Se obtuvieron 1 productos totales
+2025-12-03 12:01:15.511 -03:00 [INF] Se encontraron 1 productos.
+2025-12-03 12:01:15.511 -03:00 [INF] HTTP GET /api/products responded 200 in 1.8478 ms
+2025-12-03 12:01:15.517 -03:00 [INF] Solicitud para crear un nuevo producto recibida: {"Sku":"ABC231","InternalCode":"ABC123","Name":"Producto prototipo","Description":"descripcion","CurrentUnitPrice":100,"StockQuantity":1,"ImageUrl":"","$type":"RequestProductModel"}
+2025-12-03 12:01:15.517 -03:00 [INF] Añadiendo un nuevo producto: RequestProductModel { Sku = ABC231, InternalCode = ABC123, Name = Producto prototipo, Description = descripcion, CurrentUnitPrice = 100, StockQuantity = 1, ImageUrl =  }
+2025-12-03 12:01:15.519 -03:00 [INF] Received ImageUrl in request: ''
+2025-12-03 12:01:15.519 -03:00 [INF] Creating product with ImageUrl: 
+2025-12-03 12:01:15.628 -03:00 [INF] Producto con id: "09b684e4-3daf-436f-9b94-98fe81af93c6" añadido exitosamente
+2025-12-03 12:01:15.628 -03:00 [INF] Producto "09b684e4-3daf-436f-9b94-98fe81af93c6" creado exitosamente.
+2025-12-03 12:01:15.646 -03:00 [INF] HTTP POST /api/products responded 201 in 129.6572 ms
+2025-12-03 12:01:15.699 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:15.699 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 12:01:15.702 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:15.702 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:15.702 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 12:01:15.702 -03:00 [INF] Se obtuvieron 33 productos totales
+2025-12-03 12:01:15.702 -03:00 [INF] Se encontraron 33 productos.
+2025-12-03 12:01:15.703 -03:00 [INF] HTTP GET /api/products responded 200 in 3.7331 ms
+2025-12-03 12:01:15.708 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:15.708 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 12:01:15.708 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:15.708 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 12:01:15.708 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 12:01:15.708 -03:00 [INF] HTTP GET /api/products responded 200 in 6.6599 ms
+2025-12-03 12:01:15.710 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:15.710 -03:00 [INF] Se obtuvieron 33 productos totales
+2025-12-03 12:01:15.710 -03:00 [INF] Se encontraron 33 productos.
+2025-12-03 12:01:15.710 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:15.710 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 12:01:15.711 -03:00 [INF] HTTP GET /api/products responded 200 in 4.8969 ms
+2025-12-03 12:01:15.713 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:15.713 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 12:01:15.713 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 12:01:15.713 -03:00 [INF] HTTP GET /api/products responded 200 in 3.1370 ms
+2025-12-03 12:01:41.576 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":"ABC401","PageNumber":1,"PageSize":20,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:41.577 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = ABC401, PageNumber = 1, PageSize = 20, IsActive =  }
+2025-12-03 12:01:41.578 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:41.578 -03:00 [INF] Se obtuvieron 0 productos totales
+2025-12-03 12:01:41.578 -03:00 [WRN] No se encontraron productos para los filtros proporcionados.
+2025-12-03 12:01:41.578 -03:00 [INF] HTTP GET /api/products responded 200 in 2.4461 ms
+2025-12-03 12:01:41.583 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":"ABC123","PageNumber":1,"PageSize":20,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:41.583 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = ABC123, PageNumber = 1, PageSize = 20, IsActive =  }
+2025-12-03 12:01:41.585 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:41.585 -03:00 [INF] Se obtuvieron 1 productos totales
+2025-12-03 12:01:41.585 -03:00 [INF] Se encontraron 1 productos.
+2025-12-03 12:01:41.586 -03:00 [INF] HTTP GET /api/products responded 200 in 2.8166 ms
+2025-12-03 12:01:41.595 -03:00 [INF] Solicitud para crear un nuevo producto recibida: {"Sku":"ABC401","InternalCode":"ABC123","Name":"Producto test","Description":"descripcion","CurrentUnitPrice":120,"StockQuantity":1,"ImageUrl":"","$type":"RequestProductModel"}
+2025-12-03 12:01:41.595 -03:00 [INF] Añadiendo un nuevo producto: RequestProductModel { Sku = ABC401, InternalCode = ABC123, Name = Producto test, Description = descripcion, CurrentUnitPrice = 120, StockQuantity = 1, ImageUrl =  }
+2025-12-03 12:01:41.596 -03:00 [INF] Received ImageUrl in request: ''
+2025-12-03 12:01:41.596 -03:00 [INF] Creating product with ImageUrl: 
+2025-12-03 12:01:41.598 -03:00 [INF] Producto con id: "4253ba1b-51d4-4977-9b16-f5d1287ea0d7" añadido exitosamente
+2025-12-03 12:01:41.598 -03:00 [INF] Producto "4253ba1b-51d4-4977-9b16-f5d1287ea0d7" creado exitosamente.
+2025-12-03 12:01:41.598 -03:00 [INF] HTTP POST /api/products responded 201 in 3.9189 ms
+2025-12-03 12:01:41.646 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:41.647 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 12:01:41.649 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:41.650 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 12:01:41.650 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 12:01:41.649 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:41.651 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 12:01:41.654 -03:00 [INF] HTTP GET /api/products responded 200 in 7.8229 ms
+2025-12-03 12:01:41.656 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:41.657 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 12:01:41.657 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:41.657 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 12:01:41.659 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 12:01:41.659 -03:00 [INF] HTTP GET /api/products responded 200 in 10.6759 ms
+2025-12-03 12:01:41.664 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:01:41.664 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 12:01:41.665 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:41.665 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 12:01:41.665 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 12:01:41.667 -03:00 [INF] HTTP GET /api/products responded 200 in 10.6503 ms
+2025-12-03 12:01:41.667 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:01:41.667 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 12:01:41.667 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 12:01:41.669 -03:00 [INF] HTTP GET /api/products responded 200 in 5.4423 ms
+2025-12-03 12:06:35.976 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:06:35.976 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 12:06:36.050 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:06:36.050 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 12:06:36.051 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 12:06:36.052 -03:00 [INF] HTTP GET /api/products responded 200 in 76.4082 ms
+2025-12-03 12:06:50.000 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 12:06:50.000 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 12:06:50.003 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:06:50.003 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 12:06:50.003 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 12:06:50.004 -03:00 [INF] HTTP GET /api/products responded 200 in 4.2172 ms
+2025-12-03 12:06:50.016 -03:00 [INF] Solicitud para crear un nuevo producto recibida: {"Sku":"ABC200","InternalCode":"ABC403","Name":"Jolines","Description":"descripcion","CurrentUnitPrice":0,"StockQuantity":0,"ImageUrl":"","$type":"RequestProductModel"}
+2025-12-03 12:06:50.016 -03:00 [INF] Añadiendo un nuevo producto: RequestProductModel { Sku = ABC200, InternalCode = ABC403, Name = Jolines, Description = descripcion, CurrentUnitPrice = 0, StockQuantity = 0, ImageUrl =  }
+2025-12-03 12:06:50.116 -03:00 [ERR] Ocurrió una excepción no controlada: The price must be a positive value.
+Dsw2025Tpi.Application.Exceptions.BadRequestException: The price must be a positive value.
+   at Dsw2025Tpi.Application.Validation.ProductValidator.Validate(RequestProductModel request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Validation\ProductValidator.cs:line 24
+   at Dsw2025Tpi.Application.Services.ProductsManagementService.AddProduct(RequestProductModel request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\ProductsManagementService.cs:line 97
+   at Dsw2025Tpi.Api.Controllers.ProductsController.AddProduct(RequestProductModel request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\ProductsController.cs:line 68
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 12:06:50.119 -03:00 [INF] HTTP POST /api/products responded 400 in 105.2711 ms
+2025-12-03 12:12:25.987 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:12:25.989 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 12:12:26.120 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:12:26.120 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 12:12:26.120 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 12:12:26.120 -03:00 [INF] HTTP GET /api/products responded 200 in 134.8815 ms
+2025-12-03 12:12:26.123 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:12:26.126 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 12:12:26.152 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:12:26.152 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 12:12:26.154 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:12:26.154 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 12:12:26.154 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 12:12:26.157 -03:00 [INF] HTTP GET /api/products responded 200 in 34.9178 ms
+2025-12-03 12:12:26.158 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:12:26.158 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 12:12:26.160 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 12:12:26.163 -03:00 [INF] HTTP GET /api/products responded 200 in 11.8265 ms
+2025-12-03 12:12:26.168 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:12:26.168 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 12:12:26.171 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:12:26.171 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 12:12:26.171 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 12:12:26.171 -03:00 [INF] HTTP GET /api/products responded 200 in 3.9933 ms
+2025-12-03 12:21:20.298 -03:00 [INF] Iniciando intento de registro para el email: lucianomalica@gmail.com
+2025-12-03 12:21:20.590 -03:00 [INF] Usuario lucianomalica@gmail.com creado en Identity. Asignando rol 'User'.
+2025-12-03 12:21:20.734 -03:00 [INF] Registro completado exitosamente para lucianomalica@gmail.com
+2025-12-03 12:21:20.735 -03:00 [INF] HTTP POST /api/auth/register responded 200 in 458.0223 ms
+2025-12-03 12:22:21.334 -03:00 [INF] Iniciando intento de registro para el email: lucianomalica@gmail.com
+2025-12-03 12:22:21.458 -03:00 [WRN] Fallo el registro para el email lucianomalica@gmail.com. Errores: Username 'Luciano12' is already taken.
+2025-12-03 12:22:21.460 -03:00 [INF] HTTP POST /api/auth/register responded 400 in 132.3194 ms
+2025-12-03 12:22:25.614 -03:00 [INF] Iniciando intento de registro para el email: lucianomalica@gmail.com
+2025-12-03 12:22:25.743 -03:00 [INF] Usuario lucianomalica@gmail.com creado en Identity. Asignando rol 'User'.
+2025-12-03 12:22:25.765 -03:00 [INF] Registro completado exitosamente para lucianomalica@gmail.com
+2025-12-03 12:22:25.765 -03:00 [INF] HTTP POST /api/auth/register responded 200 in 151.6357 ms
+2025-12-03 12:27:58.312 -03:00 [INF] Iniciando intento de registro para el email: lucianomalica@gmail.com
+2025-12-03 12:27:58.454 -03:00 [WRN] Fallo el registro para el email lucianomalica@gmail.com. Errores: Username 'Luciano12' is already taken.
+2025-12-03 12:27:58.455 -03:00 [INF] HTTP POST /api/auth/register responded 400 in 145.8346 ms
+2025-12-03 12:28:03.413 -03:00 [INF] Iniciando intento de registro para el email: lucianomalica@gmail.com
+2025-12-03 12:28:03.613 -03:00 [INF] Usuario lucianomalica@gmail.com creado en Identity. Asignando rol 'User'.
+2025-12-03 12:28:03.634 -03:00 [INF] Registro completado exitosamente para lucianomalica@gmail.com
+2025-12-03 12:28:03.634 -03:00 [INF] HTTP POST /api/auth/register responded 200 in 222.5128 ms
+2025-12-03 12:35:14.753 -03:00 [INF] Iniciando intento de registro para el email: lucianomalica@gmail.com
+2025-12-03 12:35:14.971 -03:00 [INF] Usuario lucianomalica@gmail.com creado en Identity. Asignando rol 'User'.
+2025-12-03 12:35:14.995 -03:00 [INF] Registro completado exitosamente para lucianomalica@gmail.com
+2025-12-03 12:35:14.995 -03:00 [INF] HTTP POST /api/auth/register responded 200 in 244.1335 ms
+2025-12-03 12:35:15.005 -03:00 [INF] Intento de login para el usuario: Luciano15
+2025-12-03 12:35:15.191 -03:00 [INF] Login exitoso para el usuario Luciano15 con rol User
+2025-12-03 12:35:15.194 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 190.7993 ms
+2025-12-03 12:35:17.703 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:35:17.704 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 12:35:17.709 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:35:17.710 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 12:35:17.710 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 12:35:17.711 -03:00 [INF] HTTP GET /api/products responded 200 in 9.8951 ms
+2025-12-03 12:35:17.713 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:35:17.714 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 12:35:17.719 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:35:17.719 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 12:35:17.719 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 12:35:17.720 -03:00 [INF] HTTP GET /api/products responded 200 in 7.6252 ms
+2025-12-03 12:35:17.736 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:35:17.736 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 12:35:17.739 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:35:17.739 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 12:35:17.739 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 12:35:17.739 -03:00 [INF] HTTP GET /api/products responded 200 in 4.5369 ms
+2025-12-03 12:35:17.758 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 12:35:17.758 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 12:35:17.762 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 12:35:17.762 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 12:35:17.762 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 12:35:17.763 -03:00 [INF] HTTP GET /api/products responded 200 in 5.1128 ms

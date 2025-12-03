@@ -1,0 +1,418 @@
+2025-12-03 13:09:10.329 -03:00 [INF] Starting up
+2025-12-03 13:09:12.777 -03:00 [WRN] The WebRootPath was not found: C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\wwwroot. Static files may be unavailable.
+2025-12-03 13:09:28.606 -03:00 [INF] Intento de login para el usuario: Francis
+2025-12-03 13:09:28.942 -03:00 [INF] Login exitoso para el usuario Francis con rol User
+2025-12-03 13:09:29.112 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 807.1716 ms
+2025-12-03 13:09:29.340 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:09:29.350 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 13:09:29.421 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:29.424 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 13:09:29.425 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 13:09:29.482 -03:00 [INF] HTTP GET /api/products responded 200 in 256.6243 ms
+2025-12-03 13:09:29.486 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:09:29.486 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive = True }
+2025-12-03 13:09:29.493 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:29.493 -03:00 [INF] Se obtuvieron 30 productos activos
+2025-12-03 13:09:29.493 -03:00 [INF] Se encontraron 30 productos.
+2025-12-03 13:09:29.503 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:09:29.504 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 13:09:29.506 -03:00 [INF] HTTP GET /api/products responded 200 in 26.0364 ms
+2025-12-03 13:09:29.511 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:29.511 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 13:09:29.512 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 13:09:29.512 -03:00 [INF] HTTP GET /api/products responded 200 in 22.9295 ms
+2025-12-03 13:09:29.516 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":12,"IsActive":true,"$type":"SearchProduct"}
+2025-12-03 13:09:29.516 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 12, IsActive = True }
+2025-12-03 13:09:29.522 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:29.522 -03:00 [INF] Se obtuvieron 12 productos activos
+2025-12-03 13:09:29.523 -03:00 [INF] Se encontraron 12 productos.
+2025-12-03 13:09:29.523 -03:00 [INF] HTTP GET /api/products responded 200 in 8.8286 ms
+2025-12-03 13:09:34.761 -03:00 [INF] Intento de login para el usuario: Admin
+2025-12-03 13:09:34.921 -03:00 [INF] Login exitoso para el usuario Admin con rol Admin
+2025-12-03 13:09:34.925 -03:00 [INF] HTTP POST /api/auth/login responded 200 in 183.2443 ms
+2025-12-03 13:09:34.990 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:34.991 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:09:35.012 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:35.013 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:09:35.013 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:09:35.015 -03:00 [INF] HTTP GET /api/products responded 200 in 26.4097 ms
+2025-12-03 13:09:35.018 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:35.019 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:09:35.024 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:35.025 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:09:35.025 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:09:35.027 -03:00 [INF] HTTP GET /api/products responded 200 in 10.2427 ms
+2025-12-03 13:09:35.034 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 13:09:35.039 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 13:09:35.483 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:35.514 -03:00 [INF] HTTP GET /api/orders responded 400 in 513.5466 ms
+2025-12-03 13:09:35.530 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 13:09:35.530 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 13:09:35.657 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:35.662 -03:00 [INF] HTTP GET /api/orders responded 400 in 136.5948 ms
+2025-12-03 13:09:37.612 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:37.613 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:09:37.620 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:37.621 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:09:37.621 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:09:37.622 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:37.623 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 13:09:37.625 -03:00 [INF] HTTP GET /api/products responded 200 in 14.0446 ms
+2025-12-03 13:09:37.629 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:37.629 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:37.629 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:09:37.629 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 13:09:37.630 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 13:09:37.630 -03:00 [INF] HTTP GET /api/products responded 200 in 9.7236 ms
+2025-12-03 13:09:37.635 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:37.635 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:09:37.635 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:09:37.636 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:37.636 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 13:09:37.640 -03:00 [INF] HTTP GET /api/products responded 200 in 13.3857 ms
+2025-12-03 13:09:37.646 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:37.646 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 13:09:37.646 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 13:09:37.646 -03:00 [INF] HTTP GET /api/products responded 200 in 12.3672 ms
+2025-12-03 13:09:38.951 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:09:38.951 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:09:38.952 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:09:38.952 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:09:39.229 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:39.233 -03:00 [INF] HTTP GET /api/orders responded 400 in 287.1615 ms
+2025-12-03 13:09:39.229 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:39.235 -03:00 [INF] HTTP GET /api/orders responded 400 in 289.7115 ms
+2025-12-03 13:09:39.251 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:09:39.251 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:09:39.255 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:09:39.255 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:09:39.363 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:39.510 -03:00 [INF] HTTP GET /api/orders responded 400 in 260.3389 ms
+2025-12-03 13:09:39.510 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:39.515 -03:00 [INF] HTTP GET /api/orders responded 400 in 262.6693 ms
+2025-12-03 13:09:40.060 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:40.060 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:09:40.065 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 13:09:40.066 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 13:09:40.066 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:40.067 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:09:40.067 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:09:40.069 -03:00 [INF] HTTP GET /api/products responded 200 in 9.3696 ms
+2025-12-03 13:09:40.073 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:09:40.073 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:09:40.078 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:09:40.078 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:09:40.079 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:09:40.110 -03:00 [INF] HTTP GET /api/products responded 200 in 37.5530 ms
+2025-12-03 13:09:40.193 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:40.197 -03:00 [INF] HTTP GET /api/orders responded 400 in 136.3903 ms
+2025-12-03 13:09:40.210 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":20,"$type":"SearchOrder"}
+2025-12-03 13:09:40.210 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 20 }
+2025-12-03 13:09:40.321 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:09:40.325 -03:00 [INF] HTTP GET /api/orders responded 400 in 116.3057 ms
+2025-12-03 13:10:19.245 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:10:19.245 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:10:19.245 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:10:19.245 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:10:19.432 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:10:19.432 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:10:19.435 -03:00 [INF] HTTP GET /api/orders responded 400 in 191.4751 ms
+2025-12-03 13:10:19.435 -03:00 [INF] HTTP GET /api/orders responded 400 in 192.0621 ms
+2025-12-03 13:10:19.449 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:10:19.449 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:10:19.450 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:10:19.450 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:10:19.584 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:10:19.584 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:10:19.587 -03:00 [INF] HTTP GET /api/orders responded 400 in 138.9143 ms
+2025-12-03 13:10:19.587 -03:00 [INF] HTTP GET /api/orders responded 400 in 138.2758 ms
+2025-12-03 13:10:21.269 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":"mariano","Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:10:21.269 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = mariano, Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:10:21.270 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":"mariano","Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:10:21.271 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = mariano, Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:10:21.464 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:10:21.464 -03:00 [ERR] Ocurrió una excepción no controlada: An item with the same key has already been added. Key: lucianomalica@gmail.com
+System.ArgumentException: An item with the same key has already been added. Key: lucianomalica@gmail.com
+   at System.Collections.Generic.Dictionary`2.TryInsert(TKey key, TValue value, InsertionBehavior behavior)
+   at System.Collections.Generic.Dictionary`2.Add(TKey key, TValue value)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector, IEqualityComparer`1 comparer)
+   at System.Linq.Enumerable.ToDictionary[TSource,TKey,TElement](IEnumerable`1 source, Func`2 keySelector, Func`2 elementSelector)
+   at Dsw2025Tpi.Application.Services.OrdersManagementService.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Application\Services\OrdersManagementService.cs:line 117
+   at Dsw2025Tpi.Api.Controllers.OrdersController.GetAllOrders(SearchOrder request) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\Controllers\OrdersController.cs:line 30
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Dsw2025Tpi.Api.CustomExceptionHandlingMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\lucia\Desktop\yu\TPI-Front\Dsw2025Tpi_Back\Dsw2025Tpi.Api\CustomExceptionHandlerMiddleware.cs:line 22
+2025-12-03 13:10:21.466 -03:00 [INF] HTTP GET /api/orders responded 400 in 198.4909 ms
+2025-12-03 13:10:21.466 -03:00 [INF] HTTP GET /api/orders responded 400 in 196.8672 ms
+2025-12-03 13:22:56.903 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:22:56.903 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:22:56.903 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:22:56.903 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:22:56.962 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:22:56.962 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:22:56.963 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:22:56.963 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:22:57.000 -03:00 [INF] HTTP GET /api/orders responded 200 in 107.1990 ms
+2025-12-03 13:22:57.000 -03:00 [INF] HTTP GET /api/orders responded 200 in 107.2006 ms
+2025-12-03 13:22:57.016 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10,"$type":"SearchOrder"}
+2025-12-03 13:22:57.016 -03:00 [INF] Solicitud para obtener todas las órdenes recibida. Filtros: {"CustomerName":null,"Status":null,"PageNumber":1,"PageSize":10000,"$type":"SearchOrder"}
+2025-12-03 13:22:57.016 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10 }
+2025-12-03 13:22:57.016 -03:00 [INF] Iniciando la obtención de todos los pedidos con los siguientes filtros: SearchOrder { CustomerName = , Status = , PageNumber = 1, PageSize = 10000 }
+2025-12-03 13:22:57.022 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:22:57.022 -03:00 [INF] Se obtuvieron 8 pedidos.
+2025-12-03 13:22:57.022 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:22:57.022 -03:00 [INF] Se encontraron 8 órdenes.
+2025-12-03 13:22:57.023 -03:00 [INF] HTTP GET /api/orders responded 200 in 7.8272 ms
+2025-12-03 13:22:57.023 -03:00 [INF] HTTP GET /api/orders responded 200 in 7.8273 ms
+2025-12-03 13:22:58.255 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:22:58.255 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:22:58.256 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 13:22:58.256 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:22:58.264 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:22:58.264 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:22:58.264 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 13:22:58.264 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:22:58.264 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 13:22:58.264 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:22:58.265 -03:00 [INF] HTTP GET /api/products responded 200 in 10.8076 ms
+2025-12-03 13:22:58.265 -03:00 [INF] HTTP GET /api/products responded 200 in 11.3465 ms
+2025-12-03 13:22:58.267 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:22:58.267 -03:00 [INF] Solicitud para obtener productos recibida. Filtros: {"Search":null,"PageNumber":1,"PageSize":10000,"IsActive":null,"$type":"SearchProduct"}
+2025-12-03 13:22:58.268 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10, IsActive =  }
+2025-12-03 13:22:58.268 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda: SearchProduct { Search = , PageNumber = 1, PageSize = 10000, IsActive =  }
+2025-12-03 13:22:58.272 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:22:58.272 -03:00 [INF] Obteniendo productos con paginación y filtro de búsqueda
+2025-12-03 13:22:58.272 -03:00 [INF] Se obtuvieron 10 productos totales
+2025-12-03 13:22:58.272 -03:00 [INF] Se obtuvieron 34 productos totales
+2025-12-03 13:22:58.272 -03:00 [INF] Se encontraron 10 productos.
+2025-12-03 13:22:58.272 -03:00 [INF] Se encontraron 34 productos.
+2025-12-03 13:22:58.272 -03:00 [INF] HTTP GET /api/products responded 200 in 5.6872 ms
+2025-12-03 13:22:58.273 -03:00 [INF] HTTP GET /api/products responded 200 in 6.0612 ms

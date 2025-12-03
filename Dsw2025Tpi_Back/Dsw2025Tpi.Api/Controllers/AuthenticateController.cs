@@ -99,8 +99,27 @@ public class AuthenticateController : ControllerBase
 
         _logger.LogInformation("Iniciando intento de registro para el email: {Email}", model.Email);
 
+        IdentityUser existingUser = null;
+        try
+        {
+            existingUser = await _userManager.FindByEmailAsync(model.Email);
+        }
+        catch (InvalidOperationException)
+        {
+            _logger.LogWarning("Se encontró más de un usuario con el email {Email}", model.Email);
+            throw new EmailAlreadyExistsException($"El email {model.Email} ya está registrado.");
+        }
+
+        if (existingUser != null)
+        {
+            _logger.LogWarning("Intento de registro con email ya existente: {Email}", model.Email);
+            throw new EmailAlreadyExistsException($"El email {model.Email} ya está registrado.");
+        }
+
         var user = new IdentityUser { UserName = model.Username, Email = model.Email };
         var result = await _userManager.CreateAsync(user, model.Password);
+
+
 
         if (!result.Succeeded)
         {

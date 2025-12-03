@@ -116,7 +116,8 @@ public class OrdersManagementService : IOrdersManagementService
         var users = _userManager.Users.ToList();
         var userNamesByEmail = users
             .Where(u => u.Email != null && u.UserName != null)
-            .ToDictionary(u => u.Email!, u => u.UserName!);
+            .GroupBy(u => u.Email!)
+            .ToDictionary(g => g.Key, g => g.First().UserName!);
 
         var paginatedOrders = sortedOrders.Select(
             order =>

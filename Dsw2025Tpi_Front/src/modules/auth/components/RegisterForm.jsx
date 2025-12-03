@@ -80,7 +80,7 @@ function RegisterForm() {
                 const msgLower = message.toLowerCase();
                 if (msgLower.includes('username') || msgLower.includes('usuario')) {
                     setError('username', { type: 'manual', message: 'El nombre de usuario ya está en uso' });
-                } else if (msgLower.includes('email') || msgLower.includes('correo') || msgLower.includes('mail')) {
+                } else if (msgLower.includes('email') || msgLower.includes('correo') || msgLower.includes('mail') || msgLower.includes('sequence contains more than one element')) {
                     setError('email', { type: 'manual', message: 'El correo electrónico ya está registrado' });
                 } else if (code && backendErrorMessage[code]) {
                     setServerError(backendErrorMessage[code]);
