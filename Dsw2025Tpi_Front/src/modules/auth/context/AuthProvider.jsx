@@ -51,6 +51,18 @@ function AuthProvider({ children }) {
     }
   });
 
+  const [userName, setUserName] = useState(() => {
+    try {
+      const t = typeof window !== 'undefined' ? (window.localStorage.getItem('token') || window.localStorage.getItem('userToken')) : null;
+      if (!t) return null;
+      const payload = parseJwt(t);
+      const name = payload && (payload['unique_name'] || payload['name'] || payload['sub'] || payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name']);
+      return name || null;
+    } catch (e) {
+      return null;
+    }
+  });
+
   const singout = () => {
     try {
       localStorage.removeItem('token');
@@ -62,6 +74,7 @@ function AuthProvider({ children }) {
     setIsAuthenticated(false);
     setIsAdmin(false);
     setUserRole(null);
+    setUserName(null);
   };
 
   const singin = async (username, password) => {
@@ -81,8 +94,11 @@ function AuthProvider({ children }) {
 
         const payload = parseJwt(token);
         const role = payload['role'] || payload['http://schemas.microsoft.com/ws/2008/06/identity/claims/role'];
+        const name = payload['unique_name'] || payload['name'] || payload['sub'] || payload['http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name'];
+
         setIsAdmin(role === 'Admin' || role === 'admin' || role === 'Administrator');
         setUserRole(role || null);
+        setUserName(name || null);
       }
       // if response includes customer id or user payload, store it for usage by orders
       const customerId = data && (data.customerId || (data.user && data.user.id) || (data.customer && data.customer.id));
@@ -108,6 +124,7 @@ function AuthProvider({ children }) {
         signIn: singin,
         signOut: singout,
         userRole,
+        userName,
       }}
     >
       {children}

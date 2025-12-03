@@ -16,104 +16,97 @@ function RegisterForm() {
     const navigate = useNavigate();
 
     const onSubmit = async (values) => {
-    if (values.password !== values.confirmPassword) {
-        setServerError('Las contraseñas no coinciden');
-        return;
-    }
-
-    try {
-        setLoading(true);
-        const { data, error } = await registerService({
-            username: values.username,
-            email: values.email,
-            role: values.role,
-            password: values.password,
-        });
-        if (error) {
-            setServerError(error);
+        if (values.password !== values.confirmPassword) {
+            setServerError('Las contraseñas no coinciden');
             return;
         }
-        alert(data || 'Usuario creado');
-        navigate('/'); 
-    } catch (err) {
-        console.error(err);
 
-        const code = err?.response?.data?.code;
+        try {
+            setLoading(true);
+            const { data, error } = await registerService({
+                username: values.username,
+                email: values.email,
+                role: 'User',
+                password: values.password,
+            });
+            if (error) {
+                setServerError(error);
+                return;
+            }
+            alert(data || 'Usuario creado');
+            navigate('/');
+        } catch (err) {
+            console.error(err);
 
-        if (code) {
-            setServerError(backendErrorMessage[code] || err?.response?.data?.message || 'Error al crear usuario');
-        } else {
-            setServerError(err?.response?.data || 'Error al crear usuario');
+            const code = err?.response?.data?.code;
+
+            if (code) {
+                setServerError(backendErrorMessage[code] || err?.response?.data?.message || 'Error al crear usuario');
+            } else {
+                setServerError(err?.response?.data || 'Error al crear usuario');
+            }
+
+            console.error(err);
+        } finally {
+            setLoading(false);
         }
-
-        console.error(err);
-    } finally {
-        setLoading(false);
-    }
     };
 
     return (
-    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
-        
-            <Input 
-                label="Usuario" 
+        <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-4">
+
+            <Input
+                label="Usuario"
                 {...register(
-                    'username', 
+                    'username',
                     { required: 'Usuario es obligatorio' }
-                )} 
-                error={errors.username?.message} 
+                )}
+                error={errors.username?.message}
             />
-            <Input 
-                label="Email" 
+            <Input
+                label="Email"
                 {...register(
-                    'email', 
-                    { 
-                        required: 'Email es obligatorio', 
-                        pattern: { value: /^\S+@\S+$/i, message: 'Email inválido' } 
+                    'email',
+                    {
+                        required: 'Email es obligatorio',
+                        pattern: { value: /^\S+@\S+$/i, message: 'Email inválido' }
                     }
-                    )
-                } 
-                error={errors.email?.message} 
+                )
+                }
+                error={errors.email?.message}
             />
-            <label className="block text-sm sm:text-base">
-            Rol
-            <select {...register('role')} className="block w-full mt-1 p-2 border border-gray-300 rounded-lg text-base">
-                <option value="USER">Usuario</option>
-                <option value="ADMIN">Administrador</option>
-            </select>
-            </label>
-            <Input 
-                label="Contraseña" 
-                type="password" 
+            <Input
+                label="Contraseña"
+                type="password"
                 {...register(
-                    'password', 
-                    { 
-                        required: 'Contraseña obligatoria', 
-                        minLength: { value: 6, message: 'Mínimo 6 caracteres' } 
+                    'password',
+                    {
+                        required: 'Contraseña obligatoria',
+                        minLength: { value: 6, message: 'Mínimo 6 caracteres' }
                     }
-                    )
-                } error={errors.password?.message} 
+                )
+                } error={errors.password?.message}
             />
-            <Input 
-                label="Confirmar Contraseña" 
-                type="password" 
+            <Input
+                label="Confirmar Contraseña"
+                type="password"
                 {...register(
-                    'confirmPassword', 
-                    { 
-                        required: 'Confirmación obligatoria' 
+                    'confirmPassword',
+                    {
+                        required: 'Confirmación obligatoria'
                     })
-                } 
-                error={errors.confirmPassword?.message} 
+                }
+                error={errors.confirmPassword?.message}
             />
-            <Button 
-                type="submit" 
+            <Button
+                type="submit"
                 disabled={loading}
                 className="w-full py-2 rounded-md font-medium text-sm sm:text-base">
-                    {loading ? 'Creando...' : 'Crear usuario'}
+                {loading ? 'Creando...' : 'Crear usuario'}
             </Button>
             {serverError && <p className="text-red-500 text-sm sm:text-base">{serverError}</p>}
-        
-    </form>
+
+        </form>
     );
 }
 

@@ -41,8 +41,8 @@ const ProductCard = ({ product, quantity, changeQty, handleAddToCart, isAdmin })
             <span className="text-xl sm:text-2xl font-bold text-gray-900">${(product.currentUnitPrice ?? 0).toLocaleString()}</span>
           </div>
 
-          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2">
-            <div className="flex items-center border border-gray-300 rounded-full overflow-hidden justify-center   w-full max-w-[140px] h-8">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 flex-wrap">
+            <div className="flex items-center border border-gray-300 rounded-full overflow-hidden justify-center w-full max-w-[140px] h-8 shrink-0">
               <button type="button" onClick={() => changeQty(product.id, -1, Number(product.stockQuantity ?? product.stock ?? 1))} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition " disabled={quantity <= 1}>−</button>
               <div className="w-10 text-center text-sm font-medium">{Math.min(quantity, Number(product.stockQuantity ?? product.stock ?? Infinity))}</div>
               <button type="button" onClick={() => changeQty(product.id, 1, Number(product.stockQuantity ?? product.stock ?? 1))} className="px-3 py-2 text-gray-600 hover:bg-gray-100 transition " disabled={quantity >= Number(product.stockQuantity ?? product.stock ?? 0)} title={quantity >= Number(product.stockQuantity ?? product.stock ?? 0) ? 'No hay más stock disponible' : undefined}>+</button>

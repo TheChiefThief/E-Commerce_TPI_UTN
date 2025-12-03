@@ -18,6 +18,7 @@ const useAuth = () => {
     signIn: context.signIn || context.singin,
     signOut: context.signOut || context.singout,
     userRole: context.userRole,
+    userName: context.userName,
   };
 
 };
