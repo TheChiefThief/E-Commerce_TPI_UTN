@@ -4,7 +4,7 @@ import Card from '../../shared/components/Card';
 import { listOrders } from '../services/listServices';
 import { getProductById } from '../../products/services/getById';
 import { getVal } from '../helpers/orderHelpers';
-import OrderFilters from '../components/OrderFilters';
+import GenericFilters from '../../shared/components/GenericFilters';
 import OrderCard from '../components/OrderCard';
 import Pagination from '../../shared/components/Pagination';
 
@@ -158,16 +158,21 @@ function ListOrdersPage() {
     <div>
       <Card>
         <div className='p-4'>
-          <div className='flex justify-between items-center mb-3'>
-            <h1 className='text-2xl sm:text-3xl font-bold'>Ordenes</h1>
-          </div>
-
-          <OrderFilters
-            search={search}
-            setSearch={setSearch}
+          <GenericFilters
+            title="Ordenes"
+            searchTerm={search}
+            setSearchTerm={setSearch}
             status={status}
             onStatusChange={handleStatusChange}
             onSearch={handleSearch}
+            statusOptions={[
+              { value: 'all', label: 'TODAS LAS ORDENES' },
+              { value: 'PENDING', label: 'PENDING' },
+              { value: 'PROCESSING', label: 'PROCESSING' },
+              { value: 'SHIPPED', label: 'SHIPPED' },
+              { value: 'DELIVERED', label: 'DELIVERED' },
+              { value: 'CANCELLED', label: 'CANCELLED' }
+            ]}
           />
         </div>
 

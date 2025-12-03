@@ -1,9 +1,9 @@
 import Card from '../../shared/components/Card';
 import AddToCartButton from '../../shared/components/AddToCartButton';
 
-const ProductCard = ({ product, quantity, changeQty, handleAddToCart, isAdmin }) => {
+const ProductCard = ({ product, quantity, changeQty, handleAddToCart, isAdmin, className, style }) => {
   return (
-    <Card key={product.id} className="flex flex-col h-full">
+    <Card key={product.id} className={`flex flex-col h-full ${className || ''}`} style={style}>
       <div className="h-56 sm:h-44 bg-gray-50 flex items-center justify-center overflow-hidden rounded-t-lg">
         {product.imageUrl ? (
           <img

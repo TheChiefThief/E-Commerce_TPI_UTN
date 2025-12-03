@@ -1,5 +1,5 @@
 const backendErrorMessage = {
-  "PROD-4001": 'Producto no encontrado.', // Antes: Solicitud inválida
+  "PROD-4001": 'Producto no encontrado.',
   "PROD-4002": 'El producto ya no se encuentra habilitado.',
   "PROD-4003": 'Producto no disponible.',
   "PROD-1001": 'Precio de producto inválido.',

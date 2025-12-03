@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import Card from '../../shared/components/Card';
 import { getProducts } from '../services/list';
 import { productStatus } from '../helpers/productHelpers';
-import ProductFilters from '../components/ProductFilters';
+import GenericFilters from '../../shared/components/GenericFilters';
 import ProductCard from '../components/ProductCard';
 import Pagination from '../../shared/components/Pagination';
 
@@ -98,13 +98,20 @@ function ListProductsPage() {
     <div>
       <Card>
         <div className='p-4'>
-          <ProductFilters
+          <GenericFilters
+            title="Productos"
+            onCreate={() => navigate('/admin/products/create')}
+            createLabel="Crear Producto"
             searchTerm={searchTerm}
             setSearchTerm={setSearchTerm}
+            onSearch={handleSearch}
             status={status}
             setStatus={setStatus}
-            onSearch={handleSearch}
-            onCreateProduct={() => navigate('/admin/products/create')}
+            statusOptions={[
+              { value: productStatus.ALL, label: 'Todos' },
+              { value: productStatus.ENABLED, label: 'Habilitados' },
+              { value: productStatus.DISABLED, label: 'Inhabilitados' }
+            ]}
           />
         </div>
       </Card>

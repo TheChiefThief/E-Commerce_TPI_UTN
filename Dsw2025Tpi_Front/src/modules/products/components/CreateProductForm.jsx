@@ -4,6 +4,7 @@ import Button from '../../shared/components/Button';
 import Card from '../../shared/components/Card';
 import Input from '../../shared/components/Input';
 import { createProduct } from '../services/create';
+import { getProducts } from '../services/list';
 import { useState } from 'react';
 import { backendErrorMessage } from '../helpers/backendError';
 import { uploadImage } from '../../shared/services/imageService';
@@ -14,6 +15,7 @@ function CreateProductForm() {
     formState: { errors },
     handleSubmit,
     setValue,
+    setError,
     watch,
   } = useForm({
     defaultValues: {
@@ -33,8 +35,39 @@ function CreateProductForm() {
 
 
   const onValid = async (formData) => {
-
     try {
+      // Validar si el SKU o CUI ya existen
+      // Traemos todos los productos para validar localmente ya que la búsqueda del backend podría no filtrar por CUI
+      const { data: allProductsData } = await getProducts(null, null, 1, 10000);
+      const items = Array.isArray(allProductsData)
+        ? allProductsData
+        : (allProductsData?.productItems ?? allProductsData?.products ?? allProductsData?.items ?? []);
+
+      const skuExists = items.some(p => String(p.sku).toLowerCase() === String(formData.sku).toLowerCase());
+
+      if (skuExists) {
+        setError('sku', {
+          type: 'manual',
+          message: 'El SKU ya existe. Por favor utilice otro.'
+        });
+        return;
+      }
+
+      // Validar CUI (Internal Code)
+      // Verificamos varias propiedades por si el nombre difiere en la respuesta
+      const cuiExists = items.some(p => {
+        const code = p.internalCode ?? p.cui ?? p.code ?? '';
+        return String(code).toLowerCase() === String(formData.cui).toLowerCase();
+      });
+
+      if (cuiExists) {
+        setError('cui', {
+          type: 'manual',
+          message: 'El Código Único ya existe. Por favor utilice otro.'
+        });
+        return;
+      }
+
       let finalImageUrl = formData.imageUrl;
 
       // Si hay un archivo seleccionado (drag & drop o input file), lo subimos primero
@@ -63,11 +96,17 @@ function CreateProductForm() {
 
       navigate('/admin/products');
     } catch (error) {
+      console.error(error);
       if (error.response?.data?.detail) {
-        const errorMessage = backendErrorMessage[error.response.data.code];
+        const errorMessage = backendErrorMessage[error.response.data.code] || error.response.data.detail;
         setErrorBackendMessage(errorMessage);
+      } else if (error.response?.status === 500) {
+        setError('sku', {
+          type: 'manual',
+          message: 'Error del servidor. Verifique que el SKU no esté duplicado.'
+        });
       } else {
-        setErrorBackendMessage('Contactar a Soporte');
+        setErrorBackendMessage('Ocurrió un error al crear el producto.');
       }
     }
   };
@@ -108,13 +147,17 @@ function CreateProductForm() {
         />
         <Input
           label='Descripción'
-          {...register('description')}
+          error={errors.description?.message}
+          {...register('description', {
+            required: 'La descripción es requerida',
+          })}
         />
         <Input
           label='Precio'
           error={errors.price?.message}
           type='number'
           {...register('price', {
+            required: 'El precio es requerido',
             min: {
               value: 0,
               message: 'No puede tener un precio negativo',
@@ -125,6 +168,7 @@ function CreateProductForm() {
           label='Stock'
           error={errors.stock?.message}
           {...register('stock', {
+            required: 'El stock es requerido',
             min: {
               value: 0,
               message: 'No puede tener un stock negativo',
@@ -208,7 +252,7 @@ function CreateProductForm() {
         <div className='sm:text-end'>
           <Button type='submit' className='w-full sm:w-fit'>Crear Producto</Button>
         </div>
-        {errorBackendMessage && <span className='text-red-500'>{errorBackendMessage}</span>}
+
       </form >
     </Card >
   );

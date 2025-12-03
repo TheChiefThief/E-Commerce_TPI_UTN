@@ -135,7 +135,7 @@ const ClientHome = () => {
               );
             }
 
-            return visibleProducts.map((product) => (
+            return visibleProducts.map((product, index) => (
               <ProductCatalogCard
                 key={product.id}
                 product={product}
@@ -143,16 +143,18 @@ const ClientHome = () => {
                 changeQty={changeQty}
                 handleAddToCart={handleAddToCart}
                 isAdmin={isAdmin}
+                className="animate-slide-up opacity-0"
+                style={{ animationDelay: `${index * 0.1}s` }}
               />
             ));
           })()}
         </div>
 
         {products.length > 0 && (
-          <Pagination 
-            page={page} 
-            totalPages={totalPages} 
-            setPage={setPage} 
+          <Pagination
+            page={page}
+            totalPages={totalPages}
+            setPage={setPage}
             showPageNumbers={false}
             showPageSize={false}
           />
