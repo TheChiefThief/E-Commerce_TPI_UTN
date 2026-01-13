@@ -72,4 +72,4 @@ Para garantizar que el código sea mantenible, se han aplicado los siguientes co
 ### Pasos
 1. **Clonar el repositorio:**
    ```bash
-   git clone [https://github.com/tu-usuario/tu-proyecto.git](https://github.com/tu-usuario/tu-proyecto.git)
+   git clone https://github.com/TheChiefThief/Dsw2025_E-commerce
